@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/routing/route_constants.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,7 +10,10 @@ class HomeScreen extends StatelessWidget {
       body: Center(
           child: ElevatedButton(
         child: const Text("Create Incedent Report"),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context)
+              .pushReplacementNamed(RouteConstants.initialScreen);
+        },
       )),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:incident_reporting/src/features/folw_Screens/initial_screen.dart';
 import 'package:incident_reporting/src/features/home_screen.dart';
 
 import '../../src/routing/route_constants.dart';
@@ -18,6 +19,10 @@ class RouteManager {
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.homeScreen),
             builder: (context) => const HomeScreen());
+      case RouteConstants.initialScreen:
+        return MaterialPageRoute(
+            settings: const RouteSettings(name: RouteConstants.initialScreen),
+            builder: (context) => const InitialScreen());
       default:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.splashScreen),
