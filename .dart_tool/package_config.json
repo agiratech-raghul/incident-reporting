@@ -2,12 +2,6 @@
   "configVersion": 2,
   "packages": [
     {
-      "name": "another_flushbar",
-      "rootUri": "file:///Users/agira/.pub-cache/hosted/pub.dev/another_flushbar-1.12.29",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "args",
       "rootUri": "file:///Users/agira/.pub-cache/hosted/pub.dev/args-2.4.1",
       "packageUri": "lib/",
@@ -452,13 +446,13 @@
       "languageVersion": "2.17"
     },
     {
-      "name": "flutter_starter_project",
+      "name": "incident_reporting",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-11-07T13:38:25.789608Z",
+  "generated": "2023-11-08T05:35:45.104607Z",
   "generator": "pub",
   "generatorVersion": "3.1.0"
 }

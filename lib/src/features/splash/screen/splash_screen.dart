@@ -1,6 +1,6 @@
-import 'package:flutter_starter_project/src/ui_utils/app_snack_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:incident_reporting/src/ui_utils/app_snack_bar.dart';
 import '../../../services/connectivity_service_provider.dart/connectivity_service_provider.dart';
 import '../../../utils/utils.dart';
 import '../../../constants/string_constants.dart';

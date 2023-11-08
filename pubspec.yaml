@@ -26,7 +26,6 @@ dependencies:
   shared_preferences: ^2.1.0
 
   #Widgets
-  another_flushbar: ^1.12.29
   image_picker: ^0.8.7+4
 
 dev_dependencies:

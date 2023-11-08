@@ -1,32 +1,46 @@
-import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/utils/src/extensions/size_extension.dart';
+import 'package:incident_reporting/src/utils/src/helpers/size_utils.dart';
 
 class AppSnackBar {
   final String? message;
   final String? actionText;
   final VoidCallback? onPressed;
   final bool isPositive;
+  final bool bottom;
 
   const AppSnackBar(
       {required this.message,
-      this.actionText,
-      this.onPressed,
-      this.isPositive = false});
+        this.actionText,
+        this.onPressed,
+        this.bottom = true,
+        this.isPositive = false});
 
   void showAppSnackBar(BuildContext context) {
-    Flushbar(
-      backgroundColor: isPositive ? Colors.green : Colors.red,
-      flushbarPosition: FlushbarPosition.BOTTOM,
-      messageText: Text(
-        message!.length < 200
-            ? message.toString()
-            : message.toString().substring(0, 200),
-        textAlign: TextAlign.left,
-        softWrap: true,
-        style: const TextStyle(color: Colors.white),
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: isPositive ? Colors.green[400] : Colors.red,
+        margin: bottom
+            ? EdgeInsets.symmetric(
+            horizontal: Utils.getScreenWidth(context, 23),
+            vertical: Utils.getScreenHeight(context, 35))
+            : EdgeInsets.only(
+            bottom: context.screenWidth * 0.9,
+            left: Utils.getScreenWidth(context, 23),
+            right: Utils.getScreenWidth(context, 23)),
+        content: Text(
+          message != null
+              ? message!.length < 200
+              ? message.toString()
+              : message.toString().substring(0, 200)
+              : "",
+          textAlign: TextAlign.left,
+          softWrap: true,
+          style: const TextStyle(color: Colors.white),
+        ),
+        duration: const Duration(seconds: 3),
       ),
-      isDismissible: actionText == null,
-      duration: const Duration(seconds: 5),
-    ).show(context);
+    );
   }
 }
