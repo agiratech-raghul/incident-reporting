@@ -1,15 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:incident_reporting/src/routing/route_constants.dart';
 import 'package:incident_reporting/src/ui_utils/app_snack_bar.dart';
 import '../../../services/connectivity_service_provider.dart/connectivity_service_provider.dart';
 import '../../../utils/utils.dart';
 import '../../../constants/string_constants.dart';
 
-class SplashScreen extends HookConsumerWidget {
+class SplashScreen extends StatefulHookConsumerWidget {
   const SplashScreen({super.key});
 
   @override
-  Widget build(BuildContext context, ref) {
+  ConsumerState<ConsumerStatefulWidget> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends ConsumerState<SplashScreen> {
+  @override
+  void initState() {
+    _startTimer();
+    super.initState();
+  }
+
+  void _startTimer() async {
+    Future.delayed(const Duration(seconds: 1), _moveToNextPage);
+  }
+
+  void _moveToNextPage() {
+    Navigator.of(context).pushReplacementNamed(RouteConstants.homeScreen);
+  }
+
+  @override
+  Widget build(BuildContext context) {
     ref.listen<AsyncValue<ConnectionStatus>>(
       connectionStreamProvider,
       (prevState, newState) {
@@ -24,6 +44,7 @@ class SplashScreen extends HookConsumerWidget {
         );
       },
     );
+
     return Scaffold(
       body: Container(
           color: AppColors.primaryColor,
