@@ -9,10 +9,9 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
           child: ElevatedButton(
-        child: const Text("Create Incedent Report"),
+        child: const Text("Create New Incedent "),
         onPressed: () {
-          Navigator.of(context)
-              .pushReplacementNamed(RouteConstants.initialScreen);
+          Navigator.of(context).pushNamed(RouteConstants.initialScreen);
         },
       )),
     );

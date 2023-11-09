@@ -56,6 +56,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "csslib",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/csslib-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5",
       "packageUri": "lib/",
@@ -170,10 +176,52 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "google_maps",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/google_maps-6.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "google_maps_flutter",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/google_maps_flutter-2.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "google_maps_flutter_android",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/google_maps_flutter_android-2.5.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "google_maps_flutter_ios",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/google_maps_flutter_ios-2.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "google_maps_flutter_platform_interface",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/google_maps_flutter_platform_interface-2.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "google_maps_flutter_web",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/google_maps_flutter_web-0.5.4+2",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
       "name": "hooks_riverpod",
       "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/hooks_riverpod-2.3.6",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "html",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/html-0.15.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "http",
@@ -230,6 +278,18 @@
       "languageVersion": "2.16"
     },
     {
+      "name": "js_wrapping",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/js_wrapping-0.7.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "json_annotation",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/json_annotation-4.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "lints",
       "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/lints-2.0.1",
       "packageUri": "lib/",
@@ -284,6 +344,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "pedantic",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/pedantic-1.11.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "petitparser",
       "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/petitparser-5.1.0",
       "packageUri": "lib/",
@@ -316,6 +382,12 @@
     {
       "name": "rxdart",
       "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/rxdart-0.27.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "sanitize_html",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/sanitize_html-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -374,6 +446,24 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "speech_to_text",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/speech_to_text-6.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "speech_to_text_macos",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/speech_to_text_macos-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "speech_to_text_platform_interface",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/speech_to_text_platform_interface-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "stack_trace",
       "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/stack_trace-1.11.0",
       "packageUri": "lib/",
@@ -388,6 +478,12 @@
     {
       "name": "stream_channel",
       "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/stream_channel-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "stream_transform",
+      "rootUri": "file:///home/agira/.pub-cache/hosted/pub.dev/stream_transform-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -452,7 +548,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-11-08T06:47:38.372252Z",
+  "generated": "2023-11-09T09:15:19.320465Z",
   "generator": "pub",
   "generatorVersion": "3.1.0"
 }

@@ -25,8 +25,12 @@ dependencies:
   flutter_secure_storage: ^8.0.0
   shared_preferences: ^2.1.0
 
+  #location
+  google_maps_flutter: ^2.5.0
+
   #Widgets
   image_picker: ^0.8.7+4
+  speech_to_text: ^6.4.0
 
 dev_dependencies:
   flutter_test:
