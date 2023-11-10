@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/map_widget.dart';
+import 'package:incident_reporting/src/routing/route_constants.dart';
 
 class InitialScreen extends StatefulWidget {
   const InitialScreen({super.key});
@@ -149,7 +150,9 @@ class _InitialScreenState extends State<InitialScreen> {
                 child: ElevatedButton(
                     style:
                         ElevatedButton.styleFrom(backgroundColor: Colors.green),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, RouteConstants.secondScreen);
+                    },
                     child: const Text("Next Step")))
           ]),
         ),
