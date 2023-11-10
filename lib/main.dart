@@ -7,13 +7,12 @@ import 'src/app.dart';
 import 'src/services/services_initializer.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
   final ProviderContainer container = ProviderContainer();
-  await container.read(servicesInitializerProvider).init();
-
 
   runZonedGuarded<Future<void>>(() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    await container.read(servicesInitializerProvider).init();
+
     runApp(UncontrolledProviderScope(container: container, child: const App()));
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
