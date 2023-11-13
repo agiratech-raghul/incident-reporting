@@ -13,49 +13,49 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/home/agira/Agira/incident-reporting/android/app/src/main/AndroidManifest.xml:4:5-67
-15-->/home/agira/Agira/incident-reporting/android/app/src/main/AndroidManifest.xml:4:22-64
+15-->/Users/agira/FlutterProjects/incident_reporting/android/app/src/main/AndroidManifest.xml:4:5-67
+15-->/Users/agira/FlutterProjects/incident_reporting/android/app/src/main/AndroidManifest.xml:4:22-64
 16    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-16-->[:speech_to_text] /home/agira/Agira/incident-reporting/build/speech_to_text/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-76
-16-->[:speech_to_text] /home/agira/Agira/incident-reporting/build/speech_to_text/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-73
+16-->[:speech_to_text] /Users/agira/FlutterProjects/incident_reporting/build/speech_to_text/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-76
+16-->[:speech_to_text] /Users/agira/FlutterProjects/incident_reporting/build/speech_to_text/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-73
 17    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
-17-->[:speech_to_text] /home/agira/Agira/incident-reporting/build/speech_to_text/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-77
-17-->[:speech_to_text] /home/agira/Agira/incident-reporting/build/speech_to_text/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-74
+17-->[:speech_to_text] /Users/agira/FlutterProjects/incident_reporting/build/speech_to_text/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-77
+17-->[:speech_to_text] /Users/agira/FlutterProjects/incident_reporting/build/speech_to_text/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-74
 18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-18-->[:connectivity_plus] /home/agira/Agira/incident-reporting/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
-18-->[:connectivity_plus] /home/agira/Agira/incident-reporting/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-76
+18-->[:connectivity_plus] /Users/agira/FlutterProjects/incident_reporting/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
+18-->[:connectivity_plus] /Users/agira/FlutterProjects/incident_reporting/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-76
 19
 20    <uses-feature
-20-->[com.google.android.gms:play-services-maps:18.2.0] /home/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
+20-->[com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
 21        android:glEsVersion="0x00020000"
-21-->[com.google.android.gms:play-services-maps:18.2.0] /home/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
+21-->[com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
 22        android:required="true" />
-22-->[com.google.android.gms:play-services-maps:18.2.0] /home/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
+22-->[com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
 23
 24    <queries>
-24-->[com.google.android.gms:play-services-maps:18.2.0] /home/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:30:5-34:15
+24-->[com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:30:5-34:15
 25
 26        <!-- Needs to be explicitly declared on Android R+ -->
 27        <package android:name="com.google.android.apps.maps" />
-27-->[com.google.android.gms:play-services-maps:18.2.0] /home/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
-27-->[com.google.android.gms:play-services-maps:18.2.0] /home/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
+27-->[com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
+27-->[com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
 28    </queries>
 29
 30    <permission
-30-->[androidx.core:core:1.9.0] /home/agira/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+30-->[androidx.core:core:1.9.0] /Users/agira/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
 31        android:name="com.example.flutter_starter_project.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-31-->[androidx.core:core:1.9.0] /home/agira/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+31-->[androidx.core:core:1.9.0] /Users/agira/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
 32        android:protectionLevel="signature" />
-32-->[androidx.core:core:1.9.0] /home/agira/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+32-->[androidx.core:core:1.9.0] /Users/agira/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
 33
 34    <uses-permission android:name="com.example.flutter_starter_project.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-34-->[androidx.core:core:1.9.0] /home/agira/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-34-->[androidx.core:core:1.9.0] /home/agira/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+34-->[androidx.core:core:1.9.0] /Users/agira/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+34-->[androidx.core:core:1.9.0] /Users/agira/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
 35
 36    <application
 37        android:name="android.app.Application"
 38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-38-->[androidx.core:core:1.9.0] /home/agira/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+38-->[androidx.core:core:1.9.0] /Users/agira/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 39        android:debuggable="true"
 40        android:icon="@mipmap/ic_launcher"
 41        android:label="incident_reporting" >
@@ -96,57 +96,57 @@
 76            android:value="2" />
 77
 78        <provider
-78-->[:image_picker_android] /home/agira/Agira/incident-reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+78-->[:image_picker_android] /Users/agira/FlutterProjects/incident_reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
 79            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-79-->[:image_picker_android] /home/agira/Agira/incident-reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
+79-->[:image_picker_android] /Users/agira/FlutterProjects/incident_reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
 80            android:authorities="com.example.flutter_starter_project.flutter.image_provider"
-80-->[:image_picker_android] /home/agira/Agira/incident-reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
+80-->[:image_picker_android] /Users/agira/FlutterProjects/incident_reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
 81            android:exported="false"
-81-->[:image_picker_android] /home/agira/Agira/incident-reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+81-->[:image_picker_android] /Users/agira/FlutterProjects/incident_reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
 82            android:grantUriPermissions="true" >
-82-->[:image_picker_android] /home/agira/Agira/incident-reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+82-->[:image_picker_android] /Users/agira/FlutterProjects/incident_reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
 83            <meta-data
-83-->[:image_picker_android] /home/agira/Agira/incident-reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
+83-->[:image_picker_android] /Users/agira/FlutterProjects/incident_reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
 84                android:name="android.support.FILE_PROVIDER_PATHS"
-84-->[:image_picker_android] /home/agira/Agira/incident-reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+84-->[:image_picker_android] /Users/agira/FlutterProjects/incident_reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
 85                android:resource="@xml/flutter_image_picker_file_paths" />
-85-->[:image_picker_android] /home/agira/Agira/incident-reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
+85-->[:image_picker_android] /Users/agira/FlutterProjects/incident_reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
 86        </provider> <!-- Needs to be explicitly declared on P+ -->
 87        <uses-library
-87-->[com.google.android.gms:play-services-maps:18.2.0] /home/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
+87-->[com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
 88            android:name="org.apache.http.legacy"
-88-->[com.google.android.gms:play-services-maps:18.2.0] /home/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
+88-->[com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
 89            android:required="false" />
-89-->[com.google.android.gms:play-services-maps:18.2.0] /home/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
+89-->[com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
 90
 91        <activity
-91-->[com.google.android.gms:play-services-base:18.0.1] /home/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+91-->[com.google.android.gms:play-services-base:18.0.1] /Users/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
 92            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-92-->[com.google.android.gms:play-services-base:18.0.1] /home/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+92-->[com.google.android.gms:play-services-base:18.0.1] /Users/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
 93            android:exported="false"
-93-->[com.google.android.gms:play-services-base:18.0.1] /home/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+93-->[com.google.android.gms:play-services-base:18.0.1] /Users/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
 94            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-94-->[com.google.android.gms:play-services-base:18.0.1] /home/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+94-->[com.google.android.gms:play-services-base:18.0.1] /Users/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
 95
 96        <meta-data
-96-->[com.google.android.gms:play-services-basement:18.0.0] /home/agira/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+96-->[com.google.android.gms:play-services-basement:18.0.0] /Users/agira/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
 97            android:name="com.google.android.gms.version"
-97-->[com.google.android.gms:play-services-basement:18.0.0] /home/agira/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+97-->[com.google.android.gms:play-services-basement:18.0.0] /Users/agira/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
 98            android:value="@integer/google_play_services_version" />
-98-->[com.google.android.gms:play-services-basement:18.0.0] /home/agira/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+98-->[com.google.android.gms:play-services-basement:18.0.0] /Users/agira/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
 99
 100        <uses-library
-100-->[androidx.window:window:1.0.0-beta04] /home/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+100-->[androidx.window:window:1.0.0-beta04] /Users/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
 101            android:name="androidx.window.extensions"
-101-->[androidx.window:window:1.0.0-beta04] /home/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+101-->[androidx.window:window:1.0.0-beta04] /Users/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
 102            android:required="false" />
-102-->[androidx.window:window:1.0.0-beta04] /home/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+102-->[androidx.window:window:1.0.0-beta04] /Users/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
 103        <uses-library
-103-->[androidx.window:window:1.0.0-beta04] /home/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+103-->[androidx.window:window:1.0.0-beta04] /Users/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
 104            android:name="androidx.window.sidecar"
-104-->[androidx.window:window:1.0.0-beta04] /home/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+104-->[androidx.window:window:1.0.0-beta04] /Users/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
 105            android:required="false" />
-105-->[androidx.window:window:1.0.0-beta04] /home/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+105-->[androidx.window:window:1.0.0-beta04] /Users/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
 106    </application>
 107
 108</manifest>
