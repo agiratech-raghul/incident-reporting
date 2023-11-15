@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:incident_reporting/src/common_widgets/src/images/common_network_image.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/CommonDetailsCard.dart';
+import 'package:incident_reporting/src/routing/route_constants.dart';
 import 'package:incident_reporting/src/ui_utils/app_assets.dart';
 import 'package:incident_reporting/src/utils/src/helpers/size_utils.dart';
 
@@ -262,7 +263,11 @@ class _SecondScreenState extends State<SecondScreen> {
                         style:
                         ElevatedButton.styleFrom(backgroundColor: Colors.green),
                         onPressed: () {
+                          if(widget.isAnotherVehicle!) {
+                            Navigator.pushNamed(context, RouteConstants.profileScreen);
+                          } else{
                           Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondScreen(isAnotherVehicle: true),));
+                            }
                         },
                         child: const Text("Next Step")))
           ]),

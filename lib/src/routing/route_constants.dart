@@ -4,4 +4,5 @@ class RouteConstants {
   static const String homeScreen = '/home_screen';
   static const String initialScreen = '/initialScreen';
   static const String secondScreen = '/secondScreen';
+  static const String profileScreen = '/profileScreen';
 }
