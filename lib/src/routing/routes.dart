@@ -1,4 +1,5 @@
 import 'package:incident_reporting/src/features/folw_Screens/initial_screen.dart';
+import 'package:incident_reporting/src/features/folw_Screens/new_second_screen.dart';
 import 'package:incident_reporting/src/features/folw_Screens/seccond_screen.dart';
 import 'package:incident_reporting/src/features/home_screen.dart';
 
@@ -6,6 +7,8 @@ import '../../src/routing/route_constants.dart';
 import 'package:flutter/material.dart';
 
 import '../features/splash/screen/splash_screen.dart';
+import 'package:incident_reporting/src/features/folw_Screens/seccond_screen.dart';
+
 
 class RouteManager {
   MaterialPageRoute<dynamic> route(RouteSettings settings) {
@@ -26,8 +29,12 @@ class RouteManager {
             builder: (context) => const InitialScreen());
       case RouteConstants.secondScreen:
         return MaterialPageRoute(
-            settings: const RouteSettings(name: RouteConstants.initialScreen),
+            settings: const RouteSettings(name: RouteConstants.secondScreen),
             builder: (context) => const SecondScreen());
+      case RouteConstants.newSecondScreen:
+        return MaterialPageRoute(
+            settings: const RouteSettings(name: RouteConstants.newSecondScreen),
+            builder: (context) =>  NewSecondScreen());
       default:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.splashScreen),
