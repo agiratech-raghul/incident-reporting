@@ -32,7 +32,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Step 3"),
+      appBar: AppBar(title: const Text("Step 5"),
         leading: IconButton(
             icon: const Icon(Icons.close),
             onPressed: () {
@@ -154,8 +154,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       style:
                       ElevatedButton.styleFrom(backgroundColor: Colors.green),
                       onPressed: () {
-
-                          Navigator.pushNamed(context, RouteConstants.profileScreen);
+                          // Navigator.pushNamed(context, RouteConstants.profileScreen);
                       },
                       child: const Text("Next Step")))
             ],
