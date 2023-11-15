@@ -5,14 +5,15 @@ import 'package:incident_reporting/src/ui_utils/app_assets.dart';
 class CommonNetworkImage extends StatelessWidget {
   final String image;
   final String? placeHolder;
+  final double? height;
   const CommonNetworkImage(
-      {Key? key, required this.image, this.placeHolder})
+      {Key? key, required this.image, this.placeHolder, this.height})
       : super(key: key);
   @override
   Widget build(BuildContext context,) {
     return Image.network(
       image,
-      height: 50,
+      height: height!,
       loadingBuilder: (context, child, loadingProgress) {
         final totalBytes = loadingProgress?.expectedTotalBytes;
         final bytesLoaded = loadingProgress?.cumulativeBytesLoaded;

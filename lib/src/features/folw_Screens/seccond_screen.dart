@@ -103,6 +103,7 @@ class _SecondScreenState extends State<SecondScreen> {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(8),
                           child: const CommonNetworkImage(
+                            height: 50,
                             image:
                             "https://vardenchi.com/cdn/shop/products/JawarearNPindicator_2.progressive.jpg?v=1633009490",
                             placeHolder: AppAssets.sampleImage,

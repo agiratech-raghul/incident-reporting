@@ -151,7 +151,7 @@ class _InitialScreenState extends State<InitialScreen> {
                     style:
                         ElevatedButton.styleFrom(backgroundColor: Colors.green),
                     onPressed: () {
-                      Navigator.pushNamed(context, RouteConstants.newSecondScreen);
+                      Navigator.pushNamed(context, RouteConstants.secondScreen);
                     },
                     child: const Text("Next Step")))
           ]),
