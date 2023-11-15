@@ -68,6 +68,7 @@ class _SecondScreenState extends State<SecondScreen> {
               child: Column(
                 children: [
                   Row(
+
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       ElevatedButton(
