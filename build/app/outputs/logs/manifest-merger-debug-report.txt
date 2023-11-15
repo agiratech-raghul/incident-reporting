@@ -3,14 +3,6 @@ application
 INJECTED from /Users/agira/FlutterProjects/incident_reporting/android/app/src/main/AndroidManifest.xml:8:4-40:19
 MERGED from [:image_picker_android] /Users/agira/FlutterProjects/incident_reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:image_picker_android] /Users/agira/FlutterProjects/incident_reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:36:5-42:19
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:36:5-42:19
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/agira/.gradle/caches/transforms-3/67879e22102fb65217d23e347f5e9c0d/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/agira/.gradle/caches/transforms-3/67879e22102fb65217d23e347f5e9c0d/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/agira/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:20:5-24:19
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/agira/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:20:5-24:19
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.core:core:1.9.0] /Users/agira/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
@@ -29,15 +21,10 @@ INJECTED from /Users/agira/FlutterProjects/incident_reporting/android/app/src/ma
 MERGED from /Users/agira/FlutterProjects/incident_reporting/android/app/src/main/AndroidManifest.xml:1:1-41:12
 MERGED from [:shared_preferences_android] /Users/agira/FlutterProjects/incident_reporting/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:speech_to_text] /Users/agira/FlutterProjects/incident_reporting/build/speech_to_text/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-12:12
-MERGED from [:google_maps_flutter_android] /Users/agira/FlutterProjects/incident_reporting/build/google_maps_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:image_picker_android] /Users/agira/FlutterProjects/incident_reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:flutter_plugin_android_lifecycle] /Users/agira/FlutterProjects/incident_reporting/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:flutter_secure_storage] /Users/agira/FlutterProjects/incident_reporting/build/flutter_secure_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:connectivity_plus] /Users/agira/FlutterProjects/incident_reporting/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:17:1-44:12
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:16:1-24:12
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/agira/.gradle/caches/transforms-3/67879e22102fb65217d23e347f5e9c0d/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/agira/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:16:1-26:12
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/agira/.gradle/caches/transforms-3/0e0e1a382b52c0572988a1c50e96d2f7/transformed/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.6.1] /Users/agira/.gradle/caches/transforms-3/0f2c34a14d2099fb451b56a233bb2c17/transformed/jetified-activity-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /Users/agira/.gradle/caches/transforms-3/906f41b23948e23cf276f1b1ba5ed41e/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -81,8 +68,6 @@ uses-permission#android.permission.INTERNET
 ADDED from /Users/agira/FlutterProjects/incident_reporting/android/app/src/main/AndroidManifest.xml:4:5-67
 MERGED from /Users/agira/FlutterProjects/incident_reporting/android/app/src/main/AndroidManifest.xml:4:5-67
 MERGED from /Users/agira/FlutterProjects/incident_reporting/android/app/src/main/AndroidManifest.xml:4:5-67
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:24:5-67
 	android:name
 		ADDED from /Users/agira/FlutterProjects/incident_reporting/android/app/src/main/AndroidManifest.xml:4:22-64
 uses-sdk
@@ -93,8 +78,6 @@ MERGED from [:shared_preferences_android] /Users/agira/FlutterProjects/incident_
 MERGED from [:shared_preferences_android] /Users/agira/FlutterProjects/incident_reporting/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:speech_to_text] /Users/agira/FlutterProjects/incident_reporting/build/speech_to_text/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:speech_to_text] /Users/agira/FlutterProjects/incident_reporting/build/speech_to_text/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:google_maps_flutter_android] /Users/agira/FlutterProjects/incident_reporting/build/google_maps_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:google_maps_flutter_android] /Users/agira/FlutterProjects/incident_reporting/build/google_maps_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:image_picker_android] /Users/agira/FlutterProjects/incident_reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:image_picker_android] /Users/agira/FlutterProjects/incident_reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_plugin_android_lifecycle] /Users/agira/FlutterProjects/incident_reporting/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -103,14 +86,6 @@ MERGED from [:flutter_secure_storage] /Users/agira/FlutterProjects/incident_repo
 MERGED from [:flutter_secure_storage] /Users/agira/FlutterProjects/incident_reporting/build/flutter_secure_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-9:53
 MERGED from [:connectivity_plus] /Users/agira/FlutterProjects/incident_reporting/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:connectivity_plus] /Users/agira/FlutterProjects/incident_reporting/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/agira/.gradle/caches/transforms-3/67879e22102fb65217d23e347f5e9c0d/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/agira/.gradle/caches/transforms-3/67879e22102fb65217d23e347f5e9c0d/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/agira/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/agira/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:18:5-43
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/agira/.gradle/caches/transforms-3/0e0e1a382b52c0572988a1c50e96d2f7/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/agira/.gradle/caches/transforms-3/0e0e1a382b52c0572988a1c50e96d2f7/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.6.1] /Users/agira/.gradle/caches/transforms-3/0f2c34a14d2099fb451b56a233bb2c17/transformed/jetified-activity-1.6.1/AndroidManifest.xml:20:5-44
@@ -191,42 +166,8 @@ ADDED from [:image_picker_android] /Users/agira/FlutterProjects/incident_reporti
 		ADDED from [:image_picker_android] /Users/agira/FlutterProjects/incident_reporting/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [:connectivity_plus] /Users/agira/FlutterProjects/incident_reporting/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:23:5-79
 	android:name
 		ADDED from [:connectivity_plus] /Users/agira/FlutterProjects/incident_reporting/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-76
-uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
-	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
-	android:required
-		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
-queries
-ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:30:5-34:15
-package#com.google.android.apps.maps
-ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
-	android:name
-		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
-uses-library#org.apache.http.legacy
-ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
-	android:required
-		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
-	android:name
-		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/agira/.gradle/caches/transforms-3/442906d774e697151123a0d4dd799605/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/agira/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:18.0.0] /Users/agira/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:18.0.0] /Users/agira/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:18.0.0] /Users/agira/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.0.0-beta04] /Users/agira/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
 	android:required

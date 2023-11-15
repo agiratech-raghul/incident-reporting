@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/agira/Agira/incident-reporting/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/agira/FlutterProjects/incident_reporting/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/agira/Agira/incident-reporting/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/agira/FlutterProjects/incident_reporting/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
