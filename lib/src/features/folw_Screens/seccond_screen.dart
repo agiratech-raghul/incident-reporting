@@ -45,7 +45,7 @@ class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Step 2"),
+      appBar: AppBar(title:  Text(widget.isAnotherVehicle!?"Step 4":"Step 3"),
         leading: IconButton(
             icon: const Icon(Icons.close),
             onPressed: () {

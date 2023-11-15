@@ -1,5 +1,9 @@
 
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/features/folw_Screens/widget/common_select.dart';
+import 'package:incident_reporting/src/features/folw_Screens/widget/common_yes_or_no.dart';
+
+import '../../routing/route_constants.dart';
 
 class NewSecondScreen extends StatefulWidget {
   const NewSecondScreen({super.key});
@@ -9,77 +13,163 @@ class NewSecondScreen extends StatefulWidget {
 }
 
 class _NewSecondScreenState extends State<NewSecondScreen> {
-  int selectedOption = 2;
-  int vehicleOption = 2;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-        child: Column(
-          children: [
-            Card(
-              color: Colors.yellow[200],
-              child: Column(
+      appBar: AppBar(
+        title: Text("Step 2"),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+          child: Column(
+            children: [
+              Card(
+                color: Colors.yellow[200],
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        ElevatedButton(
+                            onPressed: () {
+                              showMyIncedent(
+                                  "Side Swipe",
+                                  "Same Direction Swipe",
+                                  "Opposite Direction Swipe",
+                                  "Another Vehicle Swiped My Parked Vehicle",
+                                  "I Swiped Another Parked Vehicle",
+                                  "Other- Side Swipe");
+                            },
+                            child: const Text("Rear End Collision")),
+                        ElevatedButton(
+                            onPressed: () {
+                              showMyIncedent(
+                                  "Side Swipe",
+                                  "Same Direction Swipe",
+                                  "Opposite Direction Swipe",
+                                  "Another Vehicle Swiped My Parked Vehicle",
+                                  "I Swiped Another Parked Vehicle",
+                                  "Other- Side Swipe");
+                            },
+                            child: const Text("Side Swipe")),
+                        ElevatedButton(
+                            onPressed: () {}, child: const Text("Hit and Run"))
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        ElevatedButton(
+                            onPressed: () {},
+                            child: const Text("Side Impact Collision")),
+                        ElevatedButton(
+                            onPressed: () {},
+                            child: const Text("Head- on Collision")),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(height: 10,),
+              ExpansionTile(title: Text("Injuries to anyone?"),
+              trailing: Container(
+                width: 140,
+                child: CommonYesOrNo(),
+              ),
+              children: [
+                ExpansionTile(
+                  title: Text("Insured Vehicle"),trailing: Container(
+                  width: 140,
+                  child: CommonYesOrNo(),
+                ),
+                childrenPadding: EdgeInsets.all(10),
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ElevatedButton(
-                          onPressed: () {
-                            showMyIncedent(
-                                "Side Swipe",
-                                "Same Direction Swipe",
-                                "Opposite Direction Swipe",
-                                "Another Vehicle Swiped My Parked Vehicle",
-                                "I Swiped Another Parked Vehicle",
-                                "Other- Side Swipe");
-                          },
-                          child: const Text("Rear End Collision")),
-                      ElevatedButton(
-                          onPressed: () {
-                            showMyIncedent(
-                                "Side Swipe",
-                                "Same Direction Swipe",
-                                "Opposite Direction Swipe",
-                                "Another Vehicle Swiped My Parked Vehicle",
-                                "I Swiped Another Parked Vehicle",
-                                "Other- Side Swipe");
-                          },
-                          child: const Text("Side Swipe")),
-                      ElevatedButton(
-                          onPressed: () {}, child: const Text("Hit and Run"))
-                    ],
+                  TextField(
+                    decoration: InputDecoration(
+                        label: Text("list names if possible")
+                    ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ElevatedButton(
-                          onPressed: () {},
-                          child: const Text("Side Impact Collision")),
-                      ElevatedButton(
-                          onPressed: () {},
-                          child: const Text("Head- on Collision")),
-                    ],
-                  )
+                ],
+                ),
+                ExpansionTile(
+                  title: Text("Adverse Vehicle"),trailing: Container(
+                  width: 140,
+                  child: CommonYesOrNo(),
+                ),
+                  childrenPadding: EdgeInsets.all(10),
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                          label: Text("list names if possible")
+                      ),
+                    ),
+                  ],
+                ),
+                ExpansionTile(
+                  title: Text("PKD"),trailing: Container(
+                  width: 140,
+                  child: CommonYesOrNo(),
+                ),
+                  childrenPadding: EdgeInsets.all(10),
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                          label: Text("list names if possible")
+                      ),
+                    ),
+                  ],
+                ),
+                ExpansionTile(
+                  title: Text("BKD"),trailing: Container(
+                  width: 140,
+                  child: CommonYesOrNo(),
+                ),
+                  childrenPadding: EdgeInsets.all(10),
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                          label: Text("list names if possible")
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+              ),
+              ExpansionTile(
+                title:Text("Fatality to anyone?"),
+
+              trailing:Container(
+                width: 140,
+                child: CommonYesOrNo(),
+              ),
+              children: [
+            CommonSelect(text: 'Ins Veh', text1: 'Adv Veh', text2: 'PKD', text3: 'BKD')
+              ],
+              ),
+              ExpansionTile(
+                initiallyExpanded: true,
+                title:Text("Was emergency service at the scene "),
+                children: [
+                  CommonSelect(text: 'Police', text1: 'Ambulance', text2: 'Both', text3: 'None')
+
                 ],
               ),
-            ),
-            SizedBox(height: 10,),
-            ExpansionTile(
-              title:Text("Fatality to anyone?"),
-
-            trailing:Container(
-              width: 120,
-              child: commonYesOrNo(),
-            ),
-            children: [
-              ExpansionTile(title: Text("mjhnghg"))
+              const SizedBox(
+                height: 30,
+              ),
+              SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                      style:
+                      ElevatedButton.styleFrom(backgroundColor: Colors.green),
+                      onPressed: () {
+                        Navigator.pushNamed(context, RouteConstants.secondScreen);
+                      },
+                      child: const Text("Next Step")))
             ],
-            )
-
-          ],
+          ),
         ),
       ),
     );
@@ -162,31 +252,7 @@ class _NewSecondScreenState extends State<NewSecondScreen> {
       },
     );
   }
-  Widget commonYesOrNo(){
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Radio(
-          value: 1,
-          groupValue: vehicleOption,
-          onChanged: (value) {
-            setState(() {
-              vehicleOption = value!;
-            });
-          },
-        ),
-        const Text("Yes"),
-        Radio(
-          value: 2,
-          groupValue: vehicleOption,
-          onChanged: (value) {
-            setState(() {
-              vehicleOption = value!;
-            });
-          },
-        ),
-        const Text("No"),
-      ],
-    );
-  }
+
+
+
 }
