@@ -154,7 +154,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       style:
                       ElevatedButton.styleFrom(backgroundColor: Colors.green),
                       onPressed: () {
-                          // Navigator.pushNamed(context, RouteConstants.profileScreen);
+                          Navigator.pushNamed(context, RouteConstants.otherInfoScreen);
                       },
                       child: const Text("Next Step")))
             ],
