@@ -15,33 +15,33 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   DateTime? selectedDateTime;
-  final TextEditingController _nameController =
-  TextEditingController(text: "");
+  final TextEditingController _nameController = TextEditingController(text: "");
   final TextEditingController _middleNameController =
-  TextEditingController(text: "");
+      TextEditingController(text: "");
   final TextEditingController _lastNameController =
-  TextEditingController(text: "");
-  final TextEditingController _dobController =
-  TextEditingController(text: "");
-  final TextEditingController _homeAddress =
-  TextEditingController(text: "");
+      TextEditingController(text: "");
+  final TextEditingController _dobController = TextEditingController(text: "");
+  final TextEditingController _homeAddress = TextEditingController(text: "");
   final TextEditingController _phoneNumberController =
-  TextEditingController(text: "");
+      TextEditingController(text: "");
   final TextEditingController _emailController =
-  TextEditingController(text: "");
+      TextEditingController(text: "");
   final TextEditingController _licenceController =
-  TextEditingController(text: "");
+      TextEditingController(text: "");
   @override
   Widget build(BuildContext context) {
     return CommonScaffold(
       title: "Step 5",
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20.0,horizontal: 10),
+          padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text("Profile Details",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+              const Text(
+                "Profile Details",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
               const HeightSpaceBox(size: 20),
               CommonTextField(
                 controller: _nameController,
@@ -135,24 +135,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: const CommonNetworkImage(
                       height: 100,
                       image:
-                      "https://st2.depositphotos.com/2931363/6263/i/450/depositphotos_62630621-stock-photo-young-man-making-selfie.jpg",
+                          "https://st2.depositphotos.com/2931363/6263/i/450/depositphotos_62630621-stock-photo-young-man-making-selfie.jpg",
                       placeHolder: AppAssets.sampleImage,
                     ),
                   ),
-                  TextButton(onPressed: (){}, child: const Text("Add Images")),
+                  TextButton(onPressed: () {}, child: const Text("Add Images")),
                   const WidthSpaceBox(size: 10),
                 ],
               ),
               const HeightSpaceBox(size: 10),
-              SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                      style:
-                      ElevatedButton.styleFrom(backgroundColor: Colors.green),
-                      onPressed: () {
-                          Navigator.pushNamed(context, RouteConstants.otherInfoScreen);
-                      },
-                      child: const Text("Next Step")))
             ],
           ),
         ),
@@ -160,5 +151,3 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 }
-
-

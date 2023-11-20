@@ -17,9 +17,9 @@ class FirstScreen extends StatefulWidget {
 
 class _FirstScreenState extends State<FirstScreen> {
   final TextEditingController _titleController =
-  TextEditingController(text: "");
+      TextEditingController(text: "");
   final TextEditingController _descriptionController =
-  TextEditingController(text: "");
+      TextEditingController(text: "");
   DateTime? selectedDateTime;
 
   bool isMap = false;
@@ -35,13 +35,12 @@ class _FirstScreenState extends State<FirstScreen> {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-          child: Column(
-              children: [
-                CommonTextField(
-                  controller:_titleController,
-                  labelText: "Title",
-                  hintText: "Title",
-                ),
+          child: Column(children: [
+            CommonTextField(
+              controller: _titleController,
+              labelText: "Title",
+              hintText: "Title",
+            ),
             const SizedBox(
               height: 5,
             ),
@@ -75,8 +74,9 @@ class _FirstScreenState extends State<FirstScreen> {
               child: Container(
                 height: 55,
                 width: double.infinity,
-                decoration:
-                    BoxDecoration(border: Border.all(color: Colors.grey),borderRadius: BorderRadius.all(Radius.circular(5))),
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey),
+                    borderRadius: const BorderRadius.all(Radius.circular(5))),
                 child: selectedDateTime == null
                     ? const Center(child: Text("Select Date and Time"))
                     : Center(
@@ -125,15 +125,6 @@ class _FirstScreenState extends State<FirstScreen> {
               height: 10,
             ),
             selectIncident(),
-            SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                    style:
-                        ElevatedButton.styleFrom(backgroundColor: Colors.green),
-                    onPressed: () {
-                      Navigator.pushNamed(context, RouteConstants.newSecondScreen);
-                    },
-                    child: const Text("Next Step")))
           ]),
         ),
       ),
@@ -236,10 +227,14 @@ class _FirstScreenState extends State<FirstScreen> {
                 Container(
                   height: 250,
                   width: 320,
-                  child: CommonNetworkImage(image: "https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/w_2240,c_limit/GoogleMapTA.jpg",height: 250,placeHolder: AppAssets.sampleMaps),
                   decoration: BoxDecoration(
                       color: Colors.amber,
                       border: Border.all(color: Colors.black)),
+                  child: const CommonNetworkImage(
+                      image:
+                          "https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/w_2240,c_limit/GoogleMapTA.jpg",
+                      height: 250,
+                      placeHolder: AppAssets.sampleMaps),
                 ),
                 const SizedBox(
                   height: 10,

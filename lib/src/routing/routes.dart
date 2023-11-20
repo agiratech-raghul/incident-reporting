@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 
 import '../features/splash/screen/splash_screen.dart';
 
-
 class RouteManager {
   MaterialPageRoute<dynamic> route(RouteSettings settings) {
     dynamic data = settings.arguments != null ? settings.arguments ?? {} : {};
@@ -29,20 +28,22 @@ class RouteManager {
             settings: const RouteSettings(name: RouteConstants.initialScreen),
             builder: (context) => const FirstScreen());
       case RouteConstants.secondScreen:
+        bool? isAnotherVehicles = data["isAnotherVehicle"] ?? false;
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.secondScreen),
-            builder: (context) => const ThirdScreen());
+            builder: (context) =>
+                ThirdScreen(isAnotherVehicle: isAnotherVehicles));
       case RouteConstants.newSecondScreen:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.newSecondScreen),
-            builder: (context) =>  SecondScreen());
+            builder: (context) => const SecondScreen());
       case RouteConstants.profileScreen:
         return MaterialPageRoute(
-            settings: const RouteSettings(name: RouteConstants.initialScreen),
+            settings: const RouteSettings(name: RouteConstants.profileScreen),
             builder: (context) => const ProfileScreen());
       case RouteConstants.otherInfoScreen:
         return MaterialPageRoute(
-            settings: const RouteSettings(name: RouteConstants.initialScreen),
+            settings: const RouteSettings(name: RouteConstants.otherInfoScreen),
             builder: (context) => const OtherInfoScreen());
       default:
         return MaterialPageRoute(

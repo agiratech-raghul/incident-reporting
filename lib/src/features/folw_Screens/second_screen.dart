@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:incident_reporting/src/common_widgets/common_scaffold.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/common_select.dart';
@@ -14,11 +13,10 @@ class SecondScreen extends StatefulWidget {
 }
 
 class _SecondScreenState extends State<SecondScreen> {
-
   @override
   Widget build(BuildContext context) {
     return CommonScaffold(
-        title: "Step 2",
+      title: "Step 2",
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
@@ -71,116 +69,117 @@ class _SecondScreenState extends State<SecondScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 10,),
-              ExpansionTile(title: Text("Injuries to anyone?"),
-              trailing: Container(
-                width: 140,
-                child: CommonYesOrNo(),
+              const SizedBox(
+                height: 10,
               ),
-              children: [
-                ExpansionTile(
-                  title: Text("Insured Vehicle"),trailing: Container(
+              const ExpansionTile(
+                title: Text("Injuries to anyone?"),
+                trailing: SizedBox(
                   width: 140,
                   child: CommonYesOrNo(),
                 ),
-                childrenPadding: EdgeInsets.all(10),
                 children: [
-                  TextField(
-                    decoration: InputDecoration(
-                        label: Text("list names if possible")
+                  ExpansionTile(
+                    title: Text("Insured Vehicle"),
+                    trailing: SizedBox(
+                      width: 140,
+                      child: CommonYesOrNo(),
                     ),
+                    childrenPadding: EdgeInsets.all(10),
+                    children: [
+                      TextField(
+                        decoration: InputDecoration(
+                            label: Text("list names if possible")),
+                      ),
+                    ],
+                  ),
+                  ExpansionTile(
+                    title: Text("Adverse Vehicle"),
+                    trailing: SizedBox(
+                      width: 140,
+                      child: CommonYesOrNo(),
+                    ),
+                    childrenPadding: EdgeInsets.all(10),
+                    children: [
+                      TextField(
+                        decoration: InputDecoration(
+                            label: Text("list names if possible")),
+                      ),
+                    ],
+                  ),
+                  ExpansionTile(
+                    title: Text("PKD"),
+                    trailing: SizedBox(
+                      width: 140,
+                      child: CommonYesOrNo(),
+                    ),
+                    childrenPadding: EdgeInsets.all(10),
+                    children: [
+                      TextField(
+                        decoration: InputDecoration(
+                            label: Text("list names if possible")),
+                      ),
+                    ],
+                  ),
+                  ExpansionTile(
+                    title: Text("BKD"),
+                    trailing: SizedBox(
+                      width: 140,
+                      child: CommonYesOrNo(),
+                    ),
+                    childrenPadding: EdgeInsets.all(10),
+                    children: [
+                      TextField(
+                        decoration: InputDecoration(
+                            label: Text("list names if possible")),
+                      ),
+                    ],
                   ),
                 ],
-                ),
-                ExpansionTile(
-                  title: Text("Adverse Vehicle"),trailing: Container(
+              ),
+              const ExpansionTile(
+                title: Text("Fatality to anyone?"),
+                trailing: SizedBox(
                   width: 140,
                   child: CommonYesOrNo(),
                 ),
-                  childrenPadding: EdgeInsets.all(10),
-                  children: [
-                    TextField(
-                      decoration: InputDecoration(
-                          label: Text("list names if possible")
-                      ),
-                    ),
-                  ],
-                ),
-                ExpansionTile(
-                  title: Text("PKD"),trailing: Container(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                  childrenPadding: EdgeInsets.all(10),
-                  children: [
-                    TextField(
-                      decoration: InputDecoration(
-                          label: Text("list names if possible")
-                      ),
-                    ),
-                  ],
-                ),
-                ExpansionTile(
-                  title: Text("BKD"),trailing: Container(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                  childrenPadding: EdgeInsets.all(10),
-                  children: [
-                    TextField(
-                      decoration: InputDecoration(
-                          label: Text("list names if possible")
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-              ),
-              ExpansionTile(
-                title:Text("Fatality to anyone?"),
-
-              trailing:Container(
-                width: 140,
-                child: CommonYesOrNo(),
-              ),
-              children: [
-            CommonSelect(text: 'Ins Veh', text1: 'Adv Veh', text2: 'PKD', text3: 'BKD')
-              ],
-              ),
-              ExpansionTile(
-                initiallyExpanded: true,
-                title:Text("Was emergency service at the scene "),
                 children: [
-                  CommonSelect(text: 'Police', text1: 'Ambulance', text2: 'Both', text3: 'None')
-
+                  CommonSelect(
+                      text: 'Ins Veh',
+                      text1: 'Adv Veh',
+                      text2: 'PKD',
+                      text3: 'BKD')
+                ],
+              ),
+              const ExpansionTile(
+                initiallyExpanded: true,
+                title: Text("Was emergency service at the scene "),
+                children: [
+                  CommonSelect(
+                      text: 'Police',
+                      text1: 'Ambulance',
+                      text2: 'Both',
+                      text3: 'None')
                 ],
               ),
               const SizedBox(
                 height: 30,
               ),
-              SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                      style:
-                      ElevatedButton.styleFrom(backgroundColor: Colors.green),
-                      onPressed: () {
-                        Navigator.pushNamed(context, RouteConstants.secondScreen);
-                      },
-                      child: const Text("Next Step")))
             ],
           ),
         ),
       ),
     );
   }
+
   Future<void> showMyIncedent(
-      String? title,
-      String? one,
-      String? two,
-      String? three,
-      String? four,
-      String? five,
-      ) async {
+    String? title,
+    String? one,
+    String? two,
+    String? three,
+    String? four,
+    String? five,
+  ) async {
     return showDialog<void>(
       context: context,
       barrierDismissible: true, // user must tap button!
@@ -251,7 +250,4 @@ class _SecondScreenState extends State<SecondScreen> {
       },
     );
   }
-
-
-
 }
