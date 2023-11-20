@@ -30,6 +30,8 @@ dependencies:
   #Widgets
   image_picker: ^0.8.7+4
   speech_to_text: ^6.4.0
+  mime: ^1.0.4
+  video_player: ^2.8.1
 
 dev_dependencies:
   flutter_test:

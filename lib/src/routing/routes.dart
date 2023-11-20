@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 
 import '../features/splash/screen/splash_screen.dart';
 
-
 class RouteManager {
   MaterialPageRoute<dynamic> route(RouteSettings settings) {
     dynamic data = settings.arguments != null ? settings.arguments ?? {} : {};
@@ -35,7 +34,7 @@ class RouteManager {
       case RouteConstants.newSecondScreen:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.newSecondScreen),
-            builder: (context) =>  NewSecondScreen());
+            builder: (context) => const NewSecondScreen());
       case RouteConstants.profileScreen:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.initialScreen),
