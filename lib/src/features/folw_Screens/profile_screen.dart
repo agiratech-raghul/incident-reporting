@@ -40,7 +40,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             children: [
               const Text(
                 "Profile Details",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
               ),
               const HeightSpaceBox(size: 20),
               CommonTextField(

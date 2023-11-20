@@ -6,14 +6,23 @@ class CommonNetworkImage extends StatelessWidget {
   final String image;
   final String? placeHolder;
   final double? height;
+  final double? width;
+
   const CommonNetworkImage(
-      {Key? key, required this.image, this.placeHolder, this.height})
+      {Key? key,
+      required this.image,
+      this.placeHolder,
+      this.height,
+      this.width})
       : super(key: key);
   @override
-  Widget build(BuildContext context,) {
+  Widget build(
+    BuildContext context,
+  ) {
     return Image.network(
       image,
-      height: height!,
+      height: height,
+      width: width,
       loadingBuilder: (context, child, loadingProgress) {
         final totalBytes = loadingProgress?.expectedTotalBytes;
         final bytesLoaded = loadingProgress?.cumulativeBytesLoaded;
@@ -31,10 +40,9 @@ class CommonNetworkImage extends StatelessWidget {
       },
       fit: BoxFit.cover,
       errorBuilder: (context, error, stackTrace) {
-        return
-            Image.asset(
-              placeHolder ?? AppAssets.sampleImage,
-            );
+        return Image.asset(
+          placeHolder ?? AppAssets.sampleImage,
+        );
       },
     );
   }

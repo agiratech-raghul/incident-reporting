@@ -15,15 +15,7 @@ class ThirdScreen extends StatefulWidget {
 }
 
 class _ThirdScreenState extends State<ThirdScreen> {
-  final TextEditingController _vehicleModelController =
-      TextEditingController(text: "");
-  final TextEditingController _vehicleColorController =
-      TextEditingController(text: "");
-  final TextEditingController _plateNumberController =
-      TextEditingController(text: "");
-  final TextEditingController _vinController = TextEditingController(text: "");
-
-  bool _isEnable = false;
+  final bool _isEnable = false;
   bool addPassenger = false;
   int selectedOption = 2;
   int vehicleOption = 2;
@@ -48,7 +40,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
       title: widget.isAnotherVehicle! ? "Step 4" : "Step 3",
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Padding(
@@ -59,70 +51,80 @@ class _ThirdScreenState extends State<ThirdScreen> {
                       : "Accident with Another Vehicle",
                   style: const TextStyle(fontSize: 25)),
             ),
+            const Text("Vehicle Details",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                )),
             Card(
-              color: Colors.grey.shade200,
-              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+              shape: Border.all(
+                color: Colors.black12,
+              ),
+              color: const Color.fromRGBO(206, 227, 226, 1),
+              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 0),
               child: Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text("Vehicle Details",
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold)),
-                        IconButton(
-                            icon: const Icon(Icons.edit),
-                            onPressed: () {
-                              setState(() {
-                                _isEnable = true;
-                              });
-                            })
-                      ],
-                    ),
-                    CommonTextField(
-                        controller: _vehicleModelController,
-                        isEnable: _isEnable,
-                        hintText: "Vehicle Model"),
-                    CommonTextField(
-                        controller: _vehicleColorController,
-                        isEnable: _isEnable,
-                        hintText: "Vehicle Color"),
-                    CommonTextField(
-                        controller: _plateNumberController,
-                        isEnable: _isEnable,
-                        hintText: "Plate Number"),
-                    CommonTextField(
-                        controller: _vinController,
-                        isEnable: _isEnable,
-                        hintText: "Vin Number"),
-                    Row(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: const CommonNetworkImage(
-                            height: 50,
-                            image:
-                                "https://vardenchi.com/cdn/shop/products/JawarearNPindicator_2.progressive.jpg?v=1633009490",
-                            placeHolder: AppAssets.sampleImage,
+                child: SizedBox(
+                  height: 230,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 2,
+                        child: Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const CommonTextField(hintText: "Vehicle Model"),
+                              const CommonTextField(hintText: "Vehicle Color"),
+                              const CommonTextField(hintText: "Plate Number"),
+                              const CommonTextField(hintText: "Vin Number"),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(8),
+                                    child: const CommonNetworkImage(
+                                      height: 50,
+                                      width: 50,
+                                      image:
+                                          "https://vardenchi.com/cdn/shop/products/JawarearNPindicator_2.progressive.jpg?v=1633009490",
+                                      placeHolder: AppAssets.sampleImage,
+                                    ),
+                                  ),
+                                  const WidthSpaceBox(size: 10),
+                                  ClipRRect(
+                                      borderRadius: BorderRadius.circular(8),
+                                      child: Image.asset(
+                                          height: 50, AppAssets.addIcon)),
+                                ],
+                              ),
+                            ],
                           ),
                         ),
-                        const WidthSpaceBox(size: 10),
-                        ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: Image.asset(height: 50, AppAssets.addIcon)),
-                      ],
-                    ),
-                    const HeightSpaceBox(size: 20)
-                  ],
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Container(
+                          child: const FittedBox(
+                            child: CommonNetworkImage(
+                              height: 100,
+                              width: 100,
+                              image: "https://i.gifer.com/VdgG.gif",
+                              placeHolder: AppAssets.sampleImage,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
             const Text("Driver Details",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
             const CommonDetailsCard(isDriver: true),
             const HeightSpaceBox(size: 20),
             Center(
@@ -158,9 +160,9 @@ class _ThirdScreenState extends State<ThirdScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text("Passenger Detail",
+                  const Text("Passenger Details",
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
                   TextButton(
                       onPressed: () {
                         setState(() {
@@ -219,7 +221,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                     style:
                         ElevatedButton.styleFrom(backgroundColor: Colors.green),
                     onPressed: () {
-                      if (widget.isAnotherVehicle!) {
+                      if (vehicleOption == 2) {
                         Navigator.pushNamed(
                             context, RouteConstants.profileScreen);
                       } else {
@@ -239,13 +241,9 @@ class _ThirdScreenState extends State<ThirdScreen> {
 class CommonTextField extends StatelessWidget {
   const CommonTextField({
     super.key,
-    required this.controller,
-    required this.isEnable,
     required this.hintText,
   });
 
-  final TextEditingController controller;
-  final bool isEnable;
   final String hintText;
 
   @override
@@ -253,10 +251,7 @@ class CommonTextField extends StatelessWidget {
     return SizedBox(
       height: 40,
       child: TextField(
-        controller: controller,
-        enabled: isEnable,
         decoration: InputDecoration(
-          border: InputBorder.none,
           hintText: hintText,
         ),
       ),
