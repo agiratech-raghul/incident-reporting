@@ -1,25 +1,24 @@
 
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/common_widgets/common_scaffold.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/common_select.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/common_yes_or_no.dart';
 
 import '../../routing/route_constants.dart';
 
-class NewSecondScreen extends StatefulWidget {
-  const NewSecondScreen({super.key});
+class SecondScreen extends StatefulWidget {
+  const SecondScreen({super.key});
 
   @override
-  State<NewSecondScreen> createState() => _NewSecondScreenState();
+  State<SecondScreen> createState() => _SecondScreenState();
 }
 
-class _NewSecondScreenState extends State<NewSecondScreen> {
+class _SecondScreenState extends State<SecondScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Step 2"),
-      ),
+    return CommonScaffold(
+        title: "Step 2",
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),

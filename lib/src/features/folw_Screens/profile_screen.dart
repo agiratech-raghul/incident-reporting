@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/common_widgets/common_scaffold.dart';
+import 'package:incident_reporting/src/common_widgets/common_text_field.dart';
 import 'package:incident_reporting/src/common_widgets/src/images/common_network_image.dart';
 import 'package:incident_reporting/src/routing/route_constants.dart';
 import 'package:incident_reporting/src/ui_utils/app_assets.dart';
@@ -31,23 +33,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
   TextEditingController(text: "");
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Step 5"),
-        leading: IconButton(
-            icon: const Icon(Icons.close),
-            onPressed: () {
-              Navigator.pop(context);
-            }),
-      ),
+    return CommonScaffold(
+      title: "Step 5",
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20.0,horizontal: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Profile Details",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
-              HeightSpaceBox(size: 20),
-              ProfileTextField(
+              const Text("Profile Details",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+              const HeightSpaceBox(size: 20),
+              CommonTextField(
                 controller: _nameController,
                 labelText: "First Name",
                 hintText: "Enter Your First Name",
@@ -57,15 +53,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Row(
                   children: [
                     Expanded(
-                      child: ProfileTextField(
+                      child: CommonTextField(
                         controller: _middleNameController,
                         labelText: "Middle Name",
                         hintText: "Enter Your Middle Name",
                       ),
                     ),
-                    WidthSpaceBox(size: 6),
+                    const WidthSpaceBox(size: 6),
                     Expanded(
-                      child: ProfileTextField(
+                      child: CommonTextField(
                         controller: _lastNameController,
                         labelText: "Last Name",
                         hintText: "Enter Your Last Name",
@@ -102,36 +98,36 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     }
                   });
                 }),
-                child: ProfileTextField(
+                child: CommonTextField(
                   controller: _dobController,
                   labelText: "DOB",
                   hintText: "Enter Your DOB",
                   enabled: false,
-                  icon: Icon(Icons.calendar_month),
+                  icon: const Icon(Icons.calendar_month),
                 ),
               ),
-              ProfileTextField(
+              CommonTextField(
                 controller: _homeAddress,
                 labelText: "Home Address",
                 hintText: "Enter Your Address",
                 maxLines: 4,
               ),
-              ProfileTextField(
+              CommonTextField(
                 controller: _phoneNumberController,
                 labelText: "Phone Number",
                 hintText: "Enter Your Phone Number",
               ),
-              ProfileTextField(
+              CommonTextField(
                 controller: _emailController,
                 labelText: "Email ID",
                 hintText: "Enter Your Email ID",
               ),
-              ProfileTextField(
+              CommonTextField(
                 controller: _licenceController,
                 labelText: "Licence Number",
                 hintText: "Enter Your Licence Number",
               ),
-              HeightSpaceBox(size: 10),
+              const HeightSpaceBox(size: 10),
               Row(
                 children: [
                   ClipRRect(
@@ -143,11 +139,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       placeHolder: AppAssets.sampleImage,
                     ),
                   ),
-                  TextButton(onPressed: (){}, child: Text("Add Images")),
+                  TextButton(onPressed: (){}, child: const Text("Add Images")),
                   const WidthSpaceBox(size: 10),
                 ],
               ),
-              HeightSpaceBox(size: 10),
+              const HeightSpaceBox(size: 10),
               SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
@@ -165,36 +161,4 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 }
 
-class ProfileTextField extends StatelessWidget {
-  const ProfileTextField({
-    super.key, this.labelText, this.hintText, this.icon, this.maxLines, this.enabled =true, this.controller,
-  });
-  final String? labelText;
-  final String? hintText;
-  final Icon? icon;
-  final int? maxLines;
-  final bool? enabled;
-  final TextEditingController? controller;
 
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5,),
-      child: TextField(
-        controller: controller,
-        maxLines: maxLines??null,
-        decoration: InputDecoration(
-          alignLabelWithHint: true,
-            disabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 1, color: Colors.grey)),
-          border: OutlineInputBorder(),
-          labelText: labelText,
-          hintText: hintText,
-          enabled: enabled!,
-          suffixIcon: IconButton(onPressed: (){},icon: icon??SizedBox(),)
-          // prefixIcon:
-          // IconButton(onPressed: () {}, icon: icon!),
-        ),
-      ),
-    );
-  }
-}

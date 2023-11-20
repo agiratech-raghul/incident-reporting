@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/common_widgets/common_scaffold.dart';
 import 'package:incident_reporting/src/common_widgets/src/images/common_network_image.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/CommonDetailsCard.dart';
 import 'package:incident_reporting/src/routing/route_constants.dart';
 import 'package:incident_reporting/src/ui_utils/app_assets.dart';
 import 'package:incident_reporting/src/utils/src/helpers/size_utils.dart';
 
-class SecondScreen extends StatefulWidget {
-  const SecondScreen({super.key, this.isAnotherVehicle = false});
+class ThirdScreen extends StatefulWidget {
+  const ThirdScreen({super.key, this.isAnotherVehicle = false});
   final bool? isAnotherVehicle;
 
   @override
-  State<SecondScreen> createState() => _SecondScreenState();
+  State<ThirdScreen> createState() => _ThirdScreenState();
 }
 
-class _SecondScreenState extends State<SecondScreen> {
+class _ThirdScreenState extends State<ThirdScreen> {
   final TextEditingController _vehicleModelController =
   TextEditingController(text: "");
   final TextEditingController _vehicleColorController =
@@ -44,14 +45,8 @@ class _SecondScreenState extends State<SecondScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title:  Text(widget.isAnotherVehicle!?"Step 4":"Step 3"),
-        leading: IconButton(
-            icon: const Icon(Icons.close),
-            onPressed: () {
-              Navigator.pop(context);
-            }),
-      ),
+    return CommonScaffold(
+      title: widget.isAnotherVehicle!?"Step 4":"Step 3",
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
@@ -218,7 +213,7 @@ class _SecondScreenState extends State<SecondScreen> {
                           if(widget.isAnotherVehicle!) {
                             Navigator.pushNamed(context, RouteConstants.profileScreen);
                           } else{
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondScreen(isAnotherVehicle: true),));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const ThirdScreen(isAnotherVehicle: true),));
                             }
                         },
                         child: const Text("Next Step")))

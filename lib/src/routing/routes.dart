@@ -1,8 +1,8 @@
-import 'package:incident_reporting/src/features/folw_Screens/initial_screen.dart';
-import 'package:incident_reporting/src/features/folw_Screens/new_second_screen.dart';
+import 'package:incident_reporting/src/features/folw_Screens/first_screen.dart';
+import 'package:incident_reporting/src/features/folw_Screens/second_screen.dart';
 import 'package:incident_reporting/src/features/folw_Screens/other_details.dart';
 import 'package:incident_reporting/src/features/folw_Screens/profile_screen.dart';
-import 'package:incident_reporting/src/features/folw_Screens/seccond_screen.dart';
+import 'package:incident_reporting/src/features/folw_Screens/third_screen.dart';
 import 'package:incident_reporting/src/features/home_screen.dart';
 
 import '../../src/routing/route_constants.dart';
@@ -27,15 +27,15 @@ class RouteManager {
       case RouteConstants.initialScreen:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.initialScreen),
-            builder: (context) => const InitialScreen());
+            builder: (context) => const FirstScreen());
       case RouteConstants.secondScreen:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.secondScreen),
-            builder: (context) => const SecondScreen());
+            builder: (context) => const ThirdScreen());
       case RouteConstants.newSecondScreen:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.newSecondScreen),
-            builder: (context) =>  NewSecondScreen());
+            builder: (context) =>  SecondScreen());
       case RouteConstants.profileScreen:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.initialScreen),

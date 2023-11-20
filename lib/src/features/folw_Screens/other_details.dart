@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/common_widgets/common_scaffold.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/commonOptionsContainers.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/common_yes_or_no.dart';
 
@@ -24,15 +25,8 @@ class _OtherInfoScreenState extends State<OtherInfoScreen> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Step 6"),
-        leading: IconButton(
-            icon: const Icon(Icons.close),
-            onPressed: () {
-              Navigator.pop(context);
-            }),
-      ),
+    return CommonScaffold(
+      title: "Step 6",
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 15),

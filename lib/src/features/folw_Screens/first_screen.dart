@@ -1,17 +1,25 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/common_widgets/common_scaffold.dart';
+import 'package:incident_reporting/src/common_widgets/common_text_field.dart';
+import 'package:incident_reporting/src/common_widgets/src/images/common_network_image.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/map_widget.dart';
 import 'package:incident_reporting/src/routing/route_constants.dart';
+import 'package:incident_reporting/src/ui_utils/app_assets.dart';
 
-class InitialScreen extends StatefulWidget {
-  const InitialScreen({super.key});
+class FirstScreen extends StatefulWidget {
+  const FirstScreen({super.key});
 
   @override
-  State<InitialScreen> createState() => _InitialScreenState();
+  State<FirstScreen> createState() => _FirstScreenState();
 }
 
-class _InitialScreenState extends State<InitialScreen> {
+class _FirstScreenState extends State<FirstScreen> {
+  final TextEditingController _titleController =
+  TextEditingController(text: "");
+  final TextEditingController _descriptionController =
+  TextEditingController(text: "");
   DateTime? selectedDateTime;
 
   bool isMap = false;
@@ -22,39 +30,20 @@ class _InitialScreenState extends State<InitialScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.close),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        title: const Text(
-          'Create New Incident',
-          textAlign: TextAlign.center,
-        ),
-      ),
+    return CommonScaffold(
+      title: "Step 1",
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-          child: Column(children: [
-            const Center(
-                child: Text(
-              "Step 1",
-              style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
-            )),
+          child: Column(
+              children: [
+                CommonTextField(
+                  controller:_titleController,
+                  labelText: "Title",
+                  hintText: "Title",
+                ),
             const SizedBox(
-              height: 10,
-            ),
-            const TextField(
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Title',
-                  labelText: "Title"),
-            ),
-            const SizedBox(
-              height: 20,
+              height: 5,
             ),
             GestureDetector(
               onTap: (() {
@@ -84,10 +73,10 @@ class _InitialScreenState extends State<InitialScreen> {
                 });
               }),
               child: Container(
-                height: 45,
+                height: 55,
                 width: double.infinity,
                 decoration:
-                    BoxDecoration(border: Border.all(color: Colors.black)),
+                    BoxDecoration(border: Border.all(color: Colors.grey),borderRadius: BorderRadius.all(Radius.circular(5))),
                 child: selectedDateTime == null
                     ? const Center(child: Text("Select Date and Time"))
                     : Center(
@@ -99,7 +88,7 @@ class _InitialScreenState extends State<InitialScreen> {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             if (!isMap) ...[
               GestureDetector(
@@ -107,10 +96,10 @@ class _InitialScreenState extends State<InitialScreen> {
                   showMyDialog();
                 }),
                 child: Container(
-                  height: 40,
+                  height: 55,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      border: Border.all(color: Colors.pinkAccent)),
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(color: Colors.grey)),
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -124,27 +113,18 @@ class _InitialScreenState extends State<InitialScreen> {
               const MapScreen(),
             ],
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
-            TextFormField(
-              minLines: 5,
-              maxLines: null,
-              keyboardType: TextInputType.multiline,
-              decoration: const InputDecoration(
-                hintText: 'description',
-                hintStyle: TextStyle(color: Colors.grey),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                ),
-              ),
+            CommonTextField(
+              maxLines: 5,
+              labelText: "Description",
+              hintText: "Description",
+              controller: _descriptionController,
             ),
             const SizedBox(
-              height: 15,
+              height: 10,
             ),
             selectIncident(),
-            const SizedBox(
-              height: 30,
-            ),
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -162,7 +142,7 @@ class _InitialScreenState extends State<InitialScreen> {
 
   Row selectIncident() {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         GestureDetector(
           onTap: () {
@@ -174,15 +154,16 @@ class _InitialScreenState extends State<InitialScreen> {
           },
           child: Container(
             height: 100,
-            width: 100,
+            width: 125,
             decoration: BoxDecoration(
                 color: Colors.lightBlue[300],
+                borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                    color: select1 ? Colors.green : Colors.black54, width: 3)),
+                    color: select1 ? Colors.green : Colors.black54, width: 1)),
             child: const Center(
               child: Text(
                 "Accident with another vehicle",
-                style: TextStyle(fontSize: 15, color: Colors.white),
+                style: TextStyle(fontSize: 14, color: Colors.white),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -198,15 +179,16 @@ class _InitialScreenState extends State<InitialScreen> {
           },
           child: Container(
             height: 100,
-            width: 100,
+            width: 125,
             decoration: BoxDecoration(
                 color: Colors.lightBlue[300],
+                borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                    color: select2 ? Colors.green : Colors.black54, width: 3)),
+                    color: select2 ? Colors.green : Colors.black54, width: 1)),
             child: const Center(
               child: Text(
                 "Damaged public/private property",
-                style: TextStyle(fontSize: 15, color: Colors.white),
+                style: TextStyle(fontSize: 14, color: Colors.white),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -222,15 +204,16 @@ class _InitialScreenState extends State<InitialScreen> {
           },
           child: Container(
             height: 100,
-            width: 100,
+            width: 125,
             decoration: BoxDecoration(
                 color: Colors.lightBlue[300],
+                borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                    color: select3 ? Colors.green : Colors.black54, width: 3)),
+                    color: select3 ? Colors.green : Colors.black54, width: 1)),
             child: const Center(
               child: Text(
                 "Damage to pedestrian/other pedestrian/bicyclist",
-                style: TextStyle(fontSize: 15, color: Colors.white),
+                style: TextStyle(fontSize: 14, color: Colors.white),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -253,6 +236,7 @@ class _InitialScreenState extends State<InitialScreen> {
                 Container(
                   height: 250,
                   width: 320,
+                  child: CommonNetworkImage(image: "https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/w_2240,c_limit/GoogleMapTA.jpg",height: 250,placeHolder: AppAssets.sampleMaps),
                   decoration: BoxDecoration(
                       color: Colors.amber,
                       border: Border.all(color: Colors.black)),

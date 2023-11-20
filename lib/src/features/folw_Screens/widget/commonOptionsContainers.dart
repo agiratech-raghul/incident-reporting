@@ -45,13 +45,13 @@ class _CommonOptionsContainersState extends State<CommonOptionsContainers> {
                         color: select1 ? Colors.green : Colors.black54, width: 2)),
                 child: Center(
                   child: Text(
-                    widget.option1!,
+                    widget.option1??"",
                     style: TextStyle(fontSize: 30, color: Colors.black),
                     textAlign: TextAlign.center,
                   ),
                 ),
               ),
-              Text(widget.optionName1!)
+              Text(widget.optionName1??"")
             ],
           ),
         ),
@@ -75,13 +75,13 @@ class _CommonOptionsContainersState extends State<CommonOptionsContainers> {
                         color: select2 ? Colors.green : Colors.black54, width: 2)),
                 child: Center(
                   child: Text(
-                    widget.option2!,
+                    widget.option2??"",
                     style: TextStyle(fontSize: 30, color: Colors.black),
                     textAlign: TextAlign.center,
                   ),
                 ),
               ),
-              Text(widget.optionName2!)
+              Text(widget.optionName2??"")
             ],
           ),
         ),
@@ -105,13 +105,13 @@ class _CommonOptionsContainersState extends State<CommonOptionsContainers> {
                         color: select3 ? Colors.green : Colors.black54, width: 2)),
                 child: Center(
                   child: Text(
-                    widget.option3!,
+                    widget.option3??"",
                     style: TextStyle(fontSize: 30, color: Colors.black),
                     textAlign: TextAlign.center,
                   ),
                 ),
               ),
-              Text(widget.optionName3!)
+              Text(widget.optionName3??"")
             ],
           ),
         ),
@@ -135,13 +135,13 @@ class _CommonOptionsContainersState extends State<CommonOptionsContainers> {
                         color: select4 ? Colors.green : Colors.black54, width: 2)),
                 child: Center(
                   child: Text(
-                    widget.option4!,
+                    widget.option4??"",
                     style: TextStyle(fontSize: 30, color: Colors.black),
                     textAlign: TextAlign.center,
                   ),
                 ),
               ),
-              Text(widget.optionName4!)
+              Text(widget.optionName4??"")
             ],
           ),
         )
