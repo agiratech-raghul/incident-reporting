@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:incident_reporting/src/routing/route_constants.dart';
+import 'package:incident_reporting/src/utils/src/colors/app_colors.dart';
 
 class CommonScaffold extends StatelessWidget {
   const CommonScaffold({super.key, this.body, this.title});
@@ -18,7 +19,7 @@ class CommonScaffold extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green),
+                          backgroundColor: AppColors.secondaryColor),
                       onPressed: () {
                         print(route);
                         if (route == RouteConstants.initialScreen) {
@@ -35,6 +36,7 @@ class CommonScaffold extends StatelessWidget {
                       child: const Text("Next Step"))))
           : null,
       appBar: AppBar(
+        backgroundColor: AppColors.primaryColor,
         leading: IconButton(
           icon: const Icon(Icons.close),
           onPressed: () {
