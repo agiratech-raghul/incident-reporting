@@ -30,6 +30,8 @@ dependencies:
   #Widgets
   image_picker: ^0.8.7+4
   speech_to_text: ^6.4.0
+  signature: ^5.4.0
+  path_provider: ^2.1.1
 
 dev_dependencies:
   flutter_test:
