@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/common_widgets/common_text_field.dart';
 import 'package:incident_reporting/src/common_widgets/src/images/common_network_image.dart';
 import 'package:incident_reporting/src/ui_utils/app_assets.dart';
+import 'package:incident_reporting/src/utils/src/colors/app_colors.dart';
 
 class CommonDetailsCard extends StatelessWidget {
   const CommonDetailsCard({super.key, this.isDriver = false});
@@ -12,13 +14,13 @@ class CommonDetailsCard extends StatelessWidget {
       shape: Border.all(
         color: Colors.black12,
       ),
-      color: const Color.fromRGBO(206, 227, 226, 1),
+      color: AppColors.lightGrey,
       margin: isDriver
           ? const EdgeInsets.symmetric(vertical: 10)
           : const EdgeInsets.all(9),
       child: Container(
         padding: const EdgeInsets.all(8),
-        height: 260,
+        height: MediaQuery.of(context).size.height/2.45,
         width: 400,
         child: Column(
           children: [
@@ -44,31 +46,21 @@ class CommonDetailsCard extends StatelessWidget {
                   flex: 2,
                   child: Column(
                     children: [
-                      TextField(
-                        enabled: true,
-                        decoration: InputDecoration(label: Text("Name")),
+                      CommonTextField(
+                        labelText: "Name",
+                        hintText: "Name",
                       ),
-                      TextField(
-                        decoration: InputDecoration(label: Text("Email")),
+                      CommonTextField(
+                        labelText: "Phone Number",
+                        hintText: "Phone Number",
                       ),
-                      TextField(
-                        decoration:
-                            InputDecoration(label: Text("Phone Number")),
+                      CommonTextField(
+                        labelText: "Email",
+                        hintText: "Email",
                       ),
                     ],
                   ),
                 ),
-                Expanded(
-                    flex: 2,
-                    child: FittedBox(
-                      child: CommonNetworkImage(
-                        height: 100,
-                        width: 100,
-                        image:
-                            "https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/7804129/driver-clipart-md.png",
-                        placeHolder: AppAssets.sampleImage,
-                      ),
-                    )),
               ],
             ),
           ],

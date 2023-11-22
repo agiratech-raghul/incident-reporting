@@ -28,15 +28,15 @@ class RouteManager {
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.initialScreen),
             builder: (context) => const FirstScreen());
-      case RouteConstants.secondScreen:
+      case RouteConstants.thirdScreen:
         bool? isAnotherVehicles = data["isAnotherVehicle"] ?? false;
         return MaterialPageRoute(
-            settings: const RouteSettings(name: RouteConstants.secondScreen),
+            settings: const RouteSettings(name: RouteConstants.thirdScreen),
             builder: (context) =>
                 ThirdScreen(isAnotherVehicle: isAnotherVehicles));
-      case RouteConstants.newSecondScreen:
+      case RouteConstants.secondScreen:
         return MaterialPageRoute(
-            settings: const RouteSettings(name: RouteConstants.newSecondScreen),
+            settings: const RouteSettings(name: RouteConstants.secondScreen),
             builder: (context) => const SecondScreen());
       case RouteConstants.profileScreen:
         return MaterialPageRoute(
