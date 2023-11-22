@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/utils/src/colors/app_colors.dart';
 
 class CommonYesOrNo extends StatefulWidget {
   const CommonYesOrNo({super.key});
@@ -17,6 +18,7 @@ class _CommonYesOrNoState extends State<CommonYesOrNo> {
         Radio(
           value: 1,
           groupValue: isValue,
+          activeColor: AppColors.primaryColor,
           onChanged: (value) {
             setState(() {
               isValue = value;
@@ -28,6 +30,7 @@ class _CommonYesOrNoState extends State<CommonYesOrNo> {
         Radio(
           value: 2,
           groupValue: isValue,
+          activeColor: AppColors.primaryColor,
           onChanged: (value) {
             setState(() {
               isValue = value;

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/common_widgets/common_expansion_tile.dart';
 import 'package:incident_reporting/src/common_widgets/common_scaffold.dart';
+import 'package:incident_reporting/src/common_widgets/common_text_field.dart';
 import 'package:incident_reporting/src/common_widgets/src/buttons/outline_button.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/common_select.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/common_yes_or_no.dart';
@@ -15,6 +17,10 @@ class SecondScreen extends StatefulWidget {
 
 class _SecondScreenState extends State<SecondScreen> {
   bool isSelected = false;
+  bool isOptionsSelected = false;
+  bool expand = false;
+  FocusNode? myFocusNode = FocusNode();
+  final TextEditingController _insuredVehicleController = TextEditingController(text: "");
   @override
   Widget build(BuildContext context) {
     return CommonScaffold(
@@ -35,14 +41,14 @@ class _SecondScreenState extends State<SecondScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Same Direction Swipe"),
+                        const Text("Same Direction Swipe"),
 
                         OutlinedButton(onPressed: (){
                           setState(() {
                             isSelected = !isSelected;
                           });
 
-                        }, child:Text("Change"))
+                        }, child:const Text("Change"))
                       ],
                     ),
                   )
@@ -125,101 +131,58 @@ class _SecondScreenState extends State<SecondScreen> {
               const SizedBox(
                 height: 10,
               ),
-              const ExpansionTile(
-                title: Text("Injuries to anyone?"),
+               CommonExpansionCard(
+                title: "Injuries to anyone?",
+                trailing: const SizedBox(
+                  width: 140,
+                  child: CommonYesOrNo(),
+                ),
+                widget:
+                GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      isOptionsSelected = !isOptionsSelected;
+                    });
+                  },
+                  child: Column(
+                    children: [
+                      const CommonSelect(
+                          text: 'Ins Veh',
+                          text1: 'Adv Veh',
+                          text2: 'PKD',
+                          text3: 'BKD'),
+                      !isOptionsSelected? CommonTextField(
+                        horizontal: 20,
+                      controller: _insuredVehicleController,border: InputBorder.none,
+                      labelText: "List if Any Names Possible",
+                      ):const SizedBox()
+                    ],
+                  ),
+                ),
+              ),
+              const CommonExpansionCard(
+                title: "Fatality to anyone?",
                 trailing: SizedBox(
                   width: 140,
                   child: CommonYesOrNo(),
                 ),
-                children: [
-                  ExpansionTile(
-                    title: Text("Insured Vehicle"),
-                    trailing: SizedBox(
-                      width: 140,
-                      child: CommonYesOrNo(),
-                    ),
-                    childrenPadding: EdgeInsets.all(10),
-                    children: [
-                      TextField(
-                        decoration: InputDecoration(
-                            label: Text("list names if possible")),
-                      ),
-                    ],
-                  ),
-                  ExpansionTile(
-                    title: Text("Adverse Vehicle"),
-                    trailing: SizedBox(
-                      width: 140,
-                      child: CommonYesOrNo(),
-                    ),
-                    childrenPadding: EdgeInsets.all(10),
-                    children: [
-                      TextField(
-                        decoration: InputDecoration(
-                            label: Text("list names if possible")),
-                      ),
-                    ],
-                  ),
-                  ExpansionTile(
-                    title: Text("PKD"),
-                    trailing: SizedBox(
-                      width: 140,
-                      child: CommonYesOrNo(),
-                    ),
-                    childrenPadding: EdgeInsets.all(10),
-                    children: [
-                      TextField(
-                        decoration: InputDecoration(
-                            label: Text("list names if possible")),
-                      ),
-                    ],
-                  ),
-                  ExpansionTile(
-                    title: Text("BKD"),
-                    trailing: SizedBox(
-                      width: 140,
-                      child: CommonYesOrNo(),
-                    ),
-                    childrenPadding: EdgeInsets.all(10),
-                    children: [
-                      TextField(
-                        decoration: InputDecoration(
-                            label: Text("list names if possible")),
-                      ),
-                    ],
-                  ),
-                ],
+                widget: CommonSelect(
+                    text: 'Ins Veh',
+                    text1: 'Adv Veh',
+                    text2: 'PKD',
+                    text3: 'BKD'),
               ),
-              const ExpansionTile(
-                title: Text("Fatality to anyone?"),
-                trailing: SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                children: [
-                  CommonSelect(
-                      text: 'Ins Veh',
-                      text1: 'Adv Veh',
-                      text2: 'PKD',
-                      text3: 'BKD')
-                ],
-              ),
-              const ExpansionTile(
+              const CommonExpansionCard(
                 initiallyExpanded: true,
-                title: Text("Was emergency service at the scene "),
-                children: [
-                  CommonSelect(
-                      text: 'Police',
-                      text1: 'Ambulance',
-                      text2: 'Both',
-                      text3: 'None')
-                ],
+                title: "Was emergency service at the scene?",
+                widget:  CommonSelect(
+                    text: 'Police',
+                    text1: 'Ambulance',
+                    text2: 'Both',
+                    text3: 'None'),
               ),
-              const SizedBox(
-                height: 30,
-              ),
-            ],
-          ),
+          ]
+          )
         ),
       ),
     );
@@ -261,7 +224,7 @@ class _SecondScreenState extends State<SecondScreen> {
                         child: Padding(
                           padding: const EdgeInsets.all(6.0),
                           child: Center(
-                            child: Text(one!, textAlign: TextAlign.center,style: TextStyle(fontSize: 14)),
+                            child: Text(one!, textAlign: TextAlign.center,style: const TextStyle(fontSize: 14)),
                           ),
                         ),
                       ),
@@ -274,7 +237,7 @@ class _SecondScreenState extends State<SecondScreen> {
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),
                         child: Center(
-                          child: Text(two!, textAlign: TextAlign.center,style: TextStyle(fontSize: 14)),
+                          child: Text(two!, textAlign: TextAlign.center,style: const TextStyle(fontSize: 14)),
                         ),
                       ),
                     ),
@@ -286,7 +249,7 @@ class _SecondScreenState extends State<SecondScreen> {
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),
                         child: Center(
-                          child: Text(three!, textAlign: TextAlign.center,style: TextStyle(fontSize: 14)),
+                          child: Text(three!, textAlign: TextAlign.center,style: const TextStyle(fontSize: 14)),
                         ),
                       ),
                     )
@@ -305,7 +268,7 @@ class _SecondScreenState extends State<SecondScreen> {
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),
                         child: Center(
-                          child: Text(four!, textAlign: TextAlign.center,style: TextStyle(fontSize: 14)),
+                          child: Text(four!, textAlign: TextAlign.center,style: const TextStyle(fontSize: 14)),
                         ),
                       ),
                     ),
@@ -317,7 +280,7 @@ class _SecondScreenState extends State<SecondScreen> {
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),
                         child: Center(
-                          child: Text(five!, textAlign: TextAlign.center,style: TextStyle(fontSize: 14)),
+                          child: Text(five!, textAlign: TextAlign.center,style: const TextStyle(fontSize: 14)),
                         ),
                       ),
                     )
@@ -331,3 +294,5 @@ class _SecondScreenState extends State<SecondScreen> {
     );
   }
 }
+
+

@@ -3,16 +3,17 @@ import 'package:incident_reporting/src/routing/route_constants.dart';
 import 'package:incident_reporting/src/utils/src/colors/app_colors.dart';
 
 class CommonScaffold extends StatelessWidget {
-  const CommonScaffold({super.key, this.body, this.title});
+  const CommonScaffold({super.key, this.body, this.title, this.bottomNavigationBar});
   final Widget? body;
   final String? title;
+  final Widget? bottomNavigationBar;
 
   @override
   Widget build(BuildContext context) {
     final route = ModalRoute.of(context)?.settings.name;
     print(route);
     return Scaffold(
-      bottomNavigationBar: route != RouteConstants.secondScreen
+      bottomNavigationBar: route != RouteConstants.thirdScreen
           ? Padding(
               padding: const EdgeInsets.all(8.0),
               child: SizedBox(
@@ -24,17 +25,20 @@ class CommonScaffold extends StatelessWidget {
                         print(route);
                         if (route == RouteConstants.initialScreen) {
                           Navigator.pushNamed(
-                              context, RouteConstants.newSecondScreen);
-                        } else if (route == RouteConstants.newSecondScreen) {
-                          Navigator.pushNamed(
                               context, RouteConstants.secondScreen);
-                        } else if (route == RouteConstants.profileScreen) {
+                        } else if (route == RouteConstants.secondScreen) {
+                          Navigator.pushNamed(
+                              context, RouteConstants.thirdScreen);
+                        } else if (route == RouteConstants.thirdScreen) {
+                          Navigator.pushNamed(
+                              context, RouteConstants.profileScreen);
+                        }else if (route == RouteConstants.profileScreen) {
                           Navigator.pushNamed(
                               context, RouteConstants.otherInfoScreen);
                         }
                       },
                       child: const Text("Next Step"))))
-          : null,
+          : bottomNavigationBar,
       appBar: AppBar(
         backgroundColor: AppColors.primaryColor,
         leading: IconButton(
