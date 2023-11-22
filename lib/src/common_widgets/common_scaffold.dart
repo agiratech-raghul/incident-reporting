@@ -31,6 +31,9 @@ class CommonScaffold extends StatelessWidget {
                         } else if (route == RouteConstants.profileScreen) {
                           Navigator.pushNamed(
                               context, RouteConstants.otherInfoScreen);
+                        } else if (route == RouteConstants.otherInfoScreen) {
+                          Navigator.pushNamed(
+                              context, RouteConstants.lastScreen);
                         }
                       },
                       child: const Text("Next Step"))))
