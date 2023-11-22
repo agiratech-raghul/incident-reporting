@@ -20,126 +20,127 @@ class _SecondScreenState extends State<SecondScreen> {
   bool isOptionsSelected = false;
   bool expand = false;
   FocusNode? myFocusNode = FocusNode();
-  final TextEditingController _insuredVehicleController = TextEditingController(text: "");
+  final TextEditingController _insuredVehicleController =
+      TextEditingController(text: "");
   @override
   Widget build(BuildContext context) {
     return CommonScaffold(
+      isFlow: true,
       title: "Step 2",
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-          child: Column(
-            children: [
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+            child: Column(children: [
               Card(
                 elevation: 0,
                 color: AppColors.lightGrey,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10),
-                  child: isSelected?
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text("Same Direction Swipe"),
-
-                        OutlinedButton(onPressed: (){
-                          setState(() {
-                            isSelected = !isSelected;
-                          });
-
-                        }, child:const Text("Change"))
-                      ],
-                    ),
-                  )
-                      :Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          SecondaryButton(
-                            onPressed: (){
-                              showMyIncident(
-                                  "Rear End Collision",
-                                  "Same Direction Swipe",
-                                  "Opposite Direction Swipe",
-                                  "Another Vehicle Swiped My Parked Vehicle",
-                                  "I Swiped Another Parked Vehicle",
-                                  "Other- Side Swipe");
-                            },
-                            text: "Rear End Collision",
+                  child: isSelected
+                      ? Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Text("Same Direction Swipe"),
+                              OutlinedButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      isSelected = !isSelected;
+                                    });
+                                  },
+                                  child: const Text("Change"))
+                            ],
                           ),
-                          SecondaryButton(
-                            onPressed: (){
-                              showMyIncident(
-                                  "Side Swipe",
-                                  "Same Direction Swipe",
-                                  "Opposite Direction Swipe",
-                                  "Another Vehicle Swiped My Parked Vehicle",
-                                  "I Swiped Another Parked Vehicle",
-                                  "Other- Side Swipe");
-                            },
-                            text: "Side Swipe",
-                          ),
-                          SecondaryButton(
-                            onPressed: (){
-                              showMyIncident(
-                                  "Hit and Run",
-                                  "Same Direction Swipe",
-                                  "Opposite Direction Swipe",
-                                  "Another Vehicle Swiped My Parked Vehicle",
-                                  "I Swiped Another Parked Vehicle",
-                                  "Other- Side Swipe");
-                            },
-                            text: "Hit and Run",
-                          ),
-                        ],
-                      ),
-                      Row(mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SecondaryButton(
-                            onPressed: (){
-                              showMyIncident(
-                                  "Side Impact Collision",
-                                  "Same Direction Swipe",
-                                  "Opposite Direction Swipe",
-                                  "Another Vehicle Swiped My Parked Vehicle",
-                                  "I Swiped Another Parked Vehicle",
-                                  "Other- Side Swipe");
-                            },
-                            text: "Side Impact Collision",
-                          ),
-                          const WidthSpaceBox(size: 10),
-                          SecondaryButton(
-                            onPressed: (){
-                              showMyIncident(
-                                  "Head-On Collision",
-                                  "Same Direction Swipe",
-                                  "Opposite Direction Swipe",
-                                  "Another Vehicle Swiped My Parked Vehicle",
-                                  "I Swiped Another Parked Vehicle",
-                                  "Other- Side Swipe");
-                            },
-                            text: "Head-On Collision",
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
+                        )
+                      : Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                SecondaryButton(
+                                  onPressed: () {
+                                    showMyIncident(
+                                        "Rear End Collision",
+                                        "Same Direction Swipe",
+                                        "Opposite Direction Swipe",
+                                        "Another Vehicle Swiped My Parked Vehicle",
+                                        "I Swiped Another Parked Vehicle",
+                                        "Other- Side Swipe");
+                                  },
+                                  text: "Rear End Collision",
+                                ),
+                                SecondaryButton(
+                                  onPressed: () {
+                                    showMyIncident(
+                                        "Side Swipe",
+                                        "Same Direction Swipe",
+                                        "Opposite Direction Swipe",
+                                        "Another Vehicle Swiped My Parked Vehicle",
+                                        "I Swiped Another Parked Vehicle",
+                                        "Other- Side Swipe");
+                                  },
+                                  text: "Side Swipe",
+                                ),
+                                SecondaryButton(
+                                  onPressed: () {
+                                    showMyIncident(
+                                        "Hit and Run",
+                                        "Same Direction Swipe",
+                                        "Opposite Direction Swipe",
+                                        "Another Vehicle Swiped My Parked Vehicle",
+                                        "I Swiped Another Parked Vehicle",
+                                        "Other- Side Swipe");
+                                  },
+                                  text: "Hit and Run",
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SecondaryButton(
+                                  onPressed: () {
+                                    showMyIncident(
+                                        "Side Impact Collision",
+                                        "Same Direction Swipe",
+                                        "Opposite Direction Swipe",
+                                        "Another Vehicle Swiped My Parked Vehicle",
+                                        "I Swiped Another Parked Vehicle",
+                                        "Other- Side Swipe");
+                                  },
+                                  text: "Side Impact Collision",
+                                ),
+                                const WidthSpaceBox(size: 10),
+                                SecondaryButton(
+                                  onPressed: () {
+                                    showMyIncident(
+                                        "Head-On Collision",
+                                        "Same Direction Swipe",
+                                        "Opposite Direction Swipe",
+                                        "Another Vehicle Swiped My Parked Vehicle",
+                                        "I Swiped Another Parked Vehicle",
+                                        "Other- Side Swipe");
+                                  },
+                                  text: "Head-On Collision",
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                 ),
               ),
               const SizedBox(
                 height: 10,
               ),
-               CommonExpansionCard(
+              CommonExpansionCard(
                 title: "Injuries to anyone?",
                 trailing: const SizedBox(
                   width: 140,
                   child: CommonYesOrNo(),
                 ),
-                widget:
-                GestureDetector(
-                  onTap: (){
+                widget: GestureDetector(
+                  onTap: () {
                     setState(() {
                       isOptionsSelected = !isOptionsSelected;
                     });
@@ -151,11 +152,14 @@ class _SecondScreenState extends State<SecondScreen> {
                           text1: 'Adv Veh',
                           text2: 'PKD',
                           text3: 'BKD'),
-                      !isOptionsSelected? CommonTextField(
-                        horizontal: 20,
-                      controller: _insuredVehicleController,border: InputBorder.none,
-                      labelText: "List if Any Names Possible",
-                      ):const SizedBox()
+                      !isOptionsSelected
+                          ? CommonTextField(
+                              horizontal: 20,
+                              controller: _insuredVehicleController,
+                              border: InputBorder.none,
+                              labelText: "List if Any Names Possible",
+                            )
+                          : const SizedBox()
                     ],
                   ),
                 ),
@@ -175,15 +179,13 @@ class _SecondScreenState extends State<SecondScreen> {
               const CommonExpansionCard(
                 initiallyExpanded: true,
                 title: "Was emergency service at the scene?",
-                widget:  CommonSelect(
+                widget: CommonSelect(
                     text: 'Police',
                     text1: 'Ambulance',
                     text2: 'Both',
                     text3: 'None'),
               ),
-          ]
-          )
-        ),
+            ])),
       ),
     );
   }
@@ -209,7 +211,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         Navigator.pop(context);
                         setState(() {
                           setState(() {
@@ -220,11 +222,17 @@ class _SecondScreenState extends State<SecondScreen> {
                       child: Container(
                         height: 100,
                         width: 100,
-                        decoration: BoxDecoration(color: Colors.white,border: Border.all(color: AppColors.primaryColor),borderRadius: const BorderRadius.all(Radius.circular(5))),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(color: AppColors.primaryColor),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(5))),
                         child: Padding(
                           padding: const EdgeInsets.all(6.0),
                           child: Center(
-                            child: Text(one!, textAlign: TextAlign.center,style: const TextStyle(fontSize: 14)),
+                            child: Text(one!,
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(fontSize: 14)),
                           ),
                         ),
                       ),
@@ -233,11 +241,17 @@ class _SecondScreenState extends State<SecondScreen> {
                     Container(
                       height: 100,
                       width: 100,
-                      decoration: BoxDecoration(color: Colors.white,border: Border.all(color: AppColors.primaryColor),borderRadius: const BorderRadius.all(Radius.circular(5))),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(color: AppColors.primaryColor),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(5))),
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),
                         child: Center(
-                          child: Text(two!, textAlign: TextAlign.center,style: const TextStyle(fontSize: 14)),
+                          child: Text(two!,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(fontSize: 14)),
                         ),
                       ),
                     ),
@@ -245,11 +259,17 @@ class _SecondScreenState extends State<SecondScreen> {
                     Container(
                       height: 100,
                       width: 100,
-                      decoration: BoxDecoration(color: Colors.white,border: Border.all(color: AppColors.primaryColor),borderRadius: const BorderRadius.all(Radius.circular(5))),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(color: AppColors.primaryColor),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(5))),
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),
                         child: Center(
-                          child: Text(three!, textAlign: TextAlign.center,style: const TextStyle(fontSize: 14)),
+                          child: Text(three!,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(fontSize: 14)),
                         ),
                       ),
                     )
@@ -264,11 +284,17 @@ class _SecondScreenState extends State<SecondScreen> {
                     Container(
                       height: 100,
                       width: 100,
-                      decoration: BoxDecoration(color: Colors.white,border: Border.all(color: AppColors.primaryColor),borderRadius: const BorderRadius.all(Radius.circular(5))),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(color: AppColors.primaryColor),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(5))),
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),
                         child: Center(
-                          child: Text(four!, textAlign: TextAlign.center,style: const TextStyle(fontSize: 14)),
+                          child: Text(four!,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(fontSize: 14)),
                         ),
                       ),
                     ),
@@ -276,11 +302,17 @@ class _SecondScreenState extends State<SecondScreen> {
                     Container(
                       height: 100,
                       width: 100,
-                      decoration: BoxDecoration(color: Colors.white,border: Border.all(color: AppColors.primaryColor),borderRadius: const BorderRadius.all(Radius.circular(5))),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(color: AppColors.primaryColor),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(5))),
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),
                         child: Center(
-                          child: Text(five!, textAlign: TextAlign.center,style: const TextStyle(fontSize: 14)),
+                          child: Text(five!,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(fontSize: 14)),
                         ),
                       ),
                     )
@@ -294,5 +326,3 @@ class _SecondScreenState extends State<SecondScreen> {
     );
   }
 }
-
-

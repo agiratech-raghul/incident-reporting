@@ -31,6 +31,7 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return CommonScaffold(
+      isFlow: true,
       title: "Step 1",
       body: SingleChildScrollView(
         child: Padding(
@@ -79,11 +80,17 @@ class _FirstScreenState extends State<FirstScreen> {
                     borderRadius: const BorderRadius.all(Radius.circular(5))),
                 child: selectedDateTime == null
                     ? Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Align(
-                  alignment: Alignment.centerLeft,
-                      child: Text("Select Date and Time",style: TextStyle(fontSize: 14,color: Colors.grey.shade700,fontWeight: FontWeight.w400),)),
-                    )
+                        padding: const EdgeInsets.all(8.0),
+                        child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "Select Date and Time",
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.grey.shade700,
+                                  fontWeight: FontWeight.w400),
+                            )),
+                      )
                     : Center(
                         widthFactor: 50.0,
                         child: Text(
@@ -105,14 +112,20 @@ class _FirstScreenState extends State<FirstScreen> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
                       border: Border.all(color: Colors.grey)),
-                  child:  Padding(
+                  child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
                       children: [
                         //Icon(Icons.location_on_sharp),
                         Align(
-                          alignment: Alignment.centerLeft,
-                            child: Text("Get Location",style: TextStyle(fontSize: 14,color: Colors.grey.shade700,fontWeight: FontWeight.w400),))
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "Get Location",
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.grey.shade700,
+                                  fontWeight: FontWeight.w400),
+                            ))
                       ],
                     ),
                   ),
@@ -158,11 +171,15 @@ class _FirstScreenState extends State<FirstScreen> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                    color: select1 ? AppColors.primaryColor : Colors.black54, width: select1?3:1)),
+                    color: select1 ? AppColors.primaryColor : Colors.black54,
+                    width: select1 ? 3 : 1)),
             child: const Center(
               child: Text(
                 "Accident with another vehicle",
-                style: TextStyle(fontSize: 14, color: Colors.black,fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -182,11 +199,15 @@ class _FirstScreenState extends State<FirstScreen> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                    color: select2 ? AppColors.primaryColor : Colors.black54, width: select2?3:1)),
+                    color: select2 ? AppColors.primaryColor : Colors.black54,
+                    width: select2 ? 3 : 1)),
             child: const Center(
               child: Text(
                 "Damaged public/private property",
-                style: TextStyle(fontSize: 14, color: Colors.black,fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -206,11 +227,15 @@ class _FirstScreenState extends State<FirstScreen> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                    color: select3 ? AppColors.primaryColor : Colors.black54, width: select3?3:1)),
+                    color: select3 ? AppColors.primaryColor : Colors.black54,
+                    width: select3 ? 3 : 1)),
             child: const Center(
               child: Text(
                 "Damage to pedestrian/other pedestrian/bicyclist",
-                style: TextStyle(fontSize: 14, color: Colors.black,fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
             ),

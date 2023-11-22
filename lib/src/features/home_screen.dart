@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/common_widgets/common_scaffold.dart';
 import 'package:incident_reporting/src/common_widgets/signature_pad.dart';
 import 'package:incident_reporting/src/routing/route_constants.dart';
 import 'package:path_provider/path_provider.dart';
@@ -18,7 +19,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return CommonScaffold(
+      title: "Incident Report",
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

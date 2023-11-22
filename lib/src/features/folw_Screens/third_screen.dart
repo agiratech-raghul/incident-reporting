@@ -4,7 +4,6 @@ import 'package:incident_reporting/src/common_widgets/common_scaffold.dart';
 import 'package:incident_reporting/src/common_widgets/common_text_field.dart';
 import 'package:incident_reporting/src/common_widgets/src/images/common_network_image.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/CommonDetailsCard.dart';
-import 'package:incident_reporting/src/features/folw_Screens/widget/common_yes_or_no.dart';
 import 'package:incident_reporting/src/routing/route_constants.dart';
 import 'package:incident_reporting/src/ui_utils/app_assets.dart';
 import 'package:incident_reporting/src/utils/src/colors/app_colors.dart';
@@ -41,6 +40,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
   @override
   Widget build(BuildContext context) {
     return CommonScaffold(
+      isFlow: true,
       title: widget.isAnotherVehicle! ? "Step 4" : "Step 3",
       bottomNavigationBar: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -54,8 +54,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                       Navigator.pushNamed(
                           context, RouteConstants.profileScreen);
                     } else {
-                      Navigator.pushNamed(
-                          context, RouteConstants.thirdScreen,
+                      Navigator.pushNamed(context, RouteConstants.thirdScreen,
                           arguments: {"isAnotherVehicle": true});
                     }
                   },
@@ -71,7 +70,8 @@ class _ThirdScreenState extends State<ThirdScreen> {
                   widget.isAnotherVehicle!
                       ? "Another Vehicle Detail"
                       : "Accident with Another Vehicle",
-                  style: const TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
+                  style: const TextStyle(
+                      fontSize: 18, fontWeight: FontWeight.bold)),
             ),
             const Text("Vehicle Details",
                 style: TextStyle(
@@ -88,7 +88,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
                 child: SizedBox(
-                  height: MediaQuery.of(context).size.height/2,
+                  height: MediaQuery.of(context).size.height / 2,
                   child: Row(
                     children: [
                       Expanded(
@@ -96,10 +96,19 @@ class _ThirdScreenState extends State<ThirdScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const CommonTextField(hintText: "Vehicle Model",labelText: "Vehicle Model",),
-                            const CommonTextField(hintText: "Vehicle Color",labelText: "Vehicle Color"),
-                            const CommonTextField(hintText: "Plate Number",labelText: "Plate Number"),
-                            const CommonTextField(hintText: "Vin Number",labelText: "Vin Number"),
+                            const CommonTextField(
+                              hintText: "Vehicle Model",
+                              labelText: "Vehicle Model",
+                            ),
+                            const CommonTextField(
+                                hintText: "Vehicle Color",
+                                labelText: "Vehicle Color"),
+                            const CommonTextField(
+                                hintText: "Plate Number",
+                                labelText: "Plate Number"),
+                            const CommonTextField(
+                                hintText: "Vin Number",
+                                labelText: "Vin Number"),
                             const SizedBox(
                               height: 5,
                             ),
@@ -238,7 +247,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                 title: "Are you able to enter another vehicle Details?",
                 trailing: SizedBox(
                   width: 140,
-                  child:  Row(
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Radio(
