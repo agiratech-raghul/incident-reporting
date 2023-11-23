@@ -1,22 +1,21 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../buttons/common_container_button.dart';
 
 class CommonImagePicker extends StatelessWidget {
   CommonImagePicker(
-      {super.key,
-      required this.fileList,
-      this.videoData,
-      this.isVideo = false});
-  final List<File?> fileList;
+      {super.key, this.fileList, this.videoData, this.isVideo = false});
+  final List<File?>? fileList;
   final bool? isVideo;
 
   File? videoData;
 
   final ImagePicker _Picker = ImagePicker();
+  final textRecognizer = TextRecognizer();
 
   List<XFile?>? pickedFileList = [];
 
@@ -51,12 +50,13 @@ class CommonImagePicker extends StatelessWidget {
                 children: [
                   ContainerButton(
                     onTap: () async {
+                      Navigator.pop(context);
                       final ImagePicker imagePicker = ImagePicker();
                       XFile? file = await imagePicker.pickImage(
                           source: ImageSource.camera);
                       if (file != null) {
                         pickedFileList?.add(file);
-                        fileList.add(File(file.path));
+                        fileList?.add(File(file.path));
                       }
                     },
                     height: MediaQuery.of(context).size.height / 9,
@@ -66,10 +66,16 @@ class CommonImagePicker extends StatelessWidget {
                   ),
                   ContainerButton(
                     onTap: () async {
+                      Navigator.pop(context);
                       pickedFileList = await _Picker.pickMultiImage();
                       if (pickedFileList != null) {
+                        final inputImage = InputImage.fromFile(
+                            File(pickedFileList?[0]!.path ?? ''));
+                        final recognizedText =
+                            await textRecognizer.processImage(inputImage);
+                        print(recognizedText.text);
                         for (int i = 0; i < pickedFileList!.length; i++) {
-                          fileList.add(File(pickedFileList![i]!.path));
+                          fileList?.add(File(pickedFileList![i]!.path));
                         }
                       }
                     },
