@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:incident_reporting/src/utils/src/extensions/size_extension.dart';
 import 'package:incident_reporting/src/utils/src/helpers/size_utils.dart';
+import 'package:size_setter/size_setter.dart';
 
 class AppSnackBar {
   final String? message;

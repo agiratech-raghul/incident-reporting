@@ -573,6 +573,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.4.0"
+  size_setter:
+    dependency: "direct main"
+    description:
+      name: size_setter
+      sha256: "8a527eace9ffc98a94087d33710739973cba240e1cdd291b370acc519688c82c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.8"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -731,5 +739,5 @@ packages:
     source: hosted
     version: "6.3.0"
 sdks:
-  dart: ">=3.1.0-185.0.dev <4.0.0"
+  dart: ">=3.1.0 <4.0.0"
   flutter: ">=3.10.0"

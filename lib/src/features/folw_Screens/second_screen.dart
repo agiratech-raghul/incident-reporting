@@ -7,6 +7,7 @@ import 'package:incident_reporting/src/features/folw_Screens/widget/common_selec
 import 'package:incident_reporting/src/features/folw_Screens/widget/common_yes_or_no.dart';
 import 'package:incident_reporting/src/utils/src/colors/app_colors.dart';
 import 'package:incident_reporting/src/utils/src/helpers/size_utils.dart';
+import 'package:size_setter/size_setter.dart';
 
 class SecondScreen extends StatefulWidget {
   const SecondScreen({super.key});

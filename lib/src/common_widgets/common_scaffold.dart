@@ -10,16 +10,18 @@ class CommonScaffold extends StatelessWidget {
       this.body,
       this.title,
       this.bottomNavigationBar,
-      this.isFlow = false});
+      this.isFlow = false, this.backgroundColor});
   final Widget? body;
   final String? title;
   final bool? isFlow;
   final Widget? bottomNavigationBar;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
     final route = ModalRoute.of(context)?.settings.name;
     return Scaffold(
+      backgroundColor: backgroundColor,
       bottomNavigationBar: isFlow!
           ? route != RouteConstants.thirdScreen
               ? Padding(
