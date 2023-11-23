@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:incident_reporting/src/common_widgets/common_text_field.dart';
-import 'package:incident_reporting/src/common_widgets/src/images/common_network_image.dart';
-import 'package:incident_reporting/src/ui_utils/app_assets.dart';
 import 'package:incident_reporting/src/utils/src/colors/app_colors.dart';
 
 class CommonDetailsCard extends StatelessWidget {
@@ -29,7 +27,7 @@ class CommonDetailsCard extends StatelessWidget {
                 onPressed: () {},
                 style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.blue),
+                      MaterialStateProperty.all<Color>(AppColors.lightBlue),
                 ),
                 label: Text(
                   isDriver ? "add Driver ID" : "add Passenger ID",

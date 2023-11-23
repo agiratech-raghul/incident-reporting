@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/utils/src/colors/app_colors.dart';
 
 class CommonOptionsContainers extends StatefulWidget {
   const CommonOptionsContainers({super.key, this.option1, this.option2, this.option3, this.option4, this.optionName1, this.optionName2, this.optionName3, this.optionName4});
@@ -41,8 +42,9 @@ class _CommonOptionsContainersState extends State<CommonOptionsContainers> {
                 width: 50,
                 decoration: BoxDecoration(
                     color: Colors.white,
+                    borderRadius: BorderRadius.circular(5),
                     border: Border.all(
-                        color: select1 ? Colors.green : Colors.black54, width: 2)),
+                        color: select1 ? AppColors.primaryColor : Colors.black54, width: 1)),
                 child: Center(
                   child: Text(
                     widget.option1??"",
@@ -71,8 +73,9 @@ class _CommonOptionsContainersState extends State<CommonOptionsContainers> {
                 width: 50,
                 decoration: BoxDecoration(
                     color: Colors.white,
+                    borderRadius: BorderRadius.circular(5),
                     border: Border.all(
-                        color: select2 ? Colors.green : Colors.black54, width: 2)),
+                        color: select2 ? AppColors.primaryColor : Colors.black54, width: 1)),
                 child: Center(
                   child: Text(
                     widget.option2??"",
@@ -101,8 +104,9 @@ class _CommonOptionsContainersState extends State<CommonOptionsContainers> {
                 width: 50,
                 decoration: BoxDecoration(
                     color: Colors.white,
+                    borderRadius: BorderRadius.circular(5),
                     border: Border.all(
-                        color: select3 ? Colors.green : Colors.black54, width: 2)),
+                        color: select3 ? AppColors.primaryColor : Colors.black54, width: 1)),
                 child: Center(
                   child: Text(
                     widget.option3??"",
@@ -131,8 +135,9 @@ class _CommonOptionsContainersState extends State<CommonOptionsContainers> {
                 width: 50,
                 decoration: BoxDecoration(
                     color: Colors.white,
+                    borderRadius: BorderRadius.circular(5),
                     border: Border.all(
-                        color: select4 ? Colors.green : Colors.black54, width: 2)),
+                        color: select4 ? AppColors.primaryColor : Colors.black54, width: 1)),
                 child: Center(
                   child: Text(
                     widget.option4??"",

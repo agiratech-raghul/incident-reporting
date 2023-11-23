@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/common_widgets/common_expansion_tile.dart';
 import 'package:incident_reporting/src/common_widgets/common_scaffold.dart';
+import 'package:incident_reporting/src/common_widgets/common_text_field.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/commonOptionsContainers.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/common_yes_or_no.dart';
+import 'package:size_setter/size_setter.dart';
 
 class OtherInfoScreen extends StatefulWidget {
   const OtherInfoScreen({super.key});
@@ -24,72 +27,67 @@ class _OtherInfoScreenState extends State<OtherInfoScreen> {
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
           child: Column(
             children: [
-              const ExpansionTile(
-                title: Text("Ambulance/was any party sent to ER"),
-                trailing: SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  TextField(
-                    decoration:
-                        InputDecoration(label: Text("List names if Possible")),
-                  ),
-                ],
-              ),
-              const ExpansionTile(
-                title: Text("Witness – if yes Contact information"),
-                trailing: SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  TextField(
-                    decoration:
-                        InputDecoration(label: Text("List Names if Possible")),
-                  ),
-                ],
-              ),
-              const ExpansionTile(
-                title: Text("Were there any Minors"),
-                trailing: SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  TextField(
-                    decoration: InputDecoration(
-                        label: Text("List Names and Age if possible")),
-                  ),
-                ],
-              ),
-              const ExpansionTile(
-                title: Text("Any Criminal acts by Adverse"),
-                trailing: SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  TextField(
-                    decoration: InputDecoration(
-                        label: Text("Enter a Brief Information about it")),
-                  ),
-                ],
-              ),
-              ExpansionTile(
-                title:
-                    const Text("Was a TNC company involved with the accident"),
+              CommonExpansionCard(
+                title:"Ambulance/was any party sent to ER",
                 trailing: const SizedBox(
                   width: 140,
                   child: CommonYesOrNo(),
                 ),
-                childrenPadding: const EdgeInsets.all(10),
-                children: [
-                  Row(
+                widget: CommonTextField(
+                  labelText: "List Names if Possible",
+                  hintText: "List Names if Possible",
+                  border: InputBorder.none,
+                  horizontal: 20.w,
+                ),
+              ),
+              CommonExpansionCard(
+                title:"Witness – if yes Contact information",
+                trailing: const SizedBox(
+                  width: 140,
+                  child: CommonYesOrNo(),
+                ),
+                widget: CommonTextField(
+                  labelText: "List Names if Possible",
+                  hintText: "List Names if Possible",
+                  border: InputBorder.none,
+                  horizontal: 20.w,
+                ),
+              ),
+              CommonExpansionCard(
+                title:"Were there any Minors",
+                trailing: const SizedBox(
+                  width: 140,
+                  child: CommonYesOrNo(),
+                ),
+                widget: CommonTextField(
+                  labelText: "List Names and Age if possible",
+                  hintText: "List Names and Age if possible",
+                  border: InputBorder.none,
+                  horizontal: 20.w,
+                ),
+              ),
+              CommonExpansionCard(
+                title:"Any Criminal acts by Adverse",
+                trailing: const SizedBox(
+                  width: 140,
+                  child: CommonYesOrNo(),
+                ),
+                widget: CommonTextField(
+                  labelText: "Enter a Brief Information about it",
+                  hintText: "Enter a Brief Information about it",
+                  border: InputBorder.none,
+                  horizontal: 20.w,
+                ),
+              ),
+              CommonExpansionCard(
+                title:"Was a TNC company involved with the accident",
+                trailing: const SizedBox(
+                  width: 140,
+                  child: CommonYesOrNo(),
+                ),
+                widget: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Row(
                     children: [
                       Align(
                         alignment: Alignment.topLeft,
@@ -110,30 +108,34 @@ class _OtherInfoScreenState extends State<OtherInfoScreen> {
                         ),
                       ),
                       if (dropDownValue == "Others")
-                        const Expanded(child: TextField())
+                        const Expanded(child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10.0),
+                          child: CommonTextField(labelText: "Enter the Other Names",
+                          hintText: "Enter the Other Names",border: InputBorder.none,),
+                        ))
                     ],
                   ),
-                ],
+                ),
               ),
-              const ExpansionTile(
-                title: Text("Weather Conditions"),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  CommonOptionsContainers(
+              const CommonExpansionCard(
+                title:"Weather Conditions",
+                widget: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10.0),
+                  child: CommonOptionsContainers(
                     option1: "☀️",
                     optionName1: "Sunny",
                     option2: "🌧️",
                     optionName2: "Rainy",
                     option3: "❄️",
                     optionName3: "Snow",
-                  )
-                ],
+                  ),
+                )
               ),
-              const ExpansionTile(
-                title: Text("Road Conditions"),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  CommonOptionsContainers(
+              const CommonExpansionCard(
+                title: "Road Conditions",
+                widget:  Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10.0),
+                  child: CommonOptionsContainers(
                     option1: "🛣️",
                     optionName1: "Normal Road",
                     option2: "⛐",
@@ -142,14 +144,14 @@ class _OtherInfoScreenState extends State<OtherInfoScreen> {
                     optionName3: "Construction",
                     option4: "🕳️",
                     optionName4: "Pot hole",
-                  )
-                ],
+                  ),
+                ),
               ),
-              const ExpansionTile(
-                title: Text("Traffic Conditions"),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  CommonOptionsContainers(
+              const CommonExpansionCard(
+                title: "Traffic Conditions",
+                widget:  Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10.0),
+                  child: CommonOptionsContainers(
                     option1: "🛑",
                     optionName1: "Stop Sign",
                     option2: "🏮",
@@ -158,124 +160,10 @@ class _OtherInfoScreenState extends State<OtherInfoScreen> {
                     optionName3: "Merge",
                     option4: "🚷",
                     optionName4: "Stop Sign",
-                  )
-                ],
-              ),
-              const ExpansionTile(
-                title: Text("Telematics - Dongle(s) for any vehicle"),
-                trailing: SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  TextField(
-                    decoration:
-                        InputDecoration(label: Text("List Names if Possible")),
                   ),
-                ],
+                )
               ),
-              const ExpansionTile(
-                title: Text("Dash Cam/Video"),
-                trailing: SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  TextField(
-                    enabled: false,
-                    decoration: InputDecoration(
-                        label: Text("Please Attach If available")),
-                  ),
-                ],
-              ),
-              const ExpansionTile(
-                title: Text(
-                    "Points of impact (Insured Vehicle / Adverse Vehicle)"),
-                trailing: SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  TextField(
-                    decoration:
-                        InputDecoration(label: Text("List Names if Possible")),
-                  ),
-                ],
-              ),
-              const ExpansionTile(
-                title: Text("Did any of the airbags deploy for any vehicle"),
-                trailing: SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  TextField(
-                    decoration:
-                        InputDecoration(label: Text("List Names if Possible")),
-                  ),
-                ],
-              ),
-              const ExpansionTile(
-                title: Text("Speed limit of each Vehicle if known"),
-                trailing: SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  TextField(
-                    decoration:
-                        InputDecoration(label: Text("List Names if Possible")),
-                  ),
-                ],
-              ),
-              const ExpansionTile(
-                title: Text("Was any vehicle in the accident stolen"),
-                trailing: SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  TextField(
-                    decoration:
-                        InputDecoration(label: Text("List Names if Possible")),
-                  ),
-                ],
-              ),
-              const ExpansionTile(
-                title:
-                    Text("Mechanical Failure of any vehicle in the accident"),
-                trailing: SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  TextField(
-                    decoration:
-                        InputDecoration(label: Text("List Names if Possible")),
-                  ),
-                ],
-              ),
-              const ExpansionTile(
-                title: Text("Was any vehicle in the accident towed"),
-                trailing: SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
-                childrenPadding: EdgeInsets.all(10),
-                children: [
-                  TextField(
-                    decoration:
-                        InputDecoration(label: Text("List Names if Possible")),
-                  ),
-                ],
-              ),
+
             ],
           ),
         ),

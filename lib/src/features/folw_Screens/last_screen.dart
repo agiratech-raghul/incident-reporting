@@ -1,94 +1,121 @@
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/common_widgets/common_expansion_tile.dart';
 import 'package:incident_reporting/src/common_widgets/common_scaffold.dart';
-import 'package:incident_reporting/src/features/folw_Screens/widget/commonOptionsContainers.dart';
+import 'package:incident_reporting/src/common_widgets/common_text_field.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/common_yes_or_no.dart';
+import 'package:size_setter/size_setter.dart';
 
 class LastScreen extends StatelessWidget {
   const LastScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const CommonScaffold(
+    return  CommonScaffold(
       isFlow: true,
       title: "Step 7",
-      body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-        ExpansionTile(
-          title: Text("Weather Conditions"),
-          childrenPadding: EdgeInsets.all(10),
-          children: [
-            CommonOptionsContainers(
-              option1: "☀️",
-              optionName1: "Sunny",
-              option2: "🌧️",
-              optionName2: "Rainy",
-              option3: "❄️",
-              optionName3: "Snow",
-            )
-          ],
-        ),
-        ExpansionTile(
-          title: Text("Road Conditions"),
-          childrenPadding: EdgeInsets.all(10),
-          children: [
-            CommonOptionsContainers(
-              option1: "🛣️",
-              optionName1: "Normal Road",
-              option2: "⛐",
-              optionName2: "Slippery Road",
-              option3: "🚧",
-              optionName3: "Construction",
-              option4: "🕳️",
-              optionName4: "Pot hole",
-            )
-          ],
-        ),
-        ExpansionTile(
-          title: Text("Traffic Conditions"),
-          childrenPadding: EdgeInsets.all(10),
-          children: [
-            CommonOptionsContainers(
-              option1: "🛑",
-              optionName1: "Stop Sign",
-              option2: "🏮",
-              optionName2: "Red Light",
-              option3: "⛙",
-              optionName3: "Merge",
-              option4: "🚷",
-              optionName4: "Stop Sign",
-            )
-          ],
-        ),
-        ExpansionTile(
-          title: Text("Telematics - Dongle(s) for any vehicle"),
-          trailing: SizedBox(
-            width: 140,
-            child: CommonYesOrNo(),
-          ),
-          childrenPadding: EdgeInsets.all(10),
-          children: [
-            TextField(
-              decoration:
-                  InputDecoration(label: Text("List Names if Possible")),
+      body: SingleChildScrollView(
+        child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          CommonExpansionCard(
+            title: "Telematics - Dongle(s) for any vehicle",
+            trailing: const SizedBox(
+              width: 140,
+              child: CommonYesOrNo(),
             ),
-          ],
-        ),
-        ExpansionTile(
-          title: Text("Dash Cam/Video"),
-          trailing: SizedBox(
-            width: 140,
-            child: CommonYesOrNo(),
-          ),
-          childrenPadding: EdgeInsets.all(10),
-          children: [
-            TextField(
-              enabled: false,
-              decoration:
-                  InputDecoration(label: Text("Please Attach If available")),
+            widget: CommonTextField(
+              labelText: "List Names if Possible",
+              hintText: "List Names if Possible",
+              border: InputBorder.none,
+              horizontal: 20.w,
             ),
-          ],
-        ),
-        // ElevatedButton(onPressed: () {}, child: const Text("data"))
-      ]),
+          ),
+          CommonExpansionCard(
+            title: "Dash Cam/Video",
+            trailing: const SizedBox(
+              width: 140,
+              child: CommonYesOrNo(),
+            ),
+            widget: CommonTextField(
+              enabled: true,
+              hintText: "Please Attach If available",
+              border: InputBorder.none,
+              horizontal: 20.w,
+            ),
+          ),
+          CommonExpansionCard(
+            title: "Points of impact (Insured Vehicle / Adverse Vehicle",
+            trailing: const SizedBox(
+              width: 140,
+              child: CommonYesOrNo(),
+            ),
+            widget: CommonTextField(
+              hintText: "List Names if Possible",
+              border: InputBorder.none,
+              horizontal: 20.w,
+            ),
+          ),
+          CommonExpansionCard(
+            title: "Did any of the airbags deploy for any vehicle",
+            trailing: const SizedBox(
+              width: 140,
+              child: CommonYesOrNo(),
+            ),
+            widget: CommonTextField(
+              hintText: "List Names if Possible",
+              border: InputBorder.none,
+              horizontal: 20.w,
+            ),
+          ),
+          CommonExpansionCard(
+            title: "Speed limit of each Vehicle if known",
+            trailing: const SizedBox(
+              width: 140,
+              child: CommonYesOrNo(),
+            ),
+            widget: CommonTextField(
+              hintText: "List Names if Possible",
+              border: InputBorder.none,
+              horizontal: 20.w,
+            ),
+          ),
+          CommonExpansionCard(
+            title: "Was any vehicle in the accident stolen",
+            trailing: const SizedBox(
+              width: 140,
+              child: CommonYesOrNo(),
+            ),
+            widget: CommonTextField(
+              hintText: "List Names if Possible",
+              border: InputBorder.none,
+              horizontal: 20.w,
+            ),
+          ),
+          CommonExpansionCard(
+            title: "Mechanical Failure of any vehicle in the accident",
+            trailing: const SizedBox(
+              width: 140,
+              child: CommonYesOrNo(),
+            ),
+            widget: CommonTextField(
+              hintText: "List Names if Possible",
+              border: InputBorder.none,
+              horizontal: 20.w,
+            ),
+          ),
+          CommonExpansionCard(
+            title: "Was any vehicle in the accident towed",
+            trailing: const SizedBox(
+              width: 140,
+              child: CommonYesOrNo(),
+            ),
+            widget: CommonTextField(
+              hintText: "List Names if Possible",
+              border: InputBorder.none,
+              horizontal: 20.w,
+            ),
+          ),
+          // ElevatedButton(onPressed: () {}, child: const Text("data"))
+        ]),
+      ),
     );
   }
 }
