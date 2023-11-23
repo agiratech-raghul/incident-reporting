@@ -3,6 +3,7 @@ import 'package:incident_reporting/src/ui_utils/text_styles.dart';
 import 'package:incident_reporting/src/utils/src/colors/app_colors.dart';
 import 'package:incident_reporting/src/utils/src/helpers/size_utils.dart';
 import 'package:incident_reporting/src/utils/src/helpers/ui_dimens.dart';
+import 'package:size_setter/size_setter.dart';
 
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton(
@@ -48,9 +49,9 @@ class PrimaryButton extends StatelessWidget {
             foregroundColor: isgrey ? AppColors.primaryColor : Colors.white,
             textStyle: changeTextStyle!
                 ? TextStyles.midTextWhite
-                .copyWith(fontSize: Utils.getFontSize(context, 16))
+                .copyWith(fontSize: 16)
                 : TextStyles.regularTextWhite
-                .copyWith(fontSize: Utils.getFontSize(context, 16))),
+                .copyWith(fontSize: 16)),
         onPressed: onPressed,
         child: Text(
           text,

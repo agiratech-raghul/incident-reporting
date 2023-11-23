@@ -8,6 +8,7 @@ import 'package:incident_reporting/src/routing/route_constants.dart';
 import 'package:incident_reporting/src/ui_utils/app_assets.dart';
 import 'package:incident_reporting/src/utils/src/colors/app_colors.dart';
 import 'package:incident_reporting/src/utils/src/helpers/size_utils.dart';
+import 'package:size_setter/size_setter.dart';
 
 class ThirdScreen extends StatefulWidget {
   final bool? isAnotherVehicle;

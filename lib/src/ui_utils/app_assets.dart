@@ -3,4 +3,9 @@ abstract class AppAssets {
   static const sampleImage = "$path/sample_image.png";
   static const addIcon = "$path/add_icon.png";
   static const sampleMaps = "$path/sample_maps.png";
+  static const sampleCoverImage = "$path/sample_cover_image.jpg";
+  static const sampleCarAccident = "$path/car_accident.png";
+  static const document = "$path/document.png";
+  static const documentWithoutPen = "$path/document_without_pen.png";
+  static const documentWithPen = "$path/document_with_pen.png";
 }

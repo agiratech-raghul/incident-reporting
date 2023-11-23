@@ -5,7 +5,6 @@ class RouteConstants {
   static const String initialScreen = '/initialScreen';
   static const String thirdScreen = '/ThirdScreen';
   static const String secondScreen = '/secondScreen';
-  static const String newSecondScreen = '/newSecondScreen';
   static const String profileScreen = '/profileScreen';
   static const String otherInfoScreen = '/otherInfoScreen';
   static const String lastScreen = '/lastScreen';
