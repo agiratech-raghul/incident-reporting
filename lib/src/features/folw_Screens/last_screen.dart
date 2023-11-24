@@ -7,9 +7,7 @@ import 'package:incident_reporting/src/common_widgets/common_scaffold.dart';
 import 'package:incident_reporting/src/common_widgets/common_text_field.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/common_yes_or_no.dart';
 import 'package:size_setter/size_setter.dart';
-
 import '../../common_widgets/signature_pad.dart';
-import '../../ui_utils/app_assets.dart';
 
 class LastScreen extends StatefulWidget {
   const LastScreen({super.key});
@@ -23,7 +21,7 @@ class _LastScreenState extends State<LastScreen> {
   File? videoData;
   @override
   Widget build(BuildContext context) {
-    return const CommonScaffold(
+    return CommonScaffold(
       isFlow: true,
       title: "Step 7",
       body: SingleChildScrollView(
@@ -31,7 +29,7 @@ class _LastScreenState extends State<LastScreen> {
             Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           CommonExpansionCard(
             title: "Telematics - Dongle(s) for any vehicle",
-            trailing: SizedBox(
+            trailing: const SizedBox(
               width: 140,
               child: CommonYesOrNo(),
             ),
@@ -44,7 +42,7 @@ class _LastScreenState extends State<LastScreen> {
           ),
           CommonExpansionCard(
             title: "Dash Cam/Video",
-            trailing: SizedBox(
+            trailing: const SizedBox(
               width: 140,
               child: CommonYesOrNo(),
             ),
@@ -57,7 +55,7 @@ class _LastScreenState extends State<LastScreen> {
           ),
           CommonExpansionCard(
             title: "Points of impact (Insured Vehicle / Adverse Vehicle",
-            trailing: SizedBox(
+            trailing: const SizedBox(
               width: 140,
               child: CommonYesOrNo(),
             ),
@@ -69,7 +67,7 @@ class _LastScreenState extends State<LastScreen> {
           ),
           CommonExpansionCard(
             title: "Did any of the airbags deploy for any vehicle",
-            trailing: SizedBox(
+            trailing: const SizedBox(
               width: 140,
               child: CommonYesOrNo(),
             ),
@@ -81,7 +79,7 @@ class _LastScreenState extends State<LastScreen> {
           ),
           CommonExpansionCard(
             title: "Speed limit of each Vehicle if known",
-            trailing: SizedBox(
+            trailing: const SizedBox(
               width: 140,
               child: CommonYesOrNo(),
             ),
@@ -93,7 +91,7 @@ class _LastScreenState extends State<LastScreen> {
           ),
           CommonExpansionCard(
             title: "Was any vehicle in the accident stolen",
-            trailing: SizedBox(
+            trailing: const SizedBox(
               width: 140,
               child: CommonYesOrNo(),
             ),
@@ -105,7 +103,7 @@ class _LastScreenState extends State<LastScreen> {
           ),
           CommonExpansionCard(
             title: "Mechanical Failure of any vehicle in the accident",
-            trailing: SizedBox(
+            trailing: const SizedBox(
               width: 140,
               child: CommonYesOrNo(),
             ),
@@ -117,7 +115,7 @@ class _LastScreenState extends State<LastScreen> {
           ),
           CommonExpansionCard(
             title: "Was any vehicle in the accident towed",
-            trailing: SizedBox(
+            trailing: const SizedBox(
               width: 140,
               child: CommonYesOrNo(),
             ),
@@ -125,6 +123,32 @@ class _LastScreenState extends State<LastScreen> {
               hintText: "List Names if Possible",
               border: InputBorder.none,
               horizontal: 20.w,
+            ),
+          ),
+          if (signatureImage != null)
+            Image.memory(
+              signatureImage!,
+              height: 100,
+              width: 100,
+              fit: BoxFit.fill,
+            ),
+          TextButton(
+            onPressed: () async {
+              signatureImage = await showDialog(
+                context: context,
+                builder: (context) => const AlertDialog(
+                  content: SignatureScreen(),
+                  contentPadding: EdgeInsets.zero,
+                ),
+              );
+              setState(() {});
+            },
+            child: Text(
+              signatureImage != null
+                  ? 'Change Your Signature'
+                  : 'Add Your Signature',
+              style:
+                  const TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
             ),
           ),
           // ElevatedButton(onPressed: () {}, child: const Text("data"))

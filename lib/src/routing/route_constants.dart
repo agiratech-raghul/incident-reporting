@@ -8,4 +8,6 @@ class RouteConstants {
   static const String profileScreen = '/profileScreen';
   static const String otherInfoScreen = '/otherInfoScreen';
   static const String lastScreen = '/lastScreen';
+  static const String signInScreen = '/signInScreen';
+  static const String signUpScreen = '/signUpScreen';
 }

@@ -32,8 +32,10 @@ dependencies:
   speech_to_text: ^6.4.0
   signature: ^5.4.0
   path_provider: ^2.1.1
+  flutter_sim_country_code: ^0.1.2
   google_mlkit_text_recognition: ^0.11.0
   size_setter:
+  
 
 dev_dependencies:
   flutter_test:

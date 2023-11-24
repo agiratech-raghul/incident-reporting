@@ -1,3 +1,5 @@
+import 'package:incident_reporting/src/features/auth/sign_in_screen.dart';
+import 'package:incident_reporting/src/features/auth/sign_up_screen.dart';
 import 'package:incident_reporting/src/features/folw_Screens/first_screen.dart';
 import 'package:incident_reporting/src/features/folw_Screens/last_screen.dart';
 import 'package:incident_reporting/src/features/folw_Screens/second_screen.dart';
@@ -50,6 +52,14 @@ class RouteManager {
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.lastScreen),
             builder: (context) => const LastScreen());
+      case RouteConstants.signInScreen:
+        return MaterialPageRoute(
+            settings: const RouteSettings(name: RouteConstants.signInScreen),
+            builder: (context) => SignInScreen());
+      case RouteConstants.signUpScreen:
+        return MaterialPageRoute(
+            settings: const RouteSettings(name: RouteConstants.signUpScreen),
+            builder: (context) => SignUpScreen());
       default:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.splashScreen),

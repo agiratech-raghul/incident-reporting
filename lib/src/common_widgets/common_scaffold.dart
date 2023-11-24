@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:incident_reporting/src/routing/route_constants.dart';
+import 'package:incident_reporting/src/ui_utils/app_assets.dart';
 import 'package:incident_reporting/src/utils/src/colors/app_colors.dart';
-
-import '../features/home_screen.dart';
+import 'package:size_setter/size_setter.dart';
 
 class CommonScaffold extends StatelessWidget {
   const CommonScaffold(
@@ -10,7 +10,8 @@ class CommonScaffold extends StatelessWidget {
       this.body,
       this.title,
       this.bottomNavigationBar,
-      this.isFlow = false, this.backgroundColor});
+      this.isFlow = false,
+      this.backgroundColor});
   final Widget? body;
   final String? title;
   final bool? isFlow;
@@ -55,7 +56,10 @@ class CommonScaffold extends StatelessWidget {
               : bottomNavigationBar
           : null,
       appBar: AppBar(
-        backgroundColor: AppColors.primaryColor,
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor:
+            isFlow! ? AppColors.primaryColor : AppColors.appScaffoldColor,
         leading: isFlow!
             ? IconButton(
                 icon: const Icon(Icons.close),
@@ -88,10 +92,16 @@ class CommonScaffold extends StatelessWidget {
                 },
               )
             : null,
-        title: Text(
-          title!,
-          textAlign: TextAlign.center,
-        ),
+        title: isFlow!
+            ? Text(
+                title!,
+                textAlign: TextAlign.center,
+              )
+            : Image.asset(
+                AppAssets.appLogo,
+                height: Utils.getScreenHeight(context, 50),
+                fit: BoxFit.fitHeight,
+              ),
       ),
       drawer: Drawer(
         child: ListView(

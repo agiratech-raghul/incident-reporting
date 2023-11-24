@@ -25,7 +25,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
   }
 
   void _moveToNextPage() {
-    Navigator.of(context).pushReplacementNamed(RouteConstants.homeScreen);
+    Navigator.of(context).pushReplacementNamed(RouteConstants.signInScreen);
   }
 
   @override

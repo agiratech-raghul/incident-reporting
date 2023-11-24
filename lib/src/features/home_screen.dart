@@ -22,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return CommonScaffold(
+      backgroundColor: AppColors.appScaffoldColor,
       title: "Incident Report",
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
@@ -80,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           AppColors.selectingBlue),
                                 ),
                                 child: const Text(
-                                  "Report An Incident",
+                                  "Report an Incident",
                                   style: TextStyle(fontSize: 16),
                                 ),
                               ),
@@ -145,6 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemBuilder: (context, i) {
                     return const CommonDocumentCard(
                       title: "Multi Car Collision",
+                      image: AppAssets.document,
                     );
                   }),
             ),

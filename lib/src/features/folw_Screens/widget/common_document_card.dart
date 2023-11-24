@@ -14,10 +14,10 @@ class CommonDocumentCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 3.0),
       child: Container(
-        decoration:   BoxDecoration(
+        decoration: BoxDecoration(
           border: Border.all(color: AppColors.lightGrey),
           borderRadius:
-          const BorderRadius.all(Radius.circular(UIDimens.size10)),
+              const BorderRadius.all(Radius.circular(UIDimens.size10)),
         ),
         child: Padding(
           padding: const EdgeInsets.all(5.0),
@@ -26,17 +26,19 @@ class CommonDocumentCard extends StatelessWidget {
               Container(
                   height: 150.h,
                   width: 100.w,
-                  decoration:   BoxDecoration(
-                    color: AppColors.secondaryBlueColor,
-                    borderRadius:
-                    BorderRadius.all(Radius.circular(UIDimens.size10)),
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(
+                        Radius.circular(UIDimens.size10)),
                     image: DecorationImage(
                         image: AssetImage(image ?? AppAssets.document),
                         fit: BoxFit.fitHeight),
-                  )
-              ),
+                  )),
               const HeightSpaceBox(size: 10),
-              Text(title!,style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),)
+              Text(
+                title!,
+                style:
+                    const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+              )
             ],
           ),
         ),

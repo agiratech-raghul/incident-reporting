@@ -24,7 +24,7 @@ class _FirstScreenState extends State<FirstScreen> {
 
   bool isMap = false;
 
-  bool select1 = false;
+  bool select1 = true;
   bool select2 = false;
   bool select3 = false;
 
@@ -84,7 +84,7 @@ class _FirstScreenState extends State<FirstScreen> {
                         child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              "Select Date and Time",
+                              "Incident Date and Time",
                               style: TextStyle(
                                   fontSize: 14,
                                   color: Colors.grey.shade700,
@@ -120,7 +120,7 @@ class _FirstScreenState extends State<FirstScreen> {
                         Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              "Get Location",
+                              "Incident Location",
                               style: TextStyle(
                                   fontSize: 14,
                                   color: Colors.grey.shade700,
@@ -187,11 +187,11 @@ class _FirstScreenState extends State<FirstScreen> {
         ),
         GestureDetector(
           onTap: () {
-            setState(() {
-              select1 = false;
-              select2 = true;
-              select3 = false;
-            });
+            // setState(() {
+            //   select1 = false;
+            //   select2 = true;
+            //   select3 = false;
+            // });
           },
           child: Container(
             height: 100,
@@ -215,11 +215,11 @@ class _FirstScreenState extends State<FirstScreen> {
         ),
         GestureDetector(
           onTap: () {
-            setState(() {
-              select1 = false;
-              select2 = false;
-              select3 = true;
-            });
+            // setState(() {
+            //   select1 = false;
+            //   select2 = false;
+            //   select3 = true;
+            // });
           },
           child: Container(
             height: 100,
