@@ -3,7 +3,6 @@ import 'package:incident_reporting/src/common_widgets/common_scaffold.dart';
 import 'package:incident_reporting/src/common_widgets/common_text_field.dart';
 import 'package:incident_reporting/src/common_widgets/src/images/common_network_image.dart';
 import 'package:incident_reporting/src/ui_utils/app_assets.dart';
-import 'package:incident_reporting/src/utils/src/helpers/size_utils.dart';
 import 'package:size_setter/size_setter.dart';
 
 class ProfileScreen extends StatefulWidget {

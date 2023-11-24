@@ -8,10 +8,14 @@ import '../buttons/common_container_button.dart';
 
 class CommonImagePicker extends StatelessWidget {
   CommonImagePicker(
-      {super.key, this.fileList, this.videoData, this.isVideo = false});
+      {super.key,
+      this.fileList,
+      this.videoData,
+      this.isVideo = false,
+      this.widget});
   final List<File?>? fileList;
   final bool? isVideo;
-
+  final Widget? widget;
   File? videoData;
 
   final ImagePicker _Picker = ImagePicker();
@@ -22,22 +26,17 @@ class CommonImagePicker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () async {
-        if (!isVideo!) {
-          showMediaType(context);
-        } else {
-          final data = await _Picker.pickVideo(source: ImageSource.gallery);
-          if (data != null) {
-            videoData = File(data.path);
+        onTap: () async {
+          if (!isVideo!) {
+            showMediaType(context);
+          } else {
+            final data = await _Picker.pickVideo(source: ImageSource.gallery);
+            if (data != null) {
+              videoData = File(data.path);
+            }
           }
-        }
-      },
-      child: Container(
-        height: 50,
-        width: 50,
-        decoration: const BoxDecoration(color: Colors.grey),
-      ),
-    );
+        },
+        child: widget);
   }
 
   void showMediaType(BuildContext context) {
