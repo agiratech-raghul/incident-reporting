@@ -6,7 +6,6 @@ import 'package:incident_reporting/src/common_widgets/src/buttons/outline_button
 import 'package:incident_reporting/src/features/folw_Screens/widget/common_select.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/common_yes_or_no.dart';
 import 'package:incident_reporting/src/utils/src/colors/app_colors.dart';
-import 'package:incident_reporting/src/utils/src/helpers/size_utils.dart';
 import 'package:size_setter/size_setter.dart';
 
 class SecondScreen extends StatefulWidget {
@@ -56,46 +55,57 @@ class _SecondScreenState extends State<SecondScreen> {
                         )
                       : Column(
                           children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                SecondaryButton(
-                                  onPressed: () {
-                                    showMyIncident(
-                                        "Rear End Collision",
-                                        "Same Direction Swipe",
-                                        "Opposite Direction Swipe",
-                                        "Another Vehicle Swiped My Parked Vehicle",
-                                        "I Swiped Another Parked Vehicle",
-                                        "Other- Side Swipe");
-                                  },
-                                  text: "Rear End Collision",
-                                ),
-                                SecondaryButton(
-                                  onPressed: () {
-                                    showMyIncident(
-                                        "Side Swipe",
-                                        "Same Direction Swipe",
-                                        "Opposite Direction Swipe",
-                                        "Another Vehicle Swiped My Parked Vehicle",
-                                        "I Swiped Another Parked Vehicle",
-                                        "Other- Side Swipe");
-                                  },
-                                  text: "Side Swipe",
-                                ),
-                                SecondaryButton(
-                                  onPressed: () {
-                                    showMyIncident(
-                                        "Hit and Run",
-                                        "Same Direction Swipe",
-                                        "Opposite Direction Swipe",
-                                        "Another Vehicle Swiped My Parked Vehicle",
-                                        "I Swiped Another Parked Vehicle",
-                                        "Other- Side Swipe");
-                                  },
-                                  text: "Hit and Run",
-                                ),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Expanded(
+                                    child: SecondaryButton(
+                                      onPressed: () {
+                                        showMyIncident(
+                                            "Rear End Collision",
+                                            "Same Direction Swipe",
+                                            "Opposite Direction Swipe",
+                                            "Another Vehicle Swiped My Parked Vehicle",
+                                            "I Swiped Another Parked Vehicle",
+                                            "Other- Side Swipe");
+                                      },
+                                      text: "Rear End Collision",
+                                    ),
+                                  ),
+                                  SizedBox(width: 10.w,),
+                                  Expanded(
+                                    child: SecondaryButton(
+                                      onPressed: () {
+                                        showMyIncident(
+                                            "Side Swipe",
+                                            "Same Direction Swipe",
+                                            "Opposite Direction Swipe",
+                                            "Another Vehicle Swiped My Parked Vehicle",
+                                            "I Swiped Another Parked Vehicle",
+                                            "Other- Side Swipe");
+                                      },
+                                      text: "Side Swipe",
+                                    ),
+                                  ),
+                                  SizedBox(width: 10.w,),
+                                  Expanded(
+                                    child: SecondaryButton(
+                                      onPressed: () {
+                                        showMyIncident(
+                                            "Hit and Run",
+                                            "Same Direction Swipe",
+                                            "Opposite Direction Swipe",
+                                            "Another Vehicle Swiped My Parked Vehicle",
+                                            "I Swiped Another Parked Vehicle",
+                                            "Other- Side Swipe");
+                                      },
+                                      text: "Hit and Run",
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,

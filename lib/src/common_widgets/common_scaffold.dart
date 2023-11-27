@@ -55,7 +55,7 @@ class CommonScaffold extends StatelessWidget {
                           child: const Text("Next Step"))))
               : bottomNavigationBar
           : null,
-      appBar: AppBar(
+      appBar: AppBar(iconTheme: IconThemeData(color:  isFlow! ? AppColors.appScaffoldColor : AppColors.primaryColor),
         centerTitle: true,
         elevation: 0,
         backgroundColor:

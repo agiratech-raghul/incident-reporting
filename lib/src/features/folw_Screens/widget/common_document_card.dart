@@ -30,7 +30,7 @@ class CommonDocumentCard extends StatelessWidget {
                     borderRadius: const BorderRadius.all(
                         Radius.circular(UIDimens.size10)),
                     image: DecorationImage(
-                        image: AssetImage(image ?? AppAssets.document),
+                        image: AssetImage(image ?? AppAssets.documentBgRemove),
                         fit: BoxFit.fitHeight),
                   )),
               const HeightSpaceBox(size: 10),

@@ -5,6 +5,7 @@ import 'dart:async';
 
 import 'src/app.dart';
 import 'src/services/services_initializer.dart';
+import 'package:device_preview/device_preview.dart';
 
 Future<void> main() async {
   final ProviderContainer container = ProviderContainer();
@@ -13,7 +14,9 @@ Future<void> main() async {
     WidgetsFlutterBinding.ensureInitialized();
     await container.read(servicesInitializerProvider).init();
 
-    runApp(UncontrolledProviderScope(container: container, child: const App()));
+    runApp(UncontrolledProviderScope(container: container, child: DevicePreview(
+      enabled: true,
+      builder: (context) => const App(),)));
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,

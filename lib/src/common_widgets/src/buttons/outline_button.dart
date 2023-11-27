@@ -10,7 +10,7 @@ class SecondaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         onPressed: onPressed,
-        child: Text(text!,style: TextStyle(color: Colors.black)),
+        child: Text(text!,style: TextStyle(color: Colors.black),textAlign: TextAlign.center),
         style: ButtonStyle(
             elevation: MaterialStateProperty.all<double>(0),
             backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
