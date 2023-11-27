@@ -1,3 +1,6 @@
+import 'package:incident_reporting/src/features/auth/forgot_password.dart';
+import 'package:incident_reporting/src/features/auth/otp_verification_screen.dart';
+import 'package:incident_reporting/src/features/auth/rest_password.dart';
 import 'package:incident_reporting/src/features/auth/sign_in_screen.dart';
 import 'package:incident_reporting/src/features/auth/sign_up_screen.dart';
 import 'package:incident_reporting/src/features/folw_Screens/first_screen.dart';
@@ -60,6 +63,18 @@ class RouteManager {
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.signUpScreen),
             builder: (context) => SignUpScreen());
+      case RouteConstants.forgotPassword:
+        return MaterialPageRoute(
+            settings: const RouteSettings(name: RouteConstants.forgotPassword),
+            builder: (context) => ForgotPassWord());
+      case RouteConstants.otpVerification:
+        return MaterialPageRoute(
+            settings: const RouteSettings(name: RouteConstants.otpVerification),
+            builder: (context) => const OtpVerification());
+      case RouteConstants.restPassword:
+        return MaterialPageRoute(
+            settings: const RouteSettings(name: RouteConstants.restPassword),
+            builder: (context) => RestPassword());
       default:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.splashScreen),

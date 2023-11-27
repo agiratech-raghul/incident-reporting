@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:incident_reporting/src/routing/route_constants.dart';
+import 'package:incident_reporting/src/ui_utils/app_assets.dart';
 import 'package:incident_reporting/src/ui_utils/app_snack_bar.dart';
+import 'package:incident_reporting/src/utils/src/helpers/ui_dimens.dart';
+import 'package:size_setter/size_setter.dart';
 import '../../../services/connectivity_service_provider.dart/connectivity_service_provider.dart';
 import '../../../utils/utils.dart';
 import '../../../constants/string_constants.dart';
@@ -46,9 +49,13 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
     );
 
     return Scaffold(
-      body: Container(
-          color: AppColors.primaryColor,
-          child: Center(child: Text(StringConstants.appName.tr(context)))),
-    );
+        body: Container(
+      alignment: Alignment.center,
+      child: Image.asset(
+          fit: BoxFit.cover,
+          height: Utils.getScreenHeight(
+              context, Utils.getScreenHeight(context, UIDimens.size70)),
+          AppAssets.appLogo),
+    ));
   }
 }

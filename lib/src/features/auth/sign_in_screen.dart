@@ -27,90 +27,95 @@ class SignInScreen extends StatelessWidget {
           automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: Image.asset(
-            AppAssets.appLogo,
-            height: Utils.getScreenHeight(context, 50),
-            fit: BoxFit.fitHeight,
+          title: Center(
+            child: Image.asset(
+              AppAssets.appLogo,
+              height: Utils.getScreenHeight(context, 50),
+              fit: BoxFit.fitHeight,
+            ),
           )),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 23),
-        child: ListView(
-          children: [
-            const HeightSpaceBox(size: 30),
-            const Align(
-              child: Text(
-                "Welcome To Excelsior",
-                style: TextStyle(
-                    fontSize: 28,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold),
+        child: Center(
+          child: ListView(
+            shrinkWrap: true,
+            children: [
+              const HeightSpaceBox(size: 30),
+              const Align(
+                child: Text(
+                  "Welcome To Excelsior",
+                  style: TextStyle(
+                      fontSize: 28,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            const HeightSpaceBox(size: 30),
-            Form(
-              key: _formKey,
-              child: CommonTextFields(
-                  // key: formKeys.first,
-                  controller: emailController,
-                  keyboardType: TextInputType.emailAddress,
-                  textInputAction: TextInputAction.next,
+              const HeightSpaceBox(size: 30),
+              Form(
+                key: _formKey,
+                child: CommonTextFields(
+                    // key: formKeys.first,
+                    controller: emailController,
+                    keyboardType: TextInputType.emailAddress,
+                    textInputAction: TextInputAction.next,
+                    filled: true,
+                    radius: 5,
+                    floatingText: 'Email address',
+                    onChanged: (d) {
+                      if (emailController.text.isNotEmpty) {
+                        _formKey.currentState?.validate();
+                        // return valida
+                      }
+                    },
+                    validator: FormValidator.emailValidator),
+              ),
+              const HeightSpaceBox(size: 15),
+              Form(
+                key: _formKeyTwo,
+                child: CommonTextFields(
+                  floatingText: 'Password',
+                  controller: passwordController,
+                  keyboardType: TextInputType.visiblePassword,
+                  textInputAction: TextInputAction.done,
                   filled: true,
                   radius: 5,
-                  floatingText: 'Email address',
+                  maxLines: 1,
                   onChanged: (d) {
-                    if (emailController.text.isNotEmpty) {
-                      _formKey.currentState?.validate();
-                      // return valida
-                    }
+                    _formKeyTwo.currentState?.validate();
                   },
-                  validator: FormValidator.emailValidator),
-            ),
-            const HeightSpaceBox(size: 15),
-            Form(
-              key: _formKeyTwo,
-              child: CommonTextFields(
-                floatingText: 'Password',
-                controller: passwordController,
-                keyboardType: TextInputType.visiblePassword,
-                textInputAction: TextInputAction.done,
-                filled: true,
-                radius: 5,
-                maxLines: 1,
-                onChanged: (d) {
-                  _formKeyTwo.currentState?.validate();
+                  validator: FormValidator.passwordValidator,
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, RouteConstants.forgotPassword);
                 },
-                validator: FormValidator.passwordValidator,
+                child: Container(
+                  margin: const EdgeInsets.symmetric(vertical: 12),
+                  alignment: Alignment.centerRight,
+                  child: Text('Forget Password? ',
+                      style: TextStyles.regularTextSecondary
+                          .copyWith(color: AppColors.primaryColor)),
+                ),
               ),
-            ),
-            GestureDetector(
-              onTap: () {
-                // Navigator.pushNamed(context, RouteConstants.forgotPassword);
-              },
-              child: Container(
-                margin: const EdgeInsets.symmetric(vertical: 12),
-                alignment: Alignment.centerRight,
-                child: Text('Forget Password? ',
-                    style: TextStyles.regularTextSecondary
-                        .copyWith(color: AppColors.primaryColor)),
-              ),
-            ),
-            PrimaryButton(
-                isPrimary: true,
+              PrimaryButton(
+                  isPrimary: true,
+                  onPressed: () async {
+                    Navigator.pushNamed(context, RouteConstants.homeScreen);
+                  },
+                  text: 'Login'),
+              const DividerChild(text: 'Or Login With'),
+              GoogleFacebook(googleOnpressed: () {}, facebookOnPressed: () {}),
+              const HeightSpaceBox(size: 25),
+              CommonRichText(
+                firstText: 'dont have an account',
+                secondText: "Sign Up",
                 onPressed: () async {
-                  Navigator.pushNamed(context, RouteConstants.homeScreen);
+                  Navigator.of(context).pushNamed(RouteConstants.signUpScreen);
                 },
-                text: 'Login'),
-            const DividerChild(text: 'Or Login With'),
-            GoogleFacebook(googleOnpressed: () {}, facebookOnPressed: () {}),
-            const HeightSpaceBox(size: 25),
-            CommonRichText(
-              firstText: 'dont have an account',
-              secondText: "Sign Up",
-              onPressed: () async {
-                Navigator.of(context).pushNamed(RouteConstants.signUpScreen);
-              },
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
     );

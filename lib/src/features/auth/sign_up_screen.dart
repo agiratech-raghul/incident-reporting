@@ -28,96 +28,101 @@ class SignUpScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Image.asset(
-          AppAssets.appLogo,
-          height: Utils.getScreenHeight(context, 50),
-          fit: BoxFit.fitHeight,
+        title: Center(
+          child: Image.asset(
+            AppAssets.appLogo,
+            height: Utils.getScreenHeight(context, 50),
+            fit: BoxFit.fitHeight,
+          ),
         ),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 23),
-        child: ListView(
-          children: [
-            const HeightSpaceBox(size: 30),
-            const Align(
-              child: Text(
-                "Create Account",
-                style: TextStyle(
-                    fontSize: 28,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold),
+        child: Center(
+          child: ListView(
+            shrinkWrap: true,
+            children: [
+              const HeightSpaceBox(size: 30),
+              const Align(
+                child: Text(
+                  "Create Account",
+                  style: TextStyle(
+                      fontSize: 28,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            const HeightSpaceBox(size: 30),
-            Form(
-              key: _formKey,
-              child: CommonTextFields(
-                  // key: formKeys.first,
-                  controller: nameController,
-                  keyboardType: TextInputType.emailAddress,
-                  textInputAction: TextInputAction.next,
+              const HeightSpaceBox(size: 30),
+              Form(
+                key: _formKey,
+                child: CommonTextFields(
+                    // key: formKeys.first,
+                    controller: nameController,
+                    keyboardType: TextInputType.emailAddress,
+                    textInputAction: TextInputAction.next,
+                    filled: true,
+                    radius: 5,
+                    floatingText: 'Full Name',
+                    onChanged: (d) {
+                      if (nameController.text.isNotEmpty) {
+                        _formKey.currentState?.validate();
+                        // return valida
+                      }
+                    },
+                    validator: FormValidator.emptyValidator),
+              ),
+              const HeightSpaceBox(size: 15),
+              Form(
+                key: _formKeyTwo,
+                child: CommonTextFields(
+                  floatingText: 'Email Address',
+                  controller: emailController,
+                  keyboardType: TextInputType.visiblePassword,
+                  textInputAction: TextInputAction.done,
                   filled: true,
                   radius: 5,
-                  floatingText: 'Full Name',
+                  maxLines: 1,
                   onChanged: (d) {
-                    if (nameController.text.isNotEmpty) {
-                      _formKey.currentState?.validate();
-                      // return valida
-                    }
+                    _formKeyTwo.currentState?.validate();
                   },
-                  validator: FormValidator.emptyValidator),
-            ),
-            const HeightSpaceBox(size: 15),
-            Form(
-              key: _formKeyTwo,
-              child: CommonTextFields(
-                floatingText: 'Email Address',
-                controller: emailController,
-                keyboardType: TextInputType.visiblePassword,
-                textInputAction: TextInputAction.done,
+                  validator: FormValidator.emailValidator,
+                ),
+              ),
+              const HeightSpaceBox(size: 15),
+              CommonTextFields(
+                controller: phoneNumberController,
+                hintText: 'Phone Number',
+                floatingText: 'Phone Number',
+                keyboardType: TextInputType.number,
+                textInputAction: TextInputAction.next,
                 filled: true,
                 radius: 5,
                 maxLines: 1,
-                onChanged: (d) {
-                  _formKeyTwo.currentState?.validate();
-                },
-                validator: FormValidator.emailValidator,
-              ),
-            ),
-            const HeightSpaceBox(size: 15),
-            CommonTextFields(
-              controller: phoneNumberController,
-              hintText: 'Phone Number',
-              floatingText: 'Phone Number',
-              keyboardType: TextInputType.number,
-              textInputAction: TextInputAction.next,
-              filled: true,
-              radius: 5,
-              maxLines: 1,
-              validator: (d) {
-                return null;
+                validator: (d) {
+                  return null;
 
-                // return FormValidator.mobileNumberValidator(
-                //     d, int.parse(country!.first.phoneLength));
-              },
-            ),
-            const HeightSpaceBox(size: 30),
-            PrimaryButton(
-                isPrimary: true, onPressed: () async {}, text: 'sign up'),
-            const DividerChild(text: 'or Sign Up with'),
-            GoogleFacebook(googleOnpressed: () {}, facebookOnPressed: () {}),
-            const HeightSpaceBox(size: 25),
-            CommonRichText(
-              firstText: 'Already have an account?',
-              secondText: "Login",
-              onPressed: () async {
-                Navigator.of(context).pushNamedAndRemoveUntil(
-                  RouteConstants.signInScreen,
-                  (route) => true,
-                );
-              },
-            ),
-          ],
+                  // return FormValidator.mobileNumberValidator(
+                  //     d, int.parse(country!.first.phoneLength));
+                },
+              ),
+              const HeightSpaceBox(size: 30),
+              PrimaryButton(
+                  isPrimary: true, onPressed: () async {}, text: 'sign up'),
+              const DividerChild(text: 'or Sign Up with'),
+              GoogleFacebook(googleOnpressed: () {}, facebookOnPressed: () {}),
+              const HeightSpaceBox(size: 25),
+              CommonRichText(
+                firstText: 'Already have an account?',
+                secondText: "Login",
+                onPressed: () async {
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                    RouteConstants.signInScreen,
+                    (route) => true,
+                  );
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

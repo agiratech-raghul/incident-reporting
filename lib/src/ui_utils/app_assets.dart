@@ -8,6 +8,7 @@ abstract class AppAssets {
   static const sampleCarAccident = "$path/car_accident.png";
   static const document = "$path/document.png";
   static const google = "$path/google.png";
+  static const captcha = "$path/captcha_image.png";
   static const facebook = "$path/facebook.png";
   static const documentWithoutPen = "$path/document_without_pen.png";
   static const documentWithPen = "$path/document_with_pen.png";

@@ -6,7 +6,8 @@ abstract class AppColors {
   static const Color secondaryColor = Color(0xff5ccaff);
   static const Color secondaryBlueColor = Color(0xffddf6fc);
   static const Color lightGrey = Color(0xffeeeeee);
-  static const Color secondarytextColor = Color(0xff444444);
+  static const Color checkboxColor = Color(0xff6675DD);
+  static const Color secondarytextColor = Color.fromRGBO(68, 68, 68, 1);
   static const Color primaryTextColor = Color(0xff292949);
   static const Color lightBlue = Color(0xff0090d6);
   static const Color selectingBlue = Color(0xff547DBF);
