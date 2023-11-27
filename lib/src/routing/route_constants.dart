@@ -10,4 +10,7 @@ class RouteConstants {
   static const String lastScreen = '/lastScreen';
   static const String signInScreen = '/signInScreen';
   static const String signUpScreen = '/signUpScreen';
+  static const String forgotPassword = '/forgotPassword';
+  static const String otpVerification = '/otpVerification';
+  static const String restPassword = '/restPassword';
 }

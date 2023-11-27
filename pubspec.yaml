@@ -35,6 +35,8 @@ dependencies:
   flutter_sim_country_code: ^0.1.2
   google_mlkit_text_recognition: ^0.11.0
   size_setter:
+  flutter_otp_text_field: ^1.1.1
+
 
 dev_dependencies:
   flutter_test:
@@ -43,6 +45,31 @@ dev_dependencies:
   device_preview:
 flutter:
   uses-material-design: true
+  fonts:
+  - family: RobotoRegular
+    fonts:
+      - asset: fonts/Roboto-Regular.ttf
+
+  - family: RobotoLight
+    fonts:
+      - asset: fonts/Roboto-Light.ttf
+
+  - family: RobotoBold
+    fonts:
+      - asset: fonts/Roboto-Bold.ttf
+
+  - family: RobotoMedium
+    fonts:
+      - asset: fonts/Roboto-Medium.ttf
+  - family: RobotoThin
+    fonts:
+      - asset: fonts/Roboto-Thin.ttf
+  - family: captcha
+    fonts:
+      - asset: fonts/moskitoes_regular.ttf
+  - family: profaisal
+    fonts:
+      - asset: fonts/Profaisal.ttf
   assets:
     - assets/
     - assets/json/language/
