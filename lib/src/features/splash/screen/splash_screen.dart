@@ -33,20 +33,20 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    ref.listen<AsyncValue<ConnectionStatus>>(
-      connectionStreamProvider,
-      (prevState, newState) {
-        newState.whenOrNull(
-          data: (status) {
-            String message = status == ConnectionStatus.disconnected
-                ? 'Your Disconnected'
-                : 'Your Back Online';
-            AppSnackBar(isPositive: true, message: message)
-                .showAppSnackBar(context);
-          },
-        );
-      },
-    );
+    // ref.listen<AsyncValue<ConnectionStatus>>(
+    //   connectionStreamProvider,
+    //   (prevState, newState) {
+    //     newState.whenOrNull(
+    //       data: (status) {
+    //         String message = status == ConnectionStatus.disconnected
+    //             ? 'Your Disconnected'
+    //             : 'Your Back Online';
+    //         AppSnackBar(isPositive: true, message: message)
+    //             .showAppSnackBar(context);
+    //       },
+    //     );
+    //   },
+    // );
 
     return Scaffold(
         body: Container(

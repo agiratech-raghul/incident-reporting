@@ -1,3 +1,4 @@
+import 'package:incident_reporting/src/features/auth/forgot_otp_screen.dart';
 import 'package:incident_reporting/src/features/auth/forgot_password.dart';
 import 'package:incident_reporting/src/features/auth/otp_verification_screen.dart';
 import 'package:incident_reporting/src/features/auth/rest_password.dart';
@@ -75,6 +76,10 @@ class RouteManager {
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.restPassword),
             builder: (context) => RestPassword());
+      case RouteConstants.forgotOtpScreen:
+        return MaterialPageRoute(
+            settings: const RouteSettings(name: RouteConstants.forgotOtpScreen),
+            builder: (context) => const ForgotOtpScreen());
       default:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.splashScreen),

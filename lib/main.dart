@@ -14,9 +14,12 @@ Future<void> main() async {
     WidgetsFlutterBinding.ensureInitialized();
     await container.read(servicesInitializerProvider).init();
 
-    runApp(UncontrolledProviderScope(container: container, child: DevicePreview(
-      enabled: true,
-      builder: (context) => const App(),)));
+    runApp(UncontrolledProviderScope(
+        container: container,
+        child: DevicePreview(
+          enabled: false,
+          builder: (context) => const App(),
+        )));
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,

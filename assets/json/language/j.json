@@ -1,0 +1,1492 @@
+[
+    {
+      "country_code": "AF",
+      "label": "Afghanistan",
+      "phone": "+93",
+      "flag": "flags/afg.png"
+    },
+    {
+      "country_code": "AX",
+      "label": "Åland Islands",
+      "phone": "+358",
+      "flag": "flags/ala.png"
+    },
+    {
+      "country_code": "AL",
+      "label": "Albania",
+      "phone": "+355",
+      "flag": "flags/alb.png"
+    },
+    {
+      "country_code": "DZ",
+      "label": "Algeria",
+      "phone": "+213",
+      "flag": "flags/dza.png"
+    },
+    {
+      "country_code": "AS",
+      "label": "American Samoa",
+      "phone": "+1684",
+      "flag": "flags/asm.png"
+    },
+    {
+      "country_code": "AD",
+      "label": "Andorra",
+      "phone": "+376",
+      "flag": "flags/and.png"
+    },
+    {
+      "country_code": "AO",
+      "label": "Angola",
+      "phone": "+244",
+      "flag": "flags/ago.png"
+    },
+    {
+      "country_code": "AI",
+      "label": "Anguilla",
+      "phone": "+1264",
+      "flag": "flags/aia.png"
+    },
+    {
+      "country_code": "AQ",
+      "label": "Antarctica",
+      "phone": "+672",
+      "flag": "flags/ata.png"
+    },
+    {
+      "country_code": "AG",
+      "label": "Antigua and Barbuda",
+      "phone": "+1268",
+      "flag": "flags/atg.png"
+    },
+    {
+      "country_code": "AR",
+      "label": "Argentina",
+      "phone": "+54",
+      "flag": "flags/arg.png"
+    },
+    {
+      "country_code": "AM",
+      "label": "Armenia",
+      "phone": "+374",
+      "flag": "flags/arm.png"
+    },
+    {
+      "country_code": "AW",
+      "label": "Aruba",
+      "phone": "+297",
+      "flag": "flags/abw.png"
+    },
+    {
+      "country_code": "AU",
+      "label": "Australia",
+      "phone": "+61",
+      "flag": "flags/aus.png"
+    },
+    {
+      "country_code": "AT",
+      "label": "Austria",
+      "phone": "+43",
+      "flag": "flags/aut.png"
+    },
+    {
+      "country_code": "AZ",
+      "label": "Azerbaijan",
+      "phone": "+994",
+      "flag": "flags/aze.png"
+    },
+    {
+      "country_code": "BS",
+      "label": "Bahamas",
+      "phone": "+1242",
+      "flag": "flags/bhs.png"
+    },
+    {
+      "country_code": "BH",
+      "label": "Bahrain",
+      "phone": "+973",
+      "flag": "flags/bhr.png"
+    },
+    {
+      "country_code": "BD",
+      "label": "Bangladesh",
+      "phone": "+880",
+      "flag": "flags/bgd.png"
+    },
+    {
+      "country_code": "BB",
+      "label": "Barbados",
+      "phone": "+1246",
+      "flag": "flags/brb.png"
+    },
+    {
+      "country_code": "BY",
+      "label": "Belarus",
+      "phone": "+375",
+      "flag": "flags/blr.png"
+    },
+    {
+      "country_code": "BE",
+      "label": "Belgium",
+      "phone": "+32",
+      "flag": "flags/bel.png"
+    },
+    {
+      "country_code": "BZ",
+      "label": "Belize",
+      "phone": "+501",
+      "flag": "flags/blz.png"
+    },
+    {
+      "country_code": "BJ",
+      "label": "Benin",
+      "phone": "+229",
+      "flag": "flags/ben.png"
+    },
+    {
+      "country_code": "BM",
+      "label": "Bermuda",
+      "phone": "+1441",
+      "flag": "flags/bmu.png"
+    },
+    {
+      "country_code": "BT",
+      "label": "Bhutan",
+      "phone": "+975",
+      "flag": "flags/btn.png"
+    },
+    {
+      "country_code": "BO",
+      "label": "Bolivia (Plurinational State of)",
+      "phone": "+591",
+      "flag": "flags/bol.png"
+    },
+  
+    {
+      "country_code": "BA",
+      "label": "Bosnia and Herzegovina",
+      "phone": "+387",
+      "flag": "flags/bih.png"
+    },
+    {
+      "country_code": "BW",
+      "label": "Botswana",
+      "phone": "+267",
+      "flag": "flags/bwa.png"
+    },
+    {
+      "country_code": "BV",
+      "label": "Bouvet Island",
+      "phone": "+55",
+      "flag": "flags/bvt.png"
+    },
+    {
+      "country_code": "BR",
+      "label": "Brazil",
+      "phone": "+55",
+      "flag": "flags/bra.png"
+    },
+    {
+      "country_code": "IO",
+      "label": "British Indian Ocean Territory",
+      "phone": "+246",
+      "flag": "flags/iot.png"
+    },
+   
+    {
+      "country_code": "VG",
+      "label": "Virgin Islands (British)",
+      "phone": "+1284",
+      "flag": "flags/vgb.png"
+    },
+    {
+      "country_code": "VI",
+      "label": "Virgin Islands (U.S.)",
+      "phone": "+1 340",
+      "flag": "flags/vir.png"
+    },
+    {
+      "country_code": "BN",
+      "label": "Brunei Darussalam",
+      "phone": "+673",
+      "flag": "flags/brn.png"
+    },
+    {
+      "country_code": "BG",
+      "label": "Bulgaria",
+      "phone": "+359",
+      "flag": "flags/bgr.png"
+    },
+    {
+      "country_code": "BF",
+      "label": "Burkina Faso",
+      "phone": "+226",
+      "flag": "flags/bfa.png"
+    },
+    {
+      "country_code": "BI",
+      "label": "Burundi",
+      "phone": "+257",
+      "flag": "flags/bdi.png"
+    },
+    {
+      "country_code": "KH",
+      "label": "Cambodia",
+      "phone": "+855",
+      "flag": "flags/khm.png"
+    },
+    {
+      "country_code": "CM",
+      "label": "Cameroon",
+      "phone": "+237",
+      "flag": "flags/cmr.png"
+    },
+    {
+      "country_code": "CA",
+      "label": "Canada",
+      "phone": "+1",
+      "flag": "flags/can.png"
+    },
+    {
+      "country_code": "CV",
+      "label": "Cabo Verde",
+      "phone": "+238",
+      "flag": "flags/cpv.png"
+    },
+    {
+      "country_code": "KY",
+      "label": "Cayman Islands",
+      "phone": "+1345",
+      "flag": "flags/cym.png"
+    },
+    {
+      "country_code": "CF",
+      "label": "Central African Republic",
+      "phone": "+236",
+      "flag": "flags/caf.png"
+    },
+    {
+      "country_code": "TD",
+      "label": "Chad",
+      "phone": "+235",
+      "flag": "flags/tcd.png"
+    },
+    {
+      "country_code": "CL",
+      "label": "Chile",
+      "phone": "+56",
+      "flag": "flags/chl.png"
+    },
+    {
+      "country_code": "CN",
+      "label": "China",
+      "phone": "+86",
+      "flag": "flags/chn.png"
+    },
+    {
+      "country_code": "CX",
+      "label": "Christmas Island",
+      "phone": "+61",
+      "flag": "flags/cxr.png"
+    },
+    {
+      "country_code": "CC",
+      "label": "Cocos (Keeling) Islands",
+      "phone": "+61",
+      "flag": "flags/cck.png"
+    },
+    {
+      "country_code": "CO",
+      "label": "Colombia",
+      "phone": "+57",
+      "flag": "flags/col.png"
+    },
+    {
+      "country_code": "KM",
+      "label": "Comoros",
+      "phone": "+269",
+      "flag": "flags/com.png"
+    },
+    {
+      "country_code": "CG",
+      "label": "Congo",
+      "phone": "+242",
+      "flag": "flags/cog.png"
+    },
+    {
+      "country_code": "CD",
+      "label": "Congo (Democratic Republic of the)",
+      "phone": "+243",
+      "flag": "flags/cod.png"
+    },
+    {
+      "country_code": "CK",
+      "label": "Cook Islands",
+      "phone": "+682",
+      "flag": "flags/cok.png"
+    },
+    {
+      "country_code": "CR",
+      "label": "Costa Rica",
+      "phone": "+506",
+      "flag": "flags/cri.png"
+    },
+    {
+      "country_code": "HR",
+      "label": "Croatia",
+      "phone": "+385",
+      "flag": "flags/hrv.png"
+    },
+    {
+      "country_code": "CU",
+      "label": "Cuba",
+      "phone": "+53",
+      "flag": "flags/cub.png"
+    },
+    {
+      "country_code": "CW",
+      "label": "Curaçao",
+      "phone": "+599",
+      "flag": "flags/cuw.png"
+    },
+    {
+      "country_code": "CY",
+      "label": "Cyprus",
+      "phone": "+357",
+      "flag": "flags/cyp.png"
+    },
+    {
+      "country_code": "CZ",
+      "label": "Czech Republic",
+      "phone": "+420",
+      "flag": "flags/cze.png"
+    },
+    {
+      "country_code": "DK",
+      "label": "Denmark",
+      "phone": "+45",
+      "flag": "flags/dnk.png"
+    },
+    {
+      "country_code": "DJ",
+      "label": "Djibouti",
+      "phone": "+253",
+      "flag": "flags/dji.png"
+    },
+    {
+      "country_code": "DM",
+      "label": "Dominica",
+      "phone": "+1767",
+      "flag": "flags/dma.png"
+    },
+    {
+      "country_code": "DO",
+      "label": "Dominican Republic",
+      "phone": "+1809",
+      "flag": "flags/dom.png"
+    },
+    {
+      "country_code": "EC",
+      "label": "Ecuador",
+      "phone": "+593",
+      "flag": "flags/ecu.png"
+    },
+    {
+      "country_code": "EG",
+      "label": "Egypt",
+      "phone": "+20",
+      "flag": "flags/egy.png"
+    },
+    {
+      "country_code": "SV",
+      "label": "El Salvador",
+      "phone": "+503",
+      "flag": "flags/slv.png"
+    },
+    {
+      "country_code": "GQ",
+      "label": "Equatorial Guinea",
+      "phone": "+240",
+      "flag": "flags/gnq.png"
+    },
+    {
+      "country_code": "ER",
+      "label": "Eritrea",
+      "phone": "+291",
+      "flag": "flags/eri.png"
+    },
+    {
+      "country_code": "EE",
+      "label": "Estonia",
+      "phone": "+372",
+      "flag": "flags/est.png"
+    },
+    {
+      "country_code": "ET",
+      "label": "Ethiopia",
+      "phone": "+251",
+      "flag": "flags/eth.png"
+    },
+    {
+      "country_code": "FK",
+      "label": "Falkland Islands (Malvinas)",
+      "phone": "+500",
+      "flag": "flags/flk.png"
+    },
+    {
+      "country_code": "FO",
+      "label": "Faroe Islands",
+      "phone": "+298",
+      "flag": "flags/fro.png"
+    },
+    {
+      "country_code": "FJ",
+      "label": "Fiji",
+      "phone": "+679",
+      "flag": "flags/fji.png"
+    },
+    {
+      "country_code": "FI",
+      "label": "Finland",
+      "phone": "+358",
+      "flag": "flags/fin.png"
+    },
+    {
+      "country_code": "FR",
+      "label": "France",
+      "phone": "+33",
+      "flag": "flags/fra.png"
+    },
+    {
+      "country_code": "GF",
+      "label": "French Guiana",
+      "phone": "+594",
+      "flag": "flags/guf.png"
+    },
+    {
+      "country_code": "PF",
+      "label": "French Polynesia",
+      "phone": "+689",
+      "flag": "flags/pyf.png"
+    },
+    {
+      "country_code": "TF",
+      "label": "French Southern Territories",
+      "phone": "+262",
+      "flag": "flags/atf.png"
+    },
+    {
+      "country_code": "GA",
+      "label": "Gabon",
+      "phone": "+241",
+      "flag": "flags/gab.png"
+    },
+    {
+      "country_code": "GM",
+      "label": "Gambia",
+      "phone": "+220",
+      "flag": "flags/gmb.png"
+    },
+    {
+      "country_code": "GE",
+      "label": "Georgia",
+      "phone": "+995",
+      "flag": "flags/geo.png"
+    },
+    {
+      "country_code": "DE",
+      "label": "Germany",
+      "phone": "+49",
+      "flag": "flags/deu.png"
+    },
+    {
+      "country_code": "GH",
+      "label": "Ghana",
+      "phone": "+233",
+      "flag": "flags/gha.png"
+    },
+    {
+      "country_code": "GI",
+      "label": "Gibraltar",
+      "phone": "+350",
+      "flag": "flags/gib.png"
+    },
+    {
+      "country_code": "GR",
+      "label": "Greece",
+      "phone": "+30",
+      "flag": "flags/grc.png"
+    },
+    {
+      "country_code": "GL",
+      "label": "Greenland",
+      "phone": "+299",
+      "flag": "flags/grl.png"
+    },
+    {
+      "country_code": "GD",
+      "label": "Grenada",
+      "phone": "+1473",
+      "flag": "flags/grd.png"
+    },
+    {
+      "country_code": "GP",
+      "label": "Guadeloupe",
+      "phone": "+590",
+      "flag": "flags/glp.png"
+    },
+    {
+      "country_code": "GU",
+      "label": "Guam",
+      "phone": "+1671",
+      "flag": "flags/gum.png"
+    },
+    {
+      "country_code": "GT",
+      "label": "Guatemala",
+      "phone": "+502",
+      "flag": "flags/gtm.png"
+    },
+    {
+      "country_code": "GG",
+      "label": "Guernsey",
+      "phone": "+44",
+      "flag": "flags/ggy.png"
+    },
+    {
+      "country_code": "GN",
+      "label": "Guinea",
+      "phone": "+224",
+      "flag": "flags/gin.png"
+    },
+    {
+      "country_code": "GW",
+      "label": "Guinea-Bissau",
+      "phone": "+245",
+      "flag": "flags/gnb.png"
+    },
+    {
+      "country_code": "GY",
+      "label": "Guyana",
+      "phone": "+592",
+      "flag": "flags/guy.png"
+    },
+    {
+      "country_code": "HT",
+      "label": "Haiti",
+      "phone": "+509",
+      "flag": "flags/hti.png"
+    },
+    {
+      "country_code": "HM",
+      "label": "Heard Island and McDonald Islands",
+      "phone": "+672",
+      "flag": "flags/hmd.png"
+    },
+    {
+      "country_code": "VA",
+      "label": "Holy See",
+      "phone": "+379",
+      "flag": "flags/vat.png"
+    },
+    {
+      "country_code": "HN",
+      "label": "Honduras",
+      "phone": "+504",
+      "flag": "flags/hnd.png"
+    },
+    {
+      "country_code": "HK",
+      "label": "Hong Kong",
+      "phone": "+852",
+      "flag": "flags/hkg.png"
+    },
+    {
+      "country_code": "HU",
+      "label": "Hungary",
+      "phone": "+36",
+      "flag": "flags/hun.png"
+    },
+    {
+      "country_code": "IS",
+      "label": "Iceland",
+      "phone": "+354",
+      "flag": "flags/isl.png"
+    },
+    {
+      "country_code": "IN",
+      "label": "India",
+      "phone": "+91",
+      "flag": "flags/ind.png"
+    },
+    {
+      "country_code": "ID",
+      "label": "Indonesia",
+      "phone": "+62",
+      "flag": "flags/idn.png"
+    },
+    {
+      "country_code": "CI",
+      "label": "Côte d'Ivoire",
+      "phone": "+225",
+      "flag": "flags/civ.png"
+    },
+    {
+      "country_code": "IR",
+      "label": "Iran (Islamic Republic of)",
+      "phone": "+98",
+      "flag": "flags/irn.png"
+    },
+    {
+      "country_code": "IQ",
+      "label": "Iraq",
+      "phone": "+964",
+      "flag": "flags/irq.png"
+    },
+    {
+      "country_code": "IE",
+      "label": "Ireland",
+      "phone": "+353",
+      "flag": "flags/irl.png"
+    },
+    {
+      "country_code": "IM",
+      "label": "Isle of Man",
+      "phone": "+44",
+      "flag": "flags/imn.png"
+    },
+    {
+      "country_code": "IL",
+      "label": "Israel",
+      "phone": "+972",
+      "flag": "flags/isr.png"
+    },
+    {
+      "country_code": "IT",
+      "label": "Italy",
+      "phone": "+39",
+      "flag": "flags/ita.png"
+    },
+    {
+      "country_code": "JM",
+      "label": "Jamaica",
+      "phone": "+1876",
+      "flag": "flags/jam.png"
+    },
+    {
+      "country_code": "JP",
+      "label": "Japan",
+      "phone": "+81",
+      "flag": "flags/jpn.png"
+    },
+    {
+      "country_code": "JE",
+      "label": "Jersey",
+      "phone": "+44",
+      "flag": "flags/jey.png"
+    },
+    {
+      "country_code": "JO",
+      "label": "Jordan",
+      "phone": "+962",
+      "flag": "flags/jor.png"
+    },
+    {
+      "country_code": "KZ",
+      "label": "Kazakhstan",
+      "phone": "+76",
+      "flag": "flags/kaz.png"
+    },
+    {
+      "country_code": "KE",
+      "label": "Kenya",
+      "phone": "+254",
+      "flag": "flags/ken.png"
+    },
+    {
+      "country_code": "KI",
+      "label": "Kiribati",
+      "phone": "+686",
+      "flag": "flags/kir.png"
+    },
+    {
+      "country_code": "KW",
+      "label": "Kuwait",
+      "phone": "+965",
+      "flag": "flags/kwt.png"
+    },
+    {
+      "country_code": "KG",
+      "label": "Kyrgyzstan",
+      "phone": "+996",
+      "flag": "flags/kgz.png"
+    },
+    {
+      "country_code": "LA",
+      "label": "Lao People's Democratic Republic",
+      "phone": "+856",
+      "flag": "flags/lao.png"
+    },
+    {
+      "country_code": "LV",
+      "label": "Latvia",
+      "phone": "+371",
+      "flag": "flags/lva.png"
+    },
+    {
+      "country_code": "LB",
+      "label": "Lebanon",
+      "phone": "+961",
+      "flag": "flags/lbn.png"
+    },
+    {
+      "country_code": "LS",
+      "label": "Lesotho",
+      "phone": "+266",
+      "flag": "flags/lso.png"
+    },
+    {
+      "country_code": "LR",
+      "label": "Liberia",
+      "phone": "+231",
+      "flag": "flags/lbr.png"
+    },
+    {
+      "country_code": "LY",
+      "label": "Libya",
+      "phone": "+218",
+      "flag": "flags/lby.png"
+    },
+    {
+      "country_code": "LI",
+      "label": "Liechtenstein",
+      "phone": "+423",
+      "flag": "flags/lie.png"
+    },
+    {
+      "country_code": "LT",
+      "label": "Lithuania",
+      "phone": "+370",
+      "flag": "flags/ltu.png"
+    },
+    {
+      "country_code": "LU",
+      "label": "Luxembourg",
+      "phone": "+352",
+      "flag": "flags/lux.png"
+    },
+    {
+      "country_code": "MO",
+      "label": "Macao",
+      "phone": "+853",
+      "flag": "flags/mac.png"
+    },
+    {
+      "country_code": "MK",
+      "label": "Macedonia (the former Yugoslav Republic of)",
+      "phone": "+389",
+      "flag": "flags/mkd.png"
+    },
+    {
+      "country_code": "MG",
+      "label": "Madagascar",
+      "phone": "+261",
+      "flag": "flags/mdg.png"
+    },
+    {
+      "country_code": "MW",
+      "label": "Malawi",
+      "phone": "+265",
+      "flag": "flags/mwi.png"
+    },
+    {
+      "country_code": "MY",
+      "label": "Malaysia",
+      "phone": "+60",
+      "flag": "flags/mys.png"
+    },
+    {
+      "country_code": "MV",
+      "label": "Maldives",
+      "phone": "+960",
+      "flag": "flags/mdv.png"
+    },
+    {
+      "country_code": "ML",
+      "label": "Mali",
+      "phone": "+223",
+      "flag": "flags/mli.png"
+    },
+    {
+      "country_code": "MT",
+      "label": "Malta",
+      "phone": "+356",
+      "flag": "flags/mlt.png"
+    },
+    {
+      "country_code": "MH",
+      "label": "Marshall Islands",
+      "phone": "+692",
+      "flag": "flags/mhl.png"
+    },
+    {
+      "country_code": "MQ",
+      "label": "Martinique",
+      "phone": "+596",
+      "flag": "flags/mtq.png"
+    },
+    {
+      "country_code": "MR",
+      "label": "Mauritania",
+      "phone": "+222",
+      "flag": "flags/mrt.png"
+    },
+    {
+      "country_code": "MU",
+      "label": "Mauritius",
+      "phone": "+230",
+      "flag": "flags/mus.png"
+    },
+    {
+      "country_code": "YT",
+      "label": "Mayotte",
+      "phone": "+262",
+      "flag": "flags/myt.png"
+    },
+    {
+      "country_code": "MX",
+      "label": "Mexico",
+      "phone": "+52",
+      "flag": "flags/mex.png"
+    },
+    {
+      "country_code": "FM",
+      "label": "Micronesia (Federated States of)",
+      "phone": "+691",
+      "flag": "flags/fsm.png"
+    },
+    {
+      "country_code": "MD",
+      "label": "Moldova (Republic of)",
+      "phone": "+373",
+      "flag": "flags/mda.png"
+    },
+    {
+      "country_code": "MC",
+      "label": "Monaco",
+      "phone": "+377",
+      "flag": "flags/mco.png"
+    },
+    {
+      "country_code": "MN",
+      "label": "Mongolia",
+      "phone": "+976",
+      "flag": "flags/mng.png"
+    },
+    {
+      "country_code": "ME",
+      "label": "Montenegro",
+      "phone": "+382",
+      "flag": "flags/mne.png"
+    },
+    {
+      "country_code": "MS",
+      "label": "Montserrat",
+      "phone": "+1664",
+      "flag": "flags/msr.png"
+    },
+    {
+      "country_code": "MA",
+      "label": "Morocco",
+      "phone": "+212",
+      "flag": "flags/mar.png"
+    },
+    {
+      "country_code": "MZ",
+      "label": "Mozambique",
+      "phone": "+258",
+      "flag": "flags/moz.png"
+    },
+    {
+      "country_code": "MM",
+      "label": "Myanmar",
+      "phone": "+95",
+      "flag": "flags/mmr.png"
+    },
+    {
+      "country_code": "NA",
+      "label": "Namibia",
+      "phone": "+264",
+      "flag": "flags/nam.png"
+    },
+    {
+      "country_code": "NR",
+      "label": "Nauru",
+      "phone": "+674",
+      "flag": "flags/nru.png"
+    },
+    {
+      "country_code": "NP",
+      "label": "Nepal",
+      "phone": "+977",
+      "flag": "flags/npl.png"
+    },
+    {
+      "country_code": "NL",
+      "label": "Netherlands",
+      "phone": "+31",
+      "flag": "flags/nld.png"
+    },
+    {
+      "country_code": "NC",
+      "label": "New Caledonia",
+      "phone": "+687",
+      "flag": "flags/ncl.png"
+    },
+    {
+      "country_code": "NZ",
+      "label": "New Zealand",
+      "phone": "+64",
+      "flag": "flags/nzl.png"
+    },
+    {
+      "country_code": "NI",
+      "label": "Nicaragua",
+      "phone": "+505",
+      "flag": "flags/nic.png"
+    },
+    {
+      "country_code": "NE",
+      "label": "Niger",
+      "phone": "+227",
+      "flag": "flags/ner.png"
+    },
+    {
+      "country_code": "NG",
+      "label": "Nigeria",
+      "phone": "+234",
+      "flag": "flags/nga.png"
+    },
+    {
+      "country_code": "NU",
+      "label": "Niue",
+      "phone": "+683",
+      "flag": "flags/niu.png"
+    },
+    {
+      "country_code": "NF",
+      "label": "Norfolk Island",
+      "phone": "+672",
+      "flag": "flags/nfk.png"
+    },
+    {
+      "country_code": "KP",
+      "label": "Korea (Democratic People's Republic of)",
+      "phone": "+850",
+      "flag": "flags/prk.png"
+    },
+    {
+      "country_code": "MP",
+      "label": "Northern Mariana Islands",
+      "phone": "+1670",
+      "flag": "flags/mnp.png"
+    },
+    {
+      "country_code": "NO",
+      "label": "Norway",
+      "phone": "+47",
+      "flag": "flags/nor.png"
+    },
+    {
+      "country_code": "OM",
+      "label": "Oman",
+      "phone": "+968",
+      "flag": "flags/omn.png"
+    },
+    {
+      "country_code": "PK",
+      "label": "Pakistan",
+      "phone": "+92",
+      "flag": "flags/pak.png"
+    },
+    {
+      "country_code": "PW",
+      "label": "Palau",
+      "phone": "+680",
+      "flag": "flags/plw.png"
+    },
+    {
+      "country_code": "PS",
+      "label": "Palestine, State of",
+      "phone": "+970",
+      "flag": "flags/pse.png"
+    },
+    {
+      "country_code": "PA",
+      "label": "Panama",
+      "phone": "+507",
+      "flag": "flags/pan.png"
+    },
+    {
+      "country_code": "PG",
+      "label": "Papua New Guinea",
+      "phone": "+675",
+      "flag": "flags/png.png"
+    },
+    {
+      "country_code": "PY",
+      "label": "Paraguay",
+      "phone": "+595",
+      "flag": "flags/pry.png"
+    },
+    {
+      "country_code": "PE",
+      "label": "Peru",
+      "phone": "+51",
+      "flag": "flags/per.png"
+    },
+    {
+      "country_code": "PH",
+      "label": "Philippines",
+      "phone": "+63",
+      "flag": "flags/phl.png"
+    },
+    {
+      "country_code": "PN",
+      "label": "Pitcairn",
+      "phone": "+64",
+      "flag": "flags/pcn.png"
+    },
+    {
+      "country_code": "PL",
+      "label": "Poland",
+      "phone": "+48",
+      "flag": "flags/pol.png"
+    },
+    {
+      "country_code": "PT",
+      "label": "Portugal",
+      "phone": "+351",
+      "flag": "flags/prt.png"
+    },
+    {
+      "country_code": "PR",
+      "label": "Puerto Rico",
+      "phone": "+1787",
+      "flag": "flags/pri.png"
+    },
+    {
+      "country_code": "QA",
+      "label": "Qatar",
+      "phone": "+974",
+      "flag": "flags/qat.png"
+    },
+    {
+      "country_code": "XK",
+      "label": "Republic of Kosovo",
+      "phone": "+383",
+      "flag": "flags/kos.png"
+    },
+    {
+      "country_code": "RE",
+      "label": "Réunion",
+      "phone": "+262",
+      "flag": "flags/reu.png"
+    },
+    {
+      "country_code": "RO",
+      "label": "Romania",
+      "phone": "+40",
+      "flag": "flags/rou.png"
+    },
+    {
+      "country_code": "RU",
+      "label": "Russian Federation",
+      "phone": "+7",
+      "flag": "flags/rus.png"
+    },
+    {
+      "country_code": "RW",
+      "label": "Rwanda",
+      "phone": "+250",
+      "flag": "flags/rwa.png"
+    },
+    {
+      "country_code": "BL",
+      "label": "Saint Barthélemy",
+      "phone": "+590",
+      "flag": "flags/blm.png"
+    },
+    {
+      "country_code": "SH",
+      "label": "Saint Helena, Ascension and Tristan da Cunha",
+      "phone": "+290",
+      "flag": "flags/shn.png"
+    },
+    {
+      "country_code": "KN",
+      "label": "Saint Kitts and Nevis",
+      "phone": "+1869",
+      "flag": "flags/kna.png"
+    },
+    {
+      "country_code": "LC",
+      "label": "Saint Lucia",
+      "phone": "+1758",
+      "flag": "flags/lca.png"
+    },
+    {
+      "country_code": "MF",
+      "label": "Saint Martin (French part)",
+      "phone": "+590",
+      "flag": "flags/maf.png"
+    },
+    {
+      "country_code": "PM",
+      "label": "Saint Pierre and Miquelon",
+      "phone": "+508",
+      "flag": "flags/spm.png"
+    },
+    {
+      "country_code": "VC",
+      "label": "Saint Vincent and the Grenadines",
+      "phone": "+1784",
+      "flag": "flags/vct.png"
+    },
+    {
+      "country_code": "WS",
+      "label": "Samoa",
+      "phone": "+685",
+      "flag": "flags/wsm.png"
+    },
+    {
+      "country_code": "SM",
+      "label": "San Marino",
+      "phone": "+378",
+      "flag": "flags/smr.png"
+    },
+    {
+      "country_code": "ST",
+      "label": "Sao Tome and Principe",
+      "phone": "+239",
+      "flag": "flags/stp.png"
+    },
+    {
+      "country_code": "SA",
+      "label": "Saudi Arabia",
+      "phone": "+966",
+      "flag": "flags/sau.png"
+    },
+    {
+      "country_code": "SN",
+      "label": "Senegal",
+      "phone": "+221",
+      "flag": "flags/sen.png"
+    },
+    {
+      "country_code": "RS",
+      "label": "Serbia",
+      "phone": "+381",
+      "flag": "flags/srb.png"
+    },
+    {
+      "country_code": "SC",
+      "label": "Seychelles",
+      "phone": "+248",
+      "flag": "flags/syc.png"
+    },
+    {
+      "country_code": "SL",
+      "label": "Sierra Leone",
+      "phone": "+232",
+      "flag": "flags/sle.png"
+    },
+    {
+      "country_code": "SG",
+      "label": "Singapore",
+      "phone": "+65",
+      "flag": "flags/sgp.png"
+    },
+    {
+      "country_code": "SX",
+      "label": "Sint Maarten (Dutch part)",
+      "phone": "+1721",
+      "flag": "flags/sxm.png"
+    },
+    {
+      "country_code": "SK",
+      "label": "Slovakia",
+      "phone": "+421",
+      "flag": "flags/svk.png"
+    },
+    {
+      "country_code": "SI",
+      "label": "Slovenia",
+      "phone": "+386",
+      "flag": "flags/svn.png"
+    },
+    {
+      "country_code": "SB",
+      "label": "Solomon Islands",
+      "phone": "+677",
+      "flag": "flags/slb.png"
+    },
+    {
+      "country_code": "SO",
+      "label": "Somalia",
+      "phone": "+252",
+      "flag": "flags/som.png"
+    },
+    {
+      "country_code": "ZA",
+      "label": "South Africa",
+      "phone": "+27",
+      "flag": "flags/zaf.png"
+    },
+    {
+      "country_code": "GS",
+      "label": "South Georgia and the South Sandwich Islands",
+      "phone": "+500",
+      "flag": "flags/sgs.png"
+    },
+    {
+      "country_code": "KR",
+      "label": "Korea (Republic of)",
+      "phone": "+82",
+      "flag": "flags/kor.png"
+    },
+    {
+      "country_code": "SS",
+      "label": "South Sudan",
+      "phone": "+211",
+      "flag": "flags/ssd.png"
+    },
+    {
+      "country_code": "ES",
+      "label": "Spain",
+      "phone": "+34",
+      "flag": "flags/esp.png"
+    },
+    {
+      "country_code": "LK",
+      "label": "Sri Lanka",
+      "phone": "+94",
+      "flag": "flags/lka.png"
+    },
+    {
+      "country_code": "SD",
+      "label": "Sudan",
+      "phone": "+249",
+      "flag": "flags/sdn.png"
+    },
+    {
+      "country_code": "SR",
+      "label": "Suriname",
+      "phone": "+597",
+      "flag": "flags/sur.png"
+    },
+    {
+      "country_code": "SJ",
+      "label": "Svalbard and Jan Mayen",
+      "phone": "+4779",
+      "flag": "flags/sjm.png"
+    },
+    {
+      "country_code": "SZ",
+      "label": "Swaziland",
+      "phone": "+268",
+      "flag": "flags/swz.png"
+    },
+    {
+      "country_code": "SE",
+      "label": "Sweden",
+      "phone": "+46",
+      "flag": "flags/swe.png"
+    },
+    {
+      "country_code": "CH",
+      "label": "Switzerland",
+      "phone": "+41",
+      "flag": "flags/che.png"
+    },
+    {
+      "country_code": "SY",
+      "label": "Syrian Arab Republic",
+      "phone": "+963",
+      "flag": "flags/syr.png"
+    },
+    {
+      "country_code": "TW",
+      "label": "Taiwan",
+      "phone": "+886",
+      "flag": "flags/twn.png"
+    },
+    {
+      "country_code": "TJ",
+      "label": "Tajikistan",
+      "phone": "+992",
+      "flag": "flags/tjk.png"
+    },
+    {
+      "country_code": "TZ",
+      "label": "Tanzania, United Republic of",
+      "phone": "+255",
+      "flag": "flags/tza.png"
+    },
+    {
+      "country_code": "TH",
+      "label": "Thailand",
+      "phone": "+66",
+      "flag": "flags/tha.png"
+    },
+    {
+      "country_code": "TL",
+      "label": "Timor-Leste",
+      "phone": "+670",
+      "flag": "flags/tls.png"
+    },
+    {
+      "country_code": "TG",
+      "label": "Togo",
+      "phone": "+228",
+      "flag": "flags/tgo.png"
+    },
+    {
+      "country_code": "TK",
+      "label": "Tokelau",
+      "phone": "+690",
+      "flag": "flags/tkl.png"
+    },
+    {
+      "country_code": "TO",
+      "label": "Tonga",
+      "phone": "+676",
+      "flag": "flags/ton.png"
+    },
+    {
+      "country_code": "TT",
+      "label": "Trinidad and Tobago",
+      "phone": "+1868",
+      "flag": "flags/tto.png"
+    },
+    {
+      "country_code": "TN",
+      "label": "Tunisia",
+      "phone": "+216",
+      "flag": "flags/tun.png"
+    },
+    {
+      "country_code": "TR",
+      "label": "Turkey",
+      "phone": "+90",
+      "flag": "flags/tur.png"
+    },
+    {
+      "country_code": "TM",
+      "label": "Turkmenistan",
+      "phone": "+993",
+      "flag": "flags/tkm.png"
+    },
+    {
+      "country_code": "TC",
+      "label": "Turks and Caicos Islands",
+      "phone": "+1649",
+      "flag": "flags/tca.png"
+    },
+    {
+      "country_code": "TV",
+      "label": "Tuvalu",
+      "phone": "+688",
+      "flag": "flags/tuv.png"
+    },
+    {
+      "country_code": "UG",
+      "label": "Uganda",
+      "phone": "+256",
+      "flag": "flags/uga.png"
+    },
+    {
+      "country_code": "UA",
+      "label": "Ukraine",
+      "phone": "+380",
+      "flag": "flags/ukr.png"
+    },
+    {
+      "country_code": "AE",
+      "label": "United Arab Emirates",
+      "phone": "+971",
+      "flag": "flags/are.png"
+    },
+    {
+      "country_code": "GB",
+      "label": "United Kingdom of Great Britain and Northern Ireland",
+      "phone": "+44",
+      "flag": "flags/gbr.png"
+    },
+    {
+      "country_code": "US",
+      "label": "United States of America",
+      "phone": "+1",
+      "flag": "flags/usa.png"
+    },
+    {
+      "country_code": "UY",
+      "label": "Uruguay",
+      "phone": "+598",
+      "flag": "flags/ury.png"
+    },
+    {
+      "country_code": "UZ",
+      "label": "Uzbekistan",
+      "phone": "+998",
+      "flag": "flags/uzb.png"
+    },
+    {
+      "country_code": "VU",
+      "label": "Vanuatu",
+      "phone": "+678",
+      "flag": "flags/vut.png"
+    },
+    {
+      "country_code": "VE",
+      "label": "Venezuela (Bolivarian Republic of)",
+      "phone": "+58",
+      "flag": "flags/ven.png"
+    },
+    {
+      "country_code": "VN",
+      "label": "Viet Nam",
+      "phone": "+84",
+      "flag": "flags/vnm.png"
+    },
+    {
+      "country_code": "WF",
+      "label": "Wallis and Futuna",
+      "phone": "+681",
+      "flag": "flags/wlf.png"
+    },
+    {
+      "country_code": "EH",
+      "label": "Western Sahara",
+      "phone": "+212",
+      "flag": "flags/esh.png"
+    },
+    {
+      "country_code": "YE",
+      "label": "Yemen",
+      "phone": "+967",
+      "flag": "flags/yem.png"
+    },
+    {
+      "country_code": "ZM",
+      "label": "Zambia",
+      "phone": "+260",
+      "flag": "flags/zmb.png"
+    },
+    {
+      "country_code": "ZW",
+      "label": "Zimbabwe",
+      "phone": "+263",
+      "flag": "flags/zwe.png"
+    }
+  ]

@@ -48,7 +48,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
               width: double.infinity,
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.secondaryColor),
+                      backgroundColor: AppColors.primaryColor),
                   onPressed: () {
                     if (vehicleOption == 2) {
                       Navigator.pushNamed(

@@ -31,7 +31,7 @@ class CommonScaffold extends StatelessWidget {
                       width: double.infinity,
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: AppColors.secondaryColor),
+                              backgroundColor: AppColors.primaryColor),
                           onPressed: () {
                             print(route);
                             if (route == RouteConstants.initialScreen) {
@@ -55,7 +55,10 @@ class CommonScaffold extends StatelessWidget {
                           child: const Text("Next Step"))))
               : bottomNavigationBar
           : null,
-      appBar: AppBar(iconTheme: IconThemeData(color:  isFlow! ? AppColors.appScaffoldColor : AppColors.primaryColor),
+      appBar: AppBar(
+        iconTheme: IconThemeData(
+            color:
+                isFlow! ? AppColors.appScaffoldColor : AppColors.primaryColor),
         centerTitle: true,
         elevation: 0,
         backgroundColor:
