@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 import 'dart:async';
 
 import 'src/app.dart';
+import 'src/services/connectivity_service_provider.dart/check_internet_connectivity.dart';
 import 'src/services/services_initializer.dart';
 import 'package:device_preview/device_preview.dart';
 
@@ -10,10 +12,12 @@ Future<void> main() async {
 
   runZonedGuarded<Future<void>>(() async {
     WidgetsFlutterBinding.ensureInitialized();
-
+     CheckInternet().checkRealtimeConnection();
     runApp(DevicePreview(
       enabled: false,
-      builder: (context) => const App(),
+      builder: (context) => ChangeNotifierProvider(
+          create: (_) => CheckInternet(),
+          child: const App()),
     ));
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
