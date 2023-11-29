@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'dart:async';
 
 import 'src/app.dart';
@@ -8,18 +7,14 @@ import 'src/services/services_initializer.dart';
 import 'package:device_preview/device_preview.dart';
 
 Future<void> main() async {
-  final ProviderContainer container = ProviderContainer();
 
   runZonedGuarded<Future<void>>(() async {
     WidgetsFlutterBinding.ensureInitialized();
-    await container.read(servicesInitializerProvider).init();
 
-    runApp(UncontrolledProviderScope(
-        container: container,
-        child: DevicePreview(
-          enabled: false,
-          builder: (context) => const App(),
-        )));
+    runApp(DevicePreview(
+      enabled: false,
+      builder: (context) => const App(),
+    ));
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,

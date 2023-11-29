@@ -1,22 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:incident_reporting/src/routing/route_constants.dart';
 import 'package:incident_reporting/src/ui_utils/app_assets.dart';
-import 'package:incident_reporting/src/ui_utils/app_snack_bar.dart';
 import 'package:incident_reporting/src/utils/src/helpers/ui_dimens.dart';
 import 'package:size_setter/size_setter.dart';
-import '../../../services/connectivity_service_provider.dart/connectivity_service_provider.dart';
-import '../../../utils/utils.dart';
-import '../../../constants/string_constants.dart';
 
-class SplashScreen extends StatefulHookConsumerWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override
-  ConsumerState<ConsumerStatefulWidget> createState() => _SplashScreenState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends ConsumerState<SplashScreen> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     _startTimer();
