@@ -1,3 +1,4 @@
+import 'package:incident_reporting/src/common_widgets/signature_pad.dart';
 import 'package:incident_reporting/src/features/auth/forgot_otp_screen.dart';
 import 'package:incident_reporting/src/features/auth/forgot_password.dart';
 import 'package:incident_reporting/src/features/auth/otp_verification_screen.dart';
@@ -9,6 +10,7 @@ import 'package:incident_reporting/src/features/folw_Screens/last_screen.dart';
 import 'package:incident_reporting/src/features/folw_Screens/second_screen.dart';
 import 'package:incident_reporting/src/features/folw_Screens/other_details.dart';
 import 'package:incident_reporting/src/features/folw_Screens/profile_screen.dart';
+import 'package:incident_reporting/src/features/folw_Screens/signature_screen.dart';
 import 'package:incident_reporting/src/features/folw_Screens/third_screen.dart';
 import 'package:incident_reporting/src/features/home_screen.dart';
 
@@ -63,11 +65,11 @@ class RouteManager {
       case RouteConstants.signUpScreen:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.signUpScreen),
-            builder: (context) => SignUpScreen());
+            builder: (context) => const SignUpScreen());
       case RouteConstants.forgotPassword:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.forgotPassword),
-            builder: (context) => ForgotPassWord());
+            builder: (context) => const ForgotPassWord());
       case RouteConstants.otpVerification:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.otpVerification),
@@ -80,6 +82,10 @@ class RouteManager {
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.forgotOtpScreen),
             builder: (context) => const ForgotOtpScreen());
+      case RouteConstants.signatureScreen:
+        return MaterialPageRoute(
+            settings: const RouteSettings(name: RouteConstants.signatureScreen),
+            builder: (context) => const SignatureScreen());
       default:
         return MaterialPageRoute(
             settings: const RouteSettings(name: RouteConstants.splashScreen),

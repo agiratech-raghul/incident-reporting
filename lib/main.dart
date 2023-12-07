@@ -9,15 +9,12 @@ import 'src/services/services_initializer.dart';
 import 'package:device_preview/device_preview.dart';
 
 Future<void> main() async {
-
   runZonedGuarded<Future<void>>(() async {
     WidgetsFlutterBinding.ensureInitialized();
-     CheckInternet().checkRealtimeConnection();
     runApp(DevicePreview(
       enabled: false,
       builder: (context) => ChangeNotifierProvider(
-          create: (_) => CheckInternet(),
-          child: const App()),
+          create: (_) => InternetConnectionProvider(), child: const App()),
     ));
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,

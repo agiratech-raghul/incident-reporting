@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:signature/signature.dart';
 
-class SignatureScreen extends StatefulWidget {
-  const SignatureScreen({Key? key}) : super(key: key);
+class SignaturePad extends StatefulWidget {
+  const SignaturePad({Key? key}) : super(key: key);
 
   @override
-  State<SignatureScreen> createState() => _SignatureScreenState();
+  State<SignaturePad> createState() => _SignatureScreenState();
 }
 
-class _SignatureScreenState extends State<SignatureScreen> {
+class _SignatureScreenState extends State<SignaturePad> {
   SignatureController signatureController = SignatureController(
     penStrokeWidth: 3,
     penColor: Colors.black,
@@ -27,10 +27,12 @@ class _SignatureScreenState extends State<SignatureScreen> {
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Signature(
-              height: MediaQuery.of(context).size.width,
-              width: MediaQuery.of(context).size.width,
-              controller: signatureController,
+            child: FittedBox(
+              child: Signature(
+                height: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width,
+                controller: signatureController,
+              ),
             ),
           ),
           Row(

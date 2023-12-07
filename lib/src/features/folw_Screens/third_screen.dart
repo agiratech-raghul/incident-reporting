@@ -58,7 +58,8 @@ class _ThirdScreenState extends State<ThirdScreen> {
                           arguments: {"isAnotherVehicle": true});
                     }
                   },
-                  child: const Text("Next Step")))),
+                  child: const Text("Next Step",
+                      style: TextStyle(color: Colors.white))))),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),

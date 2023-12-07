@@ -137,7 +137,7 @@ class _LastScreenState extends State<LastScreen> {
               signatureImage = await showDialog(
                 context: context,
                 builder: (context) => const AlertDialog(
-                  content: SignatureScreen(),
+                  content: SignaturePad(),
                   contentPadding: EdgeInsets.zero,
                 ),
               );

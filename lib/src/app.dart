@@ -1,3 +1,5 @@
+import 'package:incident_reporting/src/services/connectivity_service_provider.dart/check_internet_connectivity.dart';
+import 'package:provider/provider.dart';
 import 'package:size_setter/size_setter.dart';
 
 import '../src/localization/app_locallization.dart';
@@ -14,12 +16,26 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
+  // CheckInternet? _checkInternet;
+
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   _checkInternet = Provider.of<CheckInternet>(context, listen: false);
+  //   _checkInternet?.checkRealtimeConnection();
+  //   super.initState();
+  // }
+
   @override
   Widget build(BuildContext context) {
+    // if (_checkInternet?.status == "Offline") {
+    //   print("hgfhgfjh");
+    // }
     return SizeSetter(
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        supportedLocales: Languages.languages.map((e) => Locale(e.code)).toList(),
+        supportedLocales:
+            Languages.languages.map((e) => Locale(e.code)).toList(),
         localizationsDelegates: const [
           //Custom App delegates
           AppLocalizations.delegate,

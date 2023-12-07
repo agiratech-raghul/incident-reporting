@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:incident_reporting/src/routing/route_constants.dart';
+import 'package:incident_reporting/src/services/connectivity_service_provider.dart/check_internet_connectivity.dart';
 import 'package:incident_reporting/src/ui_utils/app_assets.dart';
 import 'package:incident_reporting/src/utils/src/colors/app_colors.dart';
+import 'package:provider/provider.dart';
 import 'package:size_setter/size_setter.dart';
 
-class CommonScaffold extends StatelessWidget {
+class CommonScaffold extends StatefulWidget {
   const CommonScaffold(
       {super.key,
       this.body,
@@ -19,51 +21,74 @@ class CommonScaffold extends StatelessWidget {
   final Color? backgroundColor;
 
   @override
+  State<CommonScaffold> createState() => _CommonScaffoldState();
+}
+
+class _CommonScaffoldState extends State<CommonScaffold> {
+  @override
   Widget build(BuildContext context) {
     final route = ModalRoute.of(context)?.settings.name;
     return Scaffold(
-      backgroundColor: backgroundColor,
-      bottomNavigationBar: isFlow!
+      backgroundColor: widget.backgroundColor,
+      bottomNavigationBar: widget.isFlow!
           ? route != RouteConstants.thirdScreen
               ? Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor: AppColors.primaryColor),
-                          onPressed: () {
-                            print(route);
-                            if (route == RouteConstants.initialScreen) {
-                              Navigator.pushNamed(
-                                  context, RouteConstants.secondScreen);
-                            } else if (route == RouteConstants.secondScreen) {
-                              Navigator.pushNamed(
-                                  context, RouteConstants.thirdScreen);
-                            } else if (route == RouteConstants.thirdScreen) {
-                              Navigator.pushNamed(
-                                  context, RouteConstants.profileScreen);
-                            } else if (route == RouteConstants.profileScreen) {
-                              Navigator.pushNamed(
-                                  context, RouteConstants.otherInfoScreen);
-                            } else if (route ==
-                                RouteConstants.otherInfoScreen) {
-                              Navigator.pushNamed(
-                                  context, RouteConstants.lastScreen);
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: AppColors.primaryColor),
+                        onPressed: () {
+                          print(route);
+                          if (route == RouteConstants.initialScreen) {
+                            Navigator.pushNamed(
+                                context, RouteConstants.secondScreen);
+                          } else if (route == RouteConstants.secondScreen) {
+                            Navigator.pushNamed(
+                                context, RouteConstants.thirdScreen);
+                          } else if (route == RouteConstants.thirdScreen) {
+                            Navigator.pushNamed(
+                                context, RouteConstants.profileScreen);
+                          } else if (route == RouteConstants.profileScreen) {
+                            Navigator.pushNamed(
+                                context, RouteConstants.otherInfoScreen);
+                          } else if (route == RouteConstants.otherInfoScreen) {
+                            Navigator.pushNamed(
+                                context, RouteConstants.lastScreen);
+                          } else if (route == RouteConstants.lastScreen) {
+                            Navigator.pushNamed(
+                                context, RouteConstants.signatureScreen);
+                          }
+                        },
+                        child: Consumer<InternetConnectionProvider>(
+                          builder: (context, connectionProvider, _) {
+                            if (connectionProvider.isConnected) {
+                              return const Text(
+                                'Connected to the Internet',
+                                style: TextStyle(color: Colors.white),
+                              );
+                            } else {
+                              return const Text(
+                                  'Disconnected from the Internet',
+                                  style: TextStyle(color: Colors.white));
                             }
                           },
-                          child: const Text("Next Step"))))
-              : bottomNavigationBar
+                        ),
+                      )))
+              : widget.bottomNavigationBar
           : null,
       appBar: AppBar(
         iconTheme: IconThemeData(
-            color:
-                isFlow! ? AppColors.appScaffoldColor : AppColors.primaryColor),
+            color: widget.isFlow!
+                ? AppColors.appScaffoldColor
+                : AppColors.primaryColor),
         centerTitle: true,
         elevation: 0,
-        backgroundColor:
-            isFlow! ? AppColors.primaryColor : AppColors.appScaffoldColor,
-        leading: isFlow!
+        backgroundColor: widget.isFlow!
+            ? AppColors.primaryColor
+            : AppColors.appScaffoldColor,
+        leading: widget.isFlow!
             ? IconButton(
                 icon: const Icon(Icons.close),
                 onPressed: () {
@@ -95,9 +120,9 @@ class CommonScaffold extends StatelessWidget {
                 },
               )
             : null,
-        title: isFlow!
+        title: widget.isFlow!
             ? Text(
-                title!,
+                widget.title!,
                 textAlign: TextAlign.center,
               )
             : Image.asset(
@@ -141,7 +166,7 @@ class CommonScaffold extends StatelessWidget {
           ],
         ),
       ),
-      body: body,
+      body: widget.body,
     );
   }
 }

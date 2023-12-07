@@ -14,4 +14,5 @@ class RouteConstants {
   static const String otpVerification = '/otpVerification';
   static const String restPassword = '/restPassword';
   static const String forgotOtpScreen = '/forgotOtpScreen';
+  static const String signatureScreen = '/signatureScreen';
 }

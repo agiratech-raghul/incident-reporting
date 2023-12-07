@@ -50,9 +50,8 @@ class CommonImagePicker extends StatelessWidget {
                   ContainerButton(
                     onTap: () async {
                       Navigator.pop(context);
-                      final ImagePicker imagePicker = ImagePicker();
-                      XFile? file = await imagePicker.pickImage(
-                          source: ImageSource.camera);
+                      XFile? file =
+                          await _Picker.pickImage(source: ImageSource.camera);
                       if (file != null) {
                         pickedFileList?.add(file);
                         fileList?.add(File(file.path));

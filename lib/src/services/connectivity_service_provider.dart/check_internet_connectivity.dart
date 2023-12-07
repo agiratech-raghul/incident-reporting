@@ -1,48 +1,22 @@
-import 'dart:async';
-import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/services/connectivity_service_provider.dart/data_connection_checker.dart';
 
-class CheckInternet extends ChangeNotifier {
-  String status = 'waiting...';
-  final Connectivity _connectivity = Connectivity();
-  late StreamSubscription _streamSubscription;
+enum ConnectionStatus { connected, disconnected }
 
-  void checkConnectivity() async {
-    var connectionResult = await _connectivity.checkConnectivity();
-    if (connectionResult == ConnectivityResult.mobile) {
-      status = "Connected to MobileData";
-      notifyListeners();
-    } else if (connectionResult == ConnectivityResult.wifi) {
-      status = "Connected to Wifi";
-      notifyListeners();
-    } else {
-      status = "Offline";
-      notifyListeners();
-    }
-  }
+class InternetConnectionProvider extends ChangeNotifier {
+  late DataConnectionChecker _dataConnectionChecker;
+  late bool _isConnected;
 
-  void checkRealtimeConnection() {
-    _streamSubscription = _connectivity.onConnectivityChanged.listen((event) {
-      switch (event) {
-        case ConnectivityResult.mobile:
-          {
-            status = "Connected to MobileData";
-            notifyListeners();
-          }
-          break;
-        case ConnectivityResult.wifi:
-          {
-            status = "Connected to Wifi";
-            notifyListeners();
-          }
-          break;
-        default:
-          {
-            status = 'Offline';
-            notifyListeners();
-          }
-          break;
-      }
+  InternetConnectionProvider() {
+    _dataConnectionChecker = DataConnectionChecker();
+    _isConnected = true; // Assume connected initially
+
+    // Listen for changes in internet connection status
+    _dataConnectionChecker.onStatusChange.listen((status) {
+      _isConnected = status == DataConnectionStatus.connected;
+      notifyListeners();
     });
   }
+
+  bool get isConnected => _isConnected;
 }
