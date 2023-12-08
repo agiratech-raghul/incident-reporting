@@ -78,13 +78,19 @@ class _HomeScreenState extends State<HomeScreen> {
                                         .pushNamed(RouteConstants.initialScreen);
                                   },
                                   style: ButtonStyle(
+                                    shape:MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5.0),
+                                )
+                              ),
                                     backgroundColor:
                                         MaterialStateProperty.all<Color>(
                                             AppColors.selectingBlue),
                                   ),
                                   child: const Text(
                                     "Report an Incident",
-                                    style: TextStyle(fontSize: 16),
+                                    style: TextStyle(fontSize: 16,color: Colors.white)
+                                    ,
                                   ),
                                 ),
                               ),

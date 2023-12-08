@@ -38,6 +38,7 @@ class _CommonScaffoldState extends State<CommonScaffold> {
                       width: double.infinity,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                             backgroundColor: AppColors.primaryColor),
                         onPressed: () {
                           print(route);
@@ -124,6 +125,7 @@ class _CommonScaffoldState extends State<CommonScaffold> {
             ? Text(
                 widget.title!,
                 textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white),
               )
             : Image.asset(
                 AppAssets.appLogo,

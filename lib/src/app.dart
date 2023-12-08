@@ -1,5 +1,3 @@
-import 'package:incident_reporting/src/services/connectivity_service_provider.dart/check_internet_connectivity.dart';
-import 'package:provider/provider.dart';
 import 'package:size_setter/size_setter.dart';
 
 import '../src/localization/app_locallization.dart';
