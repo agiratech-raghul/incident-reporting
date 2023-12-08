@@ -125,32 +125,32 @@ class _LastScreenState extends State<LastScreen> {
               horizontal: 20.w,
             ),
           ),
-          if (signatureImage != null)
-            Image.memory(
-              signatureImage!,
-              height: 100,
-              width: 100,
-              fit: BoxFit.fill,
-            ),
-          TextButton(
-            onPressed: () async {
-              signatureImage = await showDialog(
-                context: context,
-                builder: (context) => const AlertDialog(
-                  content: SignaturePad(),
-                  contentPadding: EdgeInsets.zero,
-                ),
-              );
-              setState(() {});
-            },
-            child: Text(
-              signatureImage != null
-                  ? 'Change Your Signature'
-                  : 'Add Your Signature',
-              style:
-                  const TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
-            ),
-          ),
+          // if (signatureImage != null)
+          //   Image.memory(
+          //     signatureImage!,
+          //     height: 100,
+          //     width: 100,
+          //     fit: BoxFit.fill,
+          //   ),
+          // TextButton(
+          //   onPressed: () async {
+          //     signatureImage = await showDialog(
+          //       context: context,
+          //       builder: (context) => const AlertDialog(
+          //         content: SignaturePad(),
+          //         contentPadding: EdgeInsets.zero,
+          //       ),
+          //     );
+          //     setState(() {});
+          //   },
+          //   child: Text(
+          //     signatureImage != null
+          //         ? 'Change Your Signature'
+          //         : 'Add Your Signature',
+          //     style:
+          //         const TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+          //   ),
+          // ),
           // ElevatedButton(onPressed: () {}, child: const Text("data"))
         ]),
       ),

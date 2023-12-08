@@ -38,10 +38,11 @@ class _SignatureScreenState extends State<SignaturePad> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              padButtonOption(Colors.redAccent, 'Clear', () {
+              padButtonOption(
+                  Colors.red.shade400, 'Clear', () {
                 signatureController.clear();
               }),
-              padButtonOption(Colors.greenAccent, 'Done', () async {
+              padButtonOption(Colors.greenAccent.shade400, 'Done', () async {
                 if (signatureController.isNotEmpty) {
                   final signature = await exportSignature();
                   if (signature.isNotEmpty) {
@@ -73,12 +74,16 @@ class _SignatureScreenState extends State<SignaturePad> {
       Color btnClr, String btnTxt, Function() btnOnTapAction) {
     return ElevatedButton(
         style: ButtonStyle(
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                )),
             backgroundColor: MaterialStateProperty.all(btnClr),
-            padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
+            padding: MaterialStateProperty.all(const EdgeInsets.symmetric(vertical: 10)),
             textStyle: MaterialStateProperty.all(
                 const TextStyle(fontSize: 14, color: Colors.white))),
         onPressed: btnOnTapAction,
-        child: Text(btnTxt));
+        child: Text(btnTxt,style: TextStyle(color: Colors.white),));
   }
 
   Future<File> bitsToFile(Uint8List? signatureImage) async {

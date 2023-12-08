@@ -15,7 +15,7 @@ Future<void> main() async {
       enabled: false,
       builder: (context) => ChangeNotifierProvider(
           create: (_) => InternetConnectionProvider(), child: const App()),
-    ));
+       ));
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,

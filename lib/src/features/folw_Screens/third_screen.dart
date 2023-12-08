@@ -48,6 +48,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
               width: double.infinity,
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                       backgroundColor: AppColors.primaryColor),
                   onPressed: () {
                     if (vehicleOption == 2) {
@@ -89,7 +90,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
                 child: SizedBox(
-                  height: MediaQuery.of(context).size.height / 2,
+                  height: MediaQuery.of(context).size.height / 2.5.h,
                   child: Row(
                     children: [
                       Expanded(
@@ -231,7 +232,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                 ],
               ),
               SizedBox(
-                height: 310,
+                height: MediaQuery.of(context).size.height/2.8.h,
                 child: PageView(
                   physics: const BouncingScrollPhysics(),
                   controller: _pageController,

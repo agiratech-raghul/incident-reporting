@@ -39,9 +39,13 @@ class _CommonSelectState extends State<CommonSelect> {
               });
             },
             style: ButtonStyle(
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                )),
                 backgroundColor: MaterialStateProperty.all<Color>(
                     value ? AppColors.selectingBlue : Colors.black12)),
-            child: Text(widget.text)),
+            child: Text(widget.text,style: const TextStyle(color: Colors.white),)),
         ElevatedButton(
             onPressed: () {
               setState(() {
@@ -52,9 +56,13 @@ class _CommonSelectState extends State<CommonSelect> {
               });
             },
             style: ButtonStyle(
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    )),
                 backgroundColor: MaterialStateProperty.all<Color>(
                     value1 ? AppColors.selectingBlue : Colors.black12)),
-            child: Text(widget.text1)),
+            child: Text(widget.text1,style: const TextStyle(color: Colors.white),)),
         ElevatedButton(
             onPressed: () {
               setState(() {
@@ -65,9 +73,13 @@ class _CommonSelectState extends State<CommonSelect> {
               });
             },
             style: ButtonStyle(
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    )),
                 backgroundColor: MaterialStateProperty.all<Color>(
                     value2 ? AppColors.selectingBlue : Colors.black12)),
-            child: Text(widget.text2)),
+            child: Text(widget.text2,style: const TextStyle(color: Colors.white),)),
         ElevatedButton(
             onPressed: () {
               setState(() {
@@ -78,9 +90,13 @@ class _CommonSelectState extends State<CommonSelect> {
               });
             },
             style: ButtonStyle(
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    )),
                 backgroundColor: MaterialStateProperty.all<Color>(
                     value3 ? AppColors.selectingBlue : Colors.black12)),
-            child: Text(widget.text3)),
+            child: Text(widget.text3,style: const TextStyle(color: Colors.white),)),
       ],
     );
   }
