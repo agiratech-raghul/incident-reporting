@@ -60,6 +60,9 @@ class _CommonScaffoldState extends State<CommonScaffold> {
                           } else if (route == RouteConstants.lastScreen) {
                             Navigator.pushNamed(
                                 context, RouteConstants.signatureScreen);
+                          } else if (route == RouteConstants.signatureScreen) {
+                            Navigator.pushNamedAndRemoveUntil(context,
+                                RouteConstants.homeScreen, (route) => false);
                           }
                         },
                         child: Consumer<InternetConnectionProvider>(
@@ -67,7 +70,7 @@ class _CommonScaffoldState extends State<CommonScaffold> {
                             if (connectionProvider.isConnected) {
                               return  Text(
                                route== RouteConstants.signatureScreen ?"Finish": 'Next',
-                                style: TextStyle(color: Colors.white,fontSize: 15),
+                                style: const TextStyle(color: Colors.white,fontSize: 15),
                               );
                             } else {
                               return const Text(
