@@ -1,4 +1,3 @@
-import 'package:incident_reporting/src/common_widgets/signature_pad.dart';
 import 'package:incident_reporting/src/features/auth/forgot_otp_screen.dart';
 import 'package:incident_reporting/src/features/auth/forgot_password.dart';
 import 'package:incident_reporting/src/features/auth/otp_verification_screen.dart';

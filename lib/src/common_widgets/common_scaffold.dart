@@ -64,9 +64,9 @@ class _CommonScaffoldState extends State<CommonScaffold> {
                         child: Consumer<InternetConnectionProvider>(
                           builder: (context, connectionProvider, _) {
                             if (connectionProvider.isConnected) {
-                              return const Text(
-                                'Connected to the Internet',
-                                style: TextStyle(color: Colors.white),
+                              return  Text(
+                               route== RouteConstants.signatureScreen ?"Finish": 'Next',
+                                style: TextStyle(color: Colors.white,fontSize: 15),
                               );
                             } else {
                               return const Text(

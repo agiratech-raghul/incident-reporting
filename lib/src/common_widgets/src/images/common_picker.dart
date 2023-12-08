@@ -6,7 +6,7 @@ import 'package:image_picker/image_picker.dart';
 
 import '../buttons/common_container_button.dart';
 
-class CommonImagePicker extends StatelessWidget {
+class CommonImagePicker extends StatefulWidget {
   CommonImagePicker(
       {super.key,
       this.fileList,
@@ -18,7 +18,13 @@ class CommonImagePicker extends StatelessWidget {
   final Widget? widget;
   File? videoData;
 
+  @override
+  State<CommonImagePicker> createState() => _CommonImagePickerState();
+}
+
+class _CommonImagePickerState extends State<CommonImagePicker> {
   final ImagePicker _Picker = ImagePicker();
+
   final textRecognizer = TextRecognizer();
 
   List<XFile?>? pickedFileList = [];
@@ -27,19 +33,33 @@ class CommonImagePicker extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () async {
-          if (!isVideo!) {
-            showMediaType(context);
-          } else {
-            final data = await _Picker.pickVideo(source: ImageSource.gallery);
-            if (data != null) {
-              videoData = File(data.path);
-            }
-          }
+         
+        //   if (!widget.isVideo!) {
+        // showMediaType(context,() async {
+        //               Navigator.pop(context);
+        //               XFile? file =
+        //                   await _Picker.pickImage(source: ImageSource.camera);
+        //               if (file != null) {
+        //                 pickedFileList?.add(file);
+        //                 widget.fileList?.add(File(file.path));
+        //               }
+                     
+        //             });
+         
+        //   } else {
+        //     final data = await _Picker.pickVideo(source: ImageSource.gallery);
+        //     if (data != null) {
+        //       widget.videoData = File(data.path);
+        //     }
+        //   }
+          
         },
-        child: widget);
+        child: widget.widget);
   }
 
-  void showMediaType(BuildContext context) {
+}
+
+ void showMediaType(BuildContext context,VoidCallback camOn,VoidCallback galOn) {
     showDialog(
         context: context,
         builder: ((context) => AlertDialog(
@@ -48,35 +68,14 @@ class CommonImagePicker extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ContainerButton(
-                    onTap: () async {
-                      Navigator.pop(context);
-                      XFile? file =
-                          await _Picker.pickImage(source: ImageSource.camera);
-                      if (file != null) {
-                        pickedFileList?.add(file);
-                        fileList?.add(File(file.path));
-                      }
-                    },
+                    onTap: camOn,
                     height: MediaQuery.of(context).size.height / 9,
                     width: MediaQuery.of(context).size.height / 9,
                     color: Colors.grey,
                     widget: const Icon(Icons.camera_alt_sharp, size: 35),
                   ),
                   ContainerButton(
-                    onTap: () async {
-                      Navigator.pop(context);
-                      pickedFileList = await _Picker.pickMultiImage();
-                      if (pickedFileList != null) {
-                        final inputImage = InputImage.fromFile(
-                            File(pickedFileList?[0]!.path ?? ''));
-                        final recognizedText =
-                            await textRecognizer.processImage(inputImage);
-                        print(recognizedText.text);
-                        for (int i = 0; i < pickedFileList!.length; i++) {
-                          fileList?.add(File(pickedFileList![i]!.path));
-                        }
-                      }
-                    },
+                    onTap: galOn,
                     height: MediaQuery.of(context).size.height / 9,
                     width: MediaQuery.of(context).size.height / 9,
                     color: Colors.grey,
@@ -85,5 +84,4 @@ class CommonImagePicker extends StatelessWidget {
                 ],
               ),
             )));
-  }
-}
+ }
