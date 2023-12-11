@@ -144,7 +144,7 @@ class _CommonScaffoldState extends State<CommonScaffold> {
               decoration: BoxDecoration(
                 color: AppColors.primaryColor,
               ),
-              child: Text('Drawer Header'),
+              child: Text('Incident Reporting',style: TextStyle(color: Colors.white)),
             ),
             ListTile(
               leading: const Icon(Icons.home),

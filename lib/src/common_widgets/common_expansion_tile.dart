@@ -46,7 +46,7 @@ class _CommonExpansionCardState extends State<CommonExpansionCard> {
             widget.title ?? "",
             style: const TextStyle(fontSize: 16.0, fontWeight: FontWeight.w500),
           ),
-          trailing: widget.trailing ?? SizedBox(
+          trailing:widget.trailing ?? SizedBox(
               width: 140,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -146,10 +146,6 @@ class _SecondScreenState extends State<SecondScreen> {
               ),
               CommonExpansionCard(
                 title: "Injuries to anyone?",
-                trailing: const SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
                 widget: GestureDetector(
                   onTap: () {
                     setState(() {
@@ -177,10 +173,6 @@ class _SecondScreenState extends State<SecondScreen> {
               ),
               const CommonExpansionCard(
                 title: "Fatality to anyone?",
-                trailing: SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
                 widget: CommonSelect(
                     text: 'Ins Veh',
                     text1: 'Adv Veh',

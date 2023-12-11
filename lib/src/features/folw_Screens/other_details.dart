@@ -29,10 +29,6 @@ class _OtherInfoScreenState extends State<OtherInfoScreen> {
             children: [
               CommonExpansionCard(
                 title:"Ambulance/was any party sent to ER",
-                trailing: const SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
                 widget: CommonTextField(
                   labelText: "List Names if Possible",
                   hintText: "List Names if Possible",
@@ -42,10 +38,6 @@ class _OtherInfoScreenState extends State<OtherInfoScreen> {
               ),
               CommonExpansionCard(
                 title:"Witness – if yes Contact information",
-                trailing: const SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
                 widget: CommonTextField(
                   labelText: "List Names if Possible",
                   hintText: "List Names if Possible",
@@ -55,10 +47,6 @@ class _OtherInfoScreenState extends State<OtherInfoScreen> {
               ),
               CommonExpansionCard(
                 title:"Were there any Minors",
-                trailing: const SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
                 widget: CommonTextField(
                   labelText: "List Names and Age if possible",
                   hintText: "List Names and Age if possible",
@@ -68,10 +56,6 @@ class _OtherInfoScreenState extends State<OtherInfoScreen> {
               ),
               CommonExpansionCard(
                 title:"Any Criminal acts by Adverse",
-                trailing: const SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
                 widget: CommonTextField(
                   labelText: "Enter a Brief Information about it",
                   hintText: "Enter a Brief Information about it",
@@ -81,10 +65,6 @@ class _OtherInfoScreenState extends State<OtherInfoScreen> {
               ),
               CommonExpansionCard(
                 title:"Was a TNC company involved with the accident",
-                trailing: const SizedBox(
-                  width: 140,
-                  child: CommonYesOrNo(),
-                ),
                 widget: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: Row(

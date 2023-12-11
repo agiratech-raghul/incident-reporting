@@ -29,10 +29,6 @@ class _LastScreenState extends State<LastScreen> {
             Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           CommonExpansionCard(
             title: "Telematics - Dongle(s) for any vehicle",
-            trailing: const SizedBox(
-              width: 140,
-              child: CommonYesOrNo(),
-            ),
             widget: CommonTextField(
               labelText: "List Names if Possible",
               hintText: "List Names if Possible",
@@ -42,10 +38,6 @@ class _LastScreenState extends State<LastScreen> {
           ),
           CommonExpansionCard(
             title: "Dash Cam/Video",
-            trailing: const SizedBox(
-              width: 140,
-              child: CommonYesOrNo(),
-            ),
             widget: CommonTextField(
               enabled: true,
               hintText: "Please Attach If available",
@@ -55,10 +47,6 @@ class _LastScreenState extends State<LastScreen> {
           ),
           CommonExpansionCard(
             title: "Points of impact (Insured Vehicle / Adverse Vehicle",
-            trailing: const SizedBox(
-              width: 140,
-              child: CommonYesOrNo(),
-            ),
             widget: CommonTextField(
               hintText: "List Names if Possible",
               border: InputBorder.none,
@@ -67,10 +55,6 @@ class _LastScreenState extends State<LastScreen> {
           ),
           CommonExpansionCard(
             title: "Did any of the airbags deploy for any vehicle",
-            trailing: const SizedBox(
-              width: 140,
-              child: CommonYesOrNo(),
-            ),
             widget: CommonTextField(
               hintText: "List Names if Possible",
               border: InputBorder.none,
@@ -79,10 +63,6 @@ class _LastScreenState extends State<LastScreen> {
           ),
           CommonExpansionCard(
             title: "Speed limit of each Vehicle if known",
-            trailing: const SizedBox(
-              width: 140,
-              child: CommonYesOrNo(),
-            ),
             widget: CommonTextField(
               hintText: "List Names if Possible",
               border: InputBorder.none,
@@ -91,10 +71,6 @@ class _LastScreenState extends State<LastScreen> {
           ),
           CommonExpansionCard(
             title: "Was any vehicle in the accident stolen",
-            trailing: const SizedBox(
-              width: 140,
-              child: CommonYesOrNo(),
-            ),
             widget: CommonTextField(
               hintText: "List Names if Possible",
               border: InputBorder.none,
@@ -103,10 +79,6 @@ class _LastScreenState extends State<LastScreen> {
           ),
           CommonExpansionCard(
             title: "Mechanical Failure of any vehicle in the accident",
-            trailing: const SizedBox(
-              width: 140,
-              child: CommonYesOrNo(),
-            ),
             widget: CommonTextField(
               hintText: "List Names if Possible",
               border: InputBorder.none,
@@ -115,10 +87,6 @@ class _LastScreenState extends State<LastScreen> {
           ),
           CommonExpansionCard(
             title: "Was any vehicle in the accident towed",
-            trailing: const SizedBox(
-              width: 140,
-              child: CommonYesOrNo(),
-            ),
             widget: CommonTextField(
               hintText: "List Names if Possible",
               border: InputBorder.none,
