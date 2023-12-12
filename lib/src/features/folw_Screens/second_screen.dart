@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:incident_reporting/src/common_widgets/common_expansion_tile.dart';
 import 'package:incident_reporting/src/common_widgets/common_scaffold.dart';
 import 'package:incident_reporting/src/common_widgets/common_text_field.dart';
 import 'package:incident_reporting/src/common_widgets/src/buttons/outline_button.dart';
+import 'package:incident_reporting/src/features/folw_Screens/widget/common_car_view_card.dart';
 import 'package:incident_reporting/src/features/folw_Screens/widget/common_select.dart';
-import 'package:incident_reporting/src/features/folw_Screens/widget/common_yes_or_no.dart';
 import 'package:incident_reporting/src/utils/src/colors/app_colors.dart';
 import 'package:size_setter/size_setter.dart';
 
@@ -22,6 +23,7 @@ class _SecondScreenState extends State<SecondScreen> {
   FocusNode? myFocusNode = FocusNode();
   final TextEditingController _insuredVehicleController =
       TextEditingController(text: "");
+  XFile? frontView;
   @override
   Widget build(BuildContext context) {
     return CommonScaffold(
@@ -56,9 +58,11 @@ class _SecondScreenState extends State<SecondScreen> {
                       : Column(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10.0),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Expanded(
                                     child: SecondaryButton(
@@ -74,7 +78,9 @@ class _SecondScreenState extends State<SecondScreen> {
                                       text: "Rear End Collision",
                                     ),
                                   ),
-                                  SizedBox(width: 10.w,),
+                                  SizedBox(
+                                    width: 10.w,
+                                  ),
                                   Expanded(
                                     child: SecondaryButton(
                                       onPressed: () {
@@ -89,7 +95,9 @@ class _SecondScreenState extends State<SecondScreen> {
                                       text: "Side Swipe",
                                     ),
                                   ),
-                                  SizedBox(width: 10.w,),
+                                  SizedBox(
+                                    width: 10.w,
+                                  ),
                                   Expanded(
                                     child: SecondaryButton(
                                       onPressed: () {
@@ -188,6 +196,44 @@ class _SecondScreenState extends State<SecondScreen> {
                     text2: 'Both',
                     text3: 'None'),
               ),
+              const Card(
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: 400,
+                    width: double.infinity,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          CarView(
+                              title:
+                                  "https://ticketing-dev.excelsior-fht.com/api/ticket/17023843706001-Screenshot20231212at4.03.23PM.png"),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              CarView(
+                                title:
+                                    "https://ticketing-dev.excelsior-fht.com/api/ticket/17023843705920-Screenshot20231212at4.02.59PM.png",
+                              ),
+                              SizedBox(
+                                height: 100,
+                                width: 100,
+                                child: Text(""),
+                              ),
+                              CarView(
+                                title:
+                                    "https://ticketing-dev.excelsior-fht.com/api/ticket/17023843706002-Screenshot20231212at4.03.32PM.png",
+                              ),
+                            ],
+                          ),
+                          CarView(
+                            title:
+                                "https://ticketing-dev.excelsior-fht.com/api/ticket/17023843706013-Screenshot20231212at4.03.39PM.png",
+                          ),
+                        ]),
+                  ),
+                ),
+              )
             ])),
       ),
     );
