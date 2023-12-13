@@ -16,10 +16,10 @@ class SignatureScreen extends StatefulWidget {
 }
 
 class _SignatureScreenState extends State<SignatureScreen> {
-    final ImagePicker _Picker = ImagePicker();
+  final ImagePicker _Picker = ImagePicker();
   Uint8List? signatureImage;
   List<File?>? fileList = [];
-  bool? isAgree=false;
+  bool? isAgree = false;
   @override
   Widget build(BuildContext context) {
     return CommonScaffold(
@@ -58,34 +58,36 @@ class _SignatureScreenState extends State<SignatureScreen> {
                       ],
                       Center(
                         child: TextButton(
-                          onPressed: (){
-                             showMediaType(context,() async {
-                      Navigator.pop(context);
-                      XFile? file =
-                          await _Picker.pickImage(source: ImageSource.camera);
-                      if (file != null) {
-                        setState(() {
-                        fileList?.add(File(file.path));
-                          
-                        });
-                      }
-                     
-                    }, () async {
-                        List<XFile?>? pickedFileList = [];
-                      Navigator.pop(context);
-                      pickedFileList = await _Picker.pickMultiImage();
-                      if (pickedFileList != null && pickedFileList.isNotEmpty) {
-                        final inputImage = InputImage.fromFile(
-                            File(pickedFileList[0]!.path ?? ''));
-                        // final recognizedText =
-                        //     await textRecognizer.processImage(inputImage);
-                        // print(recognizedText.text);
-                        for (int i = 0; i < pickedFileList.length; i++) {
-                          fileList?.add(File(pickedFileList[i]!.path));
-                        }
-                      }
-                    },);
-         
+                          onPressed: () {
+                            showMediaType(
+                              context,
+                              () async {
+                                Navigator.pop(context);
+                                XFile? file = await _Picker.pickImage(
+                                    source: ImageSource.camera);
+                                if (file != null) {
+                                  setState(() {
+                                    fileList?.add(File(file.path));
+                                  });
+                                }
+                              },
+                              () async {
+                                List<XFile?>? pickedFileList = [];
+                                Navigator.pop(context);
+                                pickedFileList = await _Picker.pickMultiImage();
+                                if (pickedFileList.isNotEmpty) {
+                                  // final inputImage = InputImage.fromFile(
+                                  //     File(pickedFileList[0]!.path ?? ''));
+
+                                  for (int i = 0;
+                                      i < pickedFileList.length;
+                                      i++) {
+                                    fileList
+                                        ?.add(File(pickedFileList[i]!.path));
+                                  }
+                                }
+                              },
+                            );
                           },
                           child: Text(
                               fileList!.isNotEmpty
@@ -104,7 +106,7 @@ class _SignatureScreenState extends State<SignatureScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey),
                       borderRadius:
@@ -148,14 +150,15 @@ class _SignatureScreenState extends State<SignatureScreen> {
               ),
             ),
             ListTile(
-              leading: Checkbox(value: isAgree, onChanged: (e){
-                setState(() {
-            isAgree = e;
-                  
-                });
-              }),
+              leading: Checkbox(
+                  value: isAgree,
+                  onChanged: (e) {
+                    setState(() {
+                      isAgree = e;
+                    });
+                  }),
               horizontalTitleGap: 0,
-              title: Text("I read and accept the Privacy policy"),
+              title: const Text("I read and accept the Privacy policy"),
             )
           ],
         ),
