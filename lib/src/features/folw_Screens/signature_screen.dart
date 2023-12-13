@@ -74,14 +74,14 @@ class _SignatureScreenState extends State<SignatureScreen> {
                         List<XFile?>? pickedFileList = [];
                       Navigator.pop(context);
                       pickedFileList = await _Picker.pickMultiImage();
-                      if (pickedFileList != null && pickedFileList!.isNotEmpty) {
+                      if (pickedFileList != null && pickedFileList.isNotEmpty) {
                         final inputImage = InputImage.fromFile(
-                            File(pickedFileList?[0]!.path ?? ''));
+                            File(pickedFileList[0]!.path ?? ''));
                         // final recognizedText =
                         //     await textRecognizer.processImage(inputImage);
                         // print(recognizedText.text);
-                        for (int i = 0; i < pickedFileList!.length; i++) {
-                          fileList?.add(File(pickedFileList![i]!.path));
+                        for (int i = 0; i < pickedFileList.length; i++) {
+                          fileList?.add(File(pickedFileList[i]!.path));
                         }
                       }
                     },);
