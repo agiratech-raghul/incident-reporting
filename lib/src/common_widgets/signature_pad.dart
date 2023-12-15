@@ -2,8 +2,8 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:incident_reporting/src/common_widgets/common_signature_pad.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:signature/signature.dart';
 
 class SignaturePad extends StatefulWidget {
   const SignaturePad({Key? key}) : super(key: key);
@@ -38,8 +38,7 @@ class _SignatureScreenState extends State<SignaturePad> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              padButtonOption(
-                  Colors.red.shade400, 'Clear', () {
+              padButtonOption(Colors.red.shade400, 'Clear', () {
                 signatureController.clear();
               }),
               padButtonOption(Colors.greenAccent.shade400, 'Done', () async {
@@ -76,14 +75,18 @@ class _SignatureScreenState extends State<SignaturePad> {
         style: ButtonStyle(
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0),
-                )),
+              borderRadius: BorderRadius.circular(8.0),
+            )),
             backgroundColor: MaterialStateProperty.all(btnClr),
-            padding: MaterialStateProperty.all(const EdgeInsets.symmetric(vertical: 10)),
+            padding: MaterialStateProperty.all(
+                const EdgeInsets.symmetric(vertical: 10)),
             textStyle: MaterialStateProperty.all(
                 const TextStyle(fontSize: 14, color: Colors.white))),
         onPressed: btnOnTapAction,
-        child: Text(btnTxt,style: TextStyle(color: Colors.white),));
+        child: Text(
+          btnTxt,
+          style: const TextStyle(color: Colors.white),
+        ));
   }
 
   Future<File> bitsToFile(Uint8List? signatureImage) async {
